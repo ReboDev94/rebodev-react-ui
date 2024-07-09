@@ -1,0 +1,37 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { ALL_SIZES, VARIANT_PRIMARY } from '../constants';
+import { VARIANT_BTN } from './styles';
+import Button from './Button';
+
+const meta = {
+  title: 'UI/Button',
+  component: Button,
+  // tags: ['autodocs'],
+  argTypes: {
+    size: {
+      control: 'radio',
+      options: ALL_SIZES
+    },
+    variant: {
+      control: 'radio',
+      options: VARIANT_BTN
+    },
+    block: {
+      control: 'boolean'
+    },
+    disabled: {
+      control: 'boolean'
+    }
+  },
+} satisfies Meta<typeof Button>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    variant: VARIANT_PRIMARY,
+    size: 'md',
+    children: 'Button',
+  },
+};
