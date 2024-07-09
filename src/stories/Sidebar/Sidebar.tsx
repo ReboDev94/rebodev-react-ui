@@ -7,7 +7,7 @@ const Sidebar: React.FC<ISidebar> = ({ open, width = 300, right = false, childre
   const widthSelected = useMemo(() => (open ? width : 0), [open, width]);
   return (
     <aside
-      className={twMerge(SIDEBAR_CLASSES, right && 'order-2', className)}
+      className={twMerge(SIDEBAR_CLASSES, right && 'order-2 right-0', className)}
       aria-label="Sidebar"
       style={{
         width: widthSelected,

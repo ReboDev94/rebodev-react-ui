@@ -1,9 +1,8 @@
 import type { Meta, StoryFn as Story } from '@storybook/react';
 import Sidebar, { ISidebar } from '.';
-import { IconSearch } from '../assets/svg';
+// import { IconSearch } from '../assets/svg';
 import { twMerge } from 'tailwind-merge';
 import imageLogo from '../assets/img/logo.png';
-import { useState } from 'react';
 
 export default {
   title: 'GENERAL/Sidebar',
@@ -69,23 +68,12 @@ export const Default: Story<ISidebar> = (args) => {
         </Sidebar.Header>
         <Sidebar.Content className="px-5 py-6">
           <Sidebar.Category title="Menu" />
-          {/* <Menu>
-            {MENU_DATA.map(({ title, icon, url }) => (
-              <Menu.ItemSidebar
-                key={uuidv4()}
-                active={pathname === url}
-                onClick={() => clickItem(url)}
-                title={title}
-                icon={icon}
-              />
-            ))}
-          </Menu> */}
         </Sidebar.Content>
         <Sidebar.Footer>
           <span className="text-sm font-semibold">@Turink {new Date().getFullYear()}</span>
         </Sidebar.Footer>
       </Sidebar>
-      <Sidebar.BackDrop onClick={() => (args.open = false)} />
+      <Sidebar.BackDrop onClick={() => {}} className={twMerge(!args.open && 'hidden')} />
       <main className={twMerge('flex-1 min-w-0 h-screen overflow-y-auto', args.right && 'order-1')}>
         <div className="px-6 py-8 mx-auto max-w-screen-2xl">
           <h1>hola mundo</h1>
