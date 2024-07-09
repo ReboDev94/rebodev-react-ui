@@ -8,12 +8,17 @@ import {
   VARIANT_PRIMARY,
 } from '../../constants';
 
-const SIZE_XS_INPUT_CLASSES = 'h-[36px] px-2 py-2';
-const SIZE_SM_INPUT_CLASSES = 'h-[40px] px-2 py-2.5';
-const SIZE_MD_INPUT_CLASSES = 'h-[42px] px-2 py-2.5 ';
+export const VARIANTS_INPUT = [VARIANT_PRIMARY, VARIANT_ERROR, VARIANT_BASE] as const;
+export const SIZES_INPUT = [SIZE_XS, SIZE_SM, SIZE_MD, SIZE_LG] as const;
+
+const SIZE_XS_INPUT_CLASSES = 'h-[36px] px-2 py-2 text-xs';
+const SIZE_SM_INPUT_CLASSES = 'h-[40px] px-2 py-2.5 text-sm';
+const SIZE_MD_INPUT_CLASSES = 'h-[42px] px-2 py-2.5';
 const SIZE_LG_INPUT_CLASSES = 'h-[48px] px-2 py-2.5';
 
 export const BASE_INPUT_CLASSES = `
+  peer
+  bg-white
   block
   w-full
   rounded-lg
@@ -21,11 +26,13 @@ export const BASE_INPUT_CLASSES = `
   border
   border-solid
   border-base-200
-  focus:ring-offset-0
-  disabled:cursor-not-allowed
   disabled:bg-base-50
   disabled:text-base-300
-  text-sm`;
+  placeholder:text-base-200
+  disabled:cursor-not-allowed
+  focus:border
+  focus:ring-1
+  focus:outline-none`;
 
 export const BASE_INPUT_FILE_CLASSES =
   'p-0 file:px-2 file:py-2.5 file:border-none';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ILabel } from './interfaces';
+import { IFormLabel } from './interfaces';
 import {
   DEFAULT_LABEL_CLASSES,
   DEFAULT_LABEL_CONTAINER_CLASSES,
@@ -13,7 +13,7 @@ import {
   POSITION_RT,
 } from '../constants';
 
-const FormLabel: React.FC<ILabel> = ({
+const FormLabel: React.FC<IFormLabel> = ({
   title,
   position = POSITION_LT,
   children,
@@ -25,7 +25,7 @@ const FormLabel: React.FC<ILabel> = ({
         <label
           className={twMerge(
             DEFAULT_LABEL_CLASSES,
-            'pb-2',
+            'pb-1',
             position === POSITION_RT && LABEL_RIGHT_CLASSES,
           )}
         >
@@ -39,7 +39,7 @@ const FormLabel: React.FC<ILabel> = ({
         <label
           className={twMerge(
             DEFAULT_LABEL_CLASSES,
-            'pt-2',
+            'pt-1',
             position === POSITION_RB && LABEL_RIGHT_CLASSES,
           )}
         >

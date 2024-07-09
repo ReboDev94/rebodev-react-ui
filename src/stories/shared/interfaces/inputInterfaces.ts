@@ -2,24 +2,13 @@
 import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
 import { IButton } from '../..';
 import {
-  SIZE_LG,
-  SIZE_MD,
-  SIZE_SM,
-  SIZE_XS,
   VARIANT_BASE,
-  VARIANT_ERROR,
   VARIANT_PRIMARY,
 } from '../../constants';
-export type Variant =
-  | typeof VARIANT_PRIMARY
-  | typeof VARIANT_ERROR
-  | typeof VARIANT_BASE;
+import { VARIANTS_INPUT, SIZES_INPUT } from '../styles/inputStyles';
 
-export type Size =
-  | typeof SIZE_XS
-  | typeof SIZE_SM
-  | typeof SIZE_MD
-  | typeof SIZE_LG;
+export type Variant = (typeof VARIANTS_INPUT)[number];
+export type Size = (typeof SIZES_INPUT)[number];
 
 export type VariantTag = typeof VARIANT_PRIMARY | typeof VARIANT_BASE;
 
@@ -31,11 +20,11 @@ interface defaultInput {
 
 export interface IInput
   extends InputHTMLAttributes<HTMLInputElement>,
-    defaultInput {}
+  defaultInput { }
 
 export interface ITextArea
   extends TextareaHTMLAttributes<HTMLTextAreaElement>,
-    Omit<defaultInput, 'sizeType'> {}
+  Omit<defaultInput, 'sizeType'> { }
 
 export interface ITag extends defaultInput {
   value: string[];
@@ -49,9 +38,9 @@ export interface ITag extends defaultInput {
 
 export interface ISelect
   extends React.SelectHTMLAttributes<HTMLSelectElement>,
-    defaultInput {}
+  defaultInput { }
 export interface ISelectOption
-  extends React.OptionHTMLAttributes<HTMLOptionElement> {}
+  extends React.OptionHTMLAttributes<HTMLOptionElement> { }
 
 export type ObjetoOString = { [key: string]: any } | string;
 

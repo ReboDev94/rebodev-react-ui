@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ALL_SIZES, VARIANT_PRIMARY } from '../constants';
+import { ALL_SIZES, SIZE_MD, VARIANT_PRIMARY } from '../constants';
 import { VARIANT_BTN } from './styles';
-import Button from './Button';
+import Button, { IButton } from '.';
 
 const meta = {
   title: 'UI/Button',
   component: Button,
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
   argTypes: {
     size: {
       control: 'radio',
@@ -28,6 +28,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const DEFAULT_ARGS: Partial<IButton> = {
+  variant: VARIANT_PRIMARY,
+  size: SIZE_MD,
+  block: false,
+  disabled: false,
+  children: 'Button',
+}
+
 export const Default: Story = {
   args: {
     variant: VARIANT_PRIMARY,
@@ -35,3 +43,6 @@ export const Default: Story = {
     children: 'Button',
   },
 };
+Default.args = DEFAULT_ARGS;
+
+

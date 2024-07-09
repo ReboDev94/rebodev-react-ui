@@ -13,7 +13,7 @@ import { IAvatar } from './Avatar';
 import { IButton } from './Button';
 import { ILoading } from './Loading';
 import { IDivider } from './Divider';
-import { IForm, ILabel } from './Form';
+import { IForm, IFormLabel } from './Form';
 import { ICheckBox } from './Checkbox';
 import { ITextArea } from './Textarea';
 import { ICard, ICardBody } from './Card';
@@ -96,7 +96,7 @@ export type { IMenu, IItemSidebar, ICollapseSidebar };
 export { default as Menu } from './Menu';
 
 /* Form */
-export type { IForm, ILabel };
+export type { IForm, IFormLabel };
 export { default as Form } from './Form';
 
 /* TextArea */

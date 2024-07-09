@@ -7,6 +7,7 @@ import {
   SIZE_INPUT,
   TYPE_INPUT,
 } from '../shared/styles/inputStyles';
+
 import { VARIANT_ERROR, VARIANT_PRIMARY, SIZE_MD } from '../constants';
 
 const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
@@ -21,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
 
   const variantClasses = useMemo(
     () => TYPE_INPUT[errorState ? VARIANT_ERROR : variant],
-    [errorState, variant],
+    [errorState, variant]
   );
 
   return (
@@ -33,7 +34,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
         SIZE_INPUT[sizeType],
         variantClasses,
         type === 'file' && BASE_INPUT_FILE_CLASSES,
-        className,
+        className
       )}
       {...rest}
     />

@@ -14,7 +14,7 @@ type labelPosition =
   | typeof POSITION_LT
   | typeof POSITION_RB;
 
-export interface ILabel {
+export interface IFormLabel {
   title: string;
   className?: string;
   children?: ReactNode;
