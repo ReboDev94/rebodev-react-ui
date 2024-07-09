@@ -1,22 +1,4 @@
-import { FormHTMLAttributes, ReactNode } from 'react';
-import {
-  POSITION_RT,
-  POSITION_LB,
-  POSITION_LT,
-  POSITION_RB,
-} from '../constants';
+import { FormHTMLAttributes } from 'react';
 
-export interface IForm extends FormHTMLAttributes<HTMLFormElement> {}
+export interface IForm extends FormHTMLAttributes<HTMLFormElement> { }
 
-type labelPosition =
-  | typeof POSITION_RT
-  | typeof POSITION_LB
-  | typeof POSITION_LT
-  | typeof POSITION_RB;
-
-export interface IFormLabel {
-  title: string;
-  className?: string;
-  children?: ReactNode;
-  position?: labelPosition;
-}

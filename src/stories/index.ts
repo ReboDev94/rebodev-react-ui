@@ -13,7 +13,9 @@ import { IAvatar } from './Avatar';
 import { IButton } from './Button';
 import { ILoading } from './Loading';
 import { IDivider } from './Divider';
-import { IForm, IFormLabel } from './Form';
+import { IForm } from './Form';
+import { IFormLabel } from './FormLabel';
+import { IFormGroupMaterial } from './FormGroupMaterial';
 import { ICheckBox } from './Checkbox';
 import { ITextArea } from './Textarea';
 import { ICard, ICardBody } from './Card';
@@ -96,8 +98,10 @@ export type { IMenu, IItemSidebar, ICollapseSidebar };
 export { default as Menu } from './Menu';
 
 /* Form */
-export type { IForm, IFormLabel };
+export type { IForm, IFormLabel, IFormGroupMaterial };
 export { default as Form } from './Form';
+export { default as FormLabel } from './FormLabel';
+export { default as FormGroupMaterial } from './FormGroupMaterial';
 
 /* TextArea */
 export type { ITextArea };

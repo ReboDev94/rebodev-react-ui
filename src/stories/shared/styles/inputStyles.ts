@@ -136,3 +136,9 @@ export const TYPE_ERROR_INPUT = {
   [VARIANT_ERROR]: ERROR_INPUT_ERROR_CLASSES,
   [VARIANT_BASE]: ERROR_INPUT_BASE_CLASSES,
 };
+
+export const VARIANT_INPUT_LABEL = {
+  [VARIANT_PRIMARY]: 'peer-focus:text-primary-800',
+  [VARIANT_ERROR]: 'peer-focus:text-error-800',
+  [VARIANT_BASE]: 'peer-focus:text-base-600',
+}

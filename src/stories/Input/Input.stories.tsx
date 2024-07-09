@@ -37,10 +37,10 @@ const DEFAULT_ARGS: Partial<IInput> = {
 };
 
 export const Default: Story<IInput> = (args) => {
-  return <Input type="email" {...args} />;
+  return <Input {...args} />;
 };
 
-Default.args = DEFAULT_ARGS;
+Default.args = { ...DEFAULT_ARGS, type: 'email' };
 
 export const File: Story<IInput> = (args) => {
   return <Input type="file" {...args} />;

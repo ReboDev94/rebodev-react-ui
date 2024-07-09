@@ -1,10 +1,5 @@
-import FormComponent from './Form';
-import FormLabel from './FormLabel';
-import { IForm, IFormLabel } from './interfaces';
-
-const Form = Object.assign(FormComponent, {
-  Label: FormLabel,
-});
+import Form from './Form';
+import { IForm } from './interfaces';
 
 export default Form;
-export type { IForm, IFormLabel };
+export type { IForm };
