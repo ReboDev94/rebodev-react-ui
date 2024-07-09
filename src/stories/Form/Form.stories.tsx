@@ -8,7 +8,7 @@ import { Default as InputStorie } from '../Input/Input.stories';
 import { Default as ButtonStorie } from '../Button/Button.stories';
 
 export default {
-  title: 'UI/Form',
+  title: 'Form/Form',
   component: Form,
   tags: ['autodocs'],
 } satisfies Meta<typeof Form>;

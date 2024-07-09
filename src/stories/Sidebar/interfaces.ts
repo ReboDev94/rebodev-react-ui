@@ -5,6 +5,7 @@ export interface ISidebar {
   children?: ReactNode;
   width?: number;
   minWidth?: number;
+  open: boolean;
   right?: boolean;
 }
 

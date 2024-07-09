@@ -4,7 +4,7 @@ import { VARIANT_BTN } from './styles';
 import Button, { IButton } from '.';
 
 const meta = {
-  title: 'UI/Button',
+  title: 'GENERAL/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

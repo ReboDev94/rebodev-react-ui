@@ -1,5 +1,5 @@
-import { ReactComponent as ArrowDownIcon } from './icon-arrow-down.svg';
-import { ReactComponent as IconX } from './icon-x.svg';
-import { ReactComponent as IconSearch } from './icon-search.svg';
+import ArrowDownIcon from './icon-arrow-down.svg?react';
+import IconX from './icon-x.svg?react';
+import IconSearch from './icon-search.svg?react';
 
 export { ArrowDownIcon, IconX, IconSearch };

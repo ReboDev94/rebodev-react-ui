@@ -4,7 +4,7 @@ import { SIZE_SM, VARIANT_PRIMARY } from '../constants';
 import Input, { IInput } from '.';
 
 export default {
-  title: 'UI/Input',
+  title: 'DATA INPUT/Input',
   component: Input,
   tags: ['autodocs'],
   argTypes: {

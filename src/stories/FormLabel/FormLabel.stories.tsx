@@ -5,7 +5,7 @@ import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
 
 export default {
-  title: 'UI/FormLabel',
+  title: 'Form/FormLabel',
   component: FormLabel,
   tags: ['autodocs'],
   parameters: {

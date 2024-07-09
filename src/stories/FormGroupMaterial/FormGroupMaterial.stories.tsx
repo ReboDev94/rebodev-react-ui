@@ -6,7 +6,7 @@ import { VARIANTS_INPUT } from '../shared/styles/inputStyles';
 import { VARIANT_PRIMARY } from '../constants';
 
 export default {
-  title: 'UI/FormGroupMaterial',
+  title: 'Form/FormGroupMaterial',
   component: FormGroupMaterial,
   tags: ['autodocs'],
   parameters: {
