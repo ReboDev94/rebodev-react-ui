@@ -9,6 +9,7 @@ import {
   VARIANT_PRIMARY,
 } from '../constants';
 
+export const VARIANTS_AVATAR = [VARIANT_PRIMARY, VARIANT_BASE] as const;
 export const DEFAULT_AVATAR_CLASSES = 'shadow-md grid place-content-center';
 
 const CIRCLE_AVATAR_CLASSES = 'rounded-full';

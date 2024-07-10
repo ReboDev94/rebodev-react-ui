@@ -1,23 +1,14 @@
 import { ReactNode } from 'react';
 import {
-  VARIANT_PRIMARY,
-  VARIANT_BASE,
-  SIZE_XS,
-  SIZE_SM,
-  SIZE_MD,
-  SIZE_LG,
-  SHAPE_CIRCLE,
-  SHAPE_SQUARED,
+  ALL_SHAPES,
+  ALL_SIZES,
 } from '../constants';
+import { VARIANTS_AVATAR } from './styles';
 
-type SizeAvatar =
-  | typeof SIZE_XS
-  | typeof SIZE_SM
-  | typeof SIZE_MD
-  | typeof SIZE_LG;
-type ShapeAvatar = typeof SHAPE_CIRCLE | typeof SHAPE_SQUARED;
-type VariantBorder = typeof VARIANT_PRIMARY | typeof VARIANT_BASE;
-type VariantBackGround = typeof VARIANT_PRIMARY | typeof VARIANT_BASE;
+type SizeAvatar = (typeof ALL_SIZES)[number];
+type ShapeAvatar = (typeof ALL_SHAPES)[number];
+type VariantBorder = (typeof VARIANTS_AVATAR)[number];
+type VariantBackGround = (typeof VARIANTS_AVATAR)[number];
 
 export interface IAvatar {
   size?: SizeAvatar;
