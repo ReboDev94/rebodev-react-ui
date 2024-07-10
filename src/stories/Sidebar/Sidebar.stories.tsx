@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useArgs } from '@storybook/preview-api';
-import Sidebar from '.';
 import { twMerge } from 'tailwind-merge';
+import { useArgs } from '@storybook/preview-api';
+import type { Meta, StoryObj } from '@storybook/react';
 import imageLogo from '../assets/img/logo.png';
+import { MENU_DATA_DUMMY } from '../utils';
+import Sidebar from '.';
+import Menu from '../Menu';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'GENERAL/Sidebar',
@@ -50,6 +52,19 @@ export const Default: Story = {
           </Sidebar.Header>
           <Sidebar.Content className="px-5 py-6">
             <Sidebar.Category title="Menu" />
+            <Menu {...args}>
+              {MENU_DATA_DUMMY.map(({ title, icon, url, active }) => (
+                <Menu.ItemSidebar
+                  key={title}
+                  active={active}
+                  onClick={() => {
+                    console.log(`click ${title} - ${url}`);
+                  }}
+                  title={title}
+                  icon={icon}
+                />
+              ))}
+            </Menu>
           </Sidebar.Content>
           <Sidebar.Footer>
             <span className="text-sm font-semibold">@Turink {new Date().getFullYear()}</span>

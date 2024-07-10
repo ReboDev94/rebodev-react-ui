@@ -10,18 +10,18 @@ const meta = {
   argTypes: {
     size: {
       control: 'radio',
-      options: ALL_SIZES
+      options: ALL_SIZES,
     },
     variant: {
       control: 'radio',
-      options: VARIANT_BTN
+      options: VARIANT_BTN,
     },
     block: {
-      control: 'boolean'
+      control: 'boolean',
     },
     disabled: {
-      control: 'boolean'
-    }
+      control: 'boolean',
+    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -34,15 +34,7 @@ const DEFAULT_ARGS: Partial<IButton> = {
   block: false,
   disabled: false,
   children: 'Button',
-}
-
-export const Default: Story = {
-  args: {
-    variant: VARIANT_PRIMARY,
-    size: 'md',
-    children: 'Button',
-  },
 };
+
+export const Default: Story = {};
 Default.args = DEFAULT_ARGS;
-
-

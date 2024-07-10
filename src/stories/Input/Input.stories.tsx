@@ -25,6 +25,9 @@ export default {
     className: {
       control: 'text',
     },
+    disabled: {
+      control: 'boolean',
+    },
   },
 } satisfies Meta<typeof Input>;
 
@@ -33,6 +36,7 @@ const DEFAULT_ARGS: Partial<IInput> = {
   sizeType: SIZE_SM,
   variant: VARIANT_PRIMARY,
   errorState: false,
+  disabled: false,
   className: '',
 };
 
