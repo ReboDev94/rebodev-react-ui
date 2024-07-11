@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
 import { IButton } from '../..';
-import {
-  VARIANT_BASE,
-  VARIANT_PRIMARY,
-} from '../../constants';
+import { VARIANT_BASE, VARIANT_PRIMARY } from '../../constants';
 import { VARIANTS_INPUT, SIZES_INPUT } from '../styles/inputStyles';
 
 export type Variant = (typeof VARIANTS_INPUT)[number];
@@ -20,11 +17,11 @@ interface defaultInput {
 
 export interface IInput
   extends InputHTMLAttributes<HTMLInputElement>,
-  defaultInput { }
+    defaultInput {}
 
 export interface ITextArea
   extends TextareaHTMLAttributes<HTMLTextAreaElement>,
-  Omit<defaultInput, 'sizeType'> { }
+    Omit<defaultInput, 'sizeType'> {}
 
 export interface ITag extends defaultInput {
   value: string[];
@@ -38,9 +35,9 @@ export interface ITag extends defaultInput {
 
 export interface ISelect
   extends React.SelectHTMLAttributes<HTMLSelectElement>,
-  defaultInput { }
+    defaultInput {}
 export interface ISelectOption
-  extends React.OptionHTMLAttributes<HTMLOptionElement> { }
+  extends React.OptionHTMLAttributes<HTMLOptionElement> {}
 
 export type ObjetoOString = { [key: string]: any } | string;
 

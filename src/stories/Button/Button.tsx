@@ -25,8 +25,8 @@ const Button: React.FC<IButton> = ({
           TYPE_BTNS[variant],
           SIZE_BTNS[size],
           block && BLOCK_BUTTON_CLASSES,
-          className
-        )
+          className,
+        ),
       )}
       {...props}
     >

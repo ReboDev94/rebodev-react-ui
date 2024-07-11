@@ -1,7 +1,5 @@
 import { ButtonHTMLAttributes } from 'react';
-import {
-  ALL_SIZES,
-} from '../constants';
+import { ALL_SIZES } from '../constants';
 import { VARIANT_BTN } from './styles';
 
 export type VariantBtn = (typeof VARIANT_BTN)[number];

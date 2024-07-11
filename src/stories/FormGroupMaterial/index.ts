@@ -1,5 +1,5 @@
-import FormGroupMaterial from "./FormGroupMaterial";
+import FormGroupMaterial from './FormGroupMaterial';
 import { IFormGroupMaterial } from './interfaces';
 
 export default FormGroupMaterial;
-export type { IFormGroupMaterial }
+export type { IFormGroupMaterial };

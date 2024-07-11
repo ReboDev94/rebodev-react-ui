@@ -8,7 +8,11 @@ import {
   VARIANT_PRIMARY,
 } from '../../constants';
 
-export const VARIANTS_INPUT = [VARIANT_PRIMARY, VARIANT_ERROR, VARIANT_BASE] as const;
+export const VARIANTS_INPUT = [
+  VARIANT_PRIMARY,
+  VARIANT_ERROR,
+  VARIANT_BASE,
+] as const;
 export const SIZES_INPUT = [SIZE_XS, SIZE_SM, SIZE_MD, SIZE_LG] as const;
 
 const SIZE_XS_INPUT_CLASSES = 'h-[36px] px-2 py-2 text-xs';
@@ -141,4 +145,4 @@ export const VARIANT_INPUT_LABEL = {
   [VARIANT_PRIMARY]: 'peer-focus:text-primary-800',
   [VARIANT_ERROR]: 'peer-focus:text-error-800',
   [VARIANT_BASE]: 'peer-focus:text-base-600',
-}
+};

@@ -8,11 +8,16 @@ import {
   SIZE_MD,
 } from '../constants';
 
-export const VARIANTS_CHECKBOX = [VARIANT_PRIMARY, VARIANT_ERROR, VARIANT_BASE] as const;
+export const VARIANTS_CHECKBOX = [
+  VARIANT_PRIMARY,
+  VARIANT_ERROR,
+  VARIANT_BASE,
+] as const;
 
 export const WRAPPER_ICON =
   'absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100';
-export const WRAPPER_CHECKBOX_CLASSES = 'relative flex items-center cursor-pointer';
+export const WRAPPER_CHECKBOX_CLASSES =
+  'relative flex items-center cursor-pointer';
 export const CHECKBOX_CLASSES =
   "before:content[''] peer relative cursor-pointer appearance-none rounded border transition-all hover:before:opacity-10";
 

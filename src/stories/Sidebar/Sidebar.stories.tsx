@@ -67,7 +67,9 @@ export const Default: Story = {
             </Menu>
           </Sidebar.Content>
           <Sidebar.Footer>
-            <span className="text-sm font-semibold">@Turink {new Date().getFullYear()}</span>
+            <span className="text-sm font-semibold">
+              @Turink {new Date().getFullYear()}
+            </span>
           </Sidebar.Footer>
         </Sidebar>
         <Sidebar.BackDrop
@@ -76,7 +78,12 @@ export const Default: Story = {
           }}
           className={twMerge(!args.open && 'hidden')}
         />
-        <main className={twMerge('flex-1 min-w-0 h-screen overflow-y-auto', args.right && 'order-1')}>
+        <main
+          className={twMerge(
+            'flex-1 min-w-0 h-screen overflow-y-auto',
+            args.right && 'order-1',
+          )}
+        >
           <div className="px-6 py-8 mx-auto max-w-screen-2xl">
             <h1>hola mundo</h1>
           </div>

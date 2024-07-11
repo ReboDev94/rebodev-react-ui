@@ -13,7 +13,7 @@ export default {
   tags: ['autodocs'],
 } satisfies Meta<typeof Form>;
 
-export const Default: Story<IForm> = (args) => {
+export const Default: Story<IForm> = args => {
   return (
     <Form {...args} className="flex flex-col gap-4 w-96">
       <div>
@@ -23,7 +23,11 @@ export const Default: Story<IForm> = (args) => {
       </div>
       <div>
         <FormLabel {...FormLabelStorie.args} title="Contraseña">
-          <Input {...InputStorie.args} type="password" placeholder="**************" />
+          <Input
+            {...InputStorie.args}
+            type="password"
+            placeholder="**************"
+          />
         </FormLabel>
       </div>
       <div>

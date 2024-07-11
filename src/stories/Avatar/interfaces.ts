@@ -1,8 +1,5 @@
 import { ReactNode } from 'react';
-import {
-  ALL_SHAPES,
-  ALL_SIZES,
-} from '../constants';
+import { ALL_SHAPES, ALL_SIZES } from '../constants';
 import { VARIANTS_AVATAR } from './styles';
 
 type SizeAvatar = (typeof ALL_SIZES)[number];

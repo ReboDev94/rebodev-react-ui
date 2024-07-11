@@ -27,7 +27,7 @@ export default {
   },
 } satisfies Meta<typeof FormLabel>;
 
-export const Default: Story<IFormLabel> = (args) => {
+export const Default: Story<IFormLabel> = args => {
   return (
     <FormLabel {...args}>
       <Input type="email" {...InputStorie.args} />

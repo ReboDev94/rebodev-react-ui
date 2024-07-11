@@ -1,6 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Avatar, { IAvatar } from '.';
-import { ALL_SHAPES, ALL_SIZES, SHAPE_CIRCLE, SIZE_MD, VARIANT_BASE } from '../constants';
+import {
+  ALL_SHAPES,
+  ALL_SIZES,
+  SHAPE_CIRCLE,
+  SIZE_MD,
+  VARIANT_BASE,
+} from '../constants';
 import { VARIANTS_AVATAR } from './styles';
 
 const meta = {

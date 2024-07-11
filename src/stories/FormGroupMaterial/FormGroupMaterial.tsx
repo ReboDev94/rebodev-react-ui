@@ -14,13 +14,16 @@ const FormGroupMaterial: React.FC<IFormGroupMaterial> = ({
 }) => {
   const variantClasses = useMemo(
     () => VARIANT_INPUT_LABEL[errorState ? VARIANT_ERROR : variant],
-    [errorState, variant]
+    [errorState, variant],
   );
 
   return (
     <div className="relative">
       {children}
-      <label htmlFor={id} className={twMerge(BASE_LABEL_CLASSES, variantClasses)}>
+      <label
+        htmlFor={id}
+        className={twMerge(BASE_LABEL_CLASSES, variantClasses)}
+      >
         {title}
       </label>
     </div>

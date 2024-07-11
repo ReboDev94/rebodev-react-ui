@@ -28,7 +28,7 @@ export default {
   },
 } satisfies Meta<typeof FormGroupMaterial>;
 
-export const Default: Story<IFormGroupMaterial> = (args) => {
+export const Default: Story<IFormGroupMaterial> = args => {
   return (
     <FormGroupMaterial {...args}>
       <Input
