@@ -6,7 +6,7 @@ import { VARIANT_PRIMARY } from '../constants';
 import { VARIANTS_INPUT } from '../shared/interfaces/inputInterfaces';
 
 export default {
-  title: 'Form/FormGroupMaterial',
+  title: 'DATA INPUT/Input Material',
   component: FormGroupMaterial,
   tags: ['autodocs'],
   parameters: {
