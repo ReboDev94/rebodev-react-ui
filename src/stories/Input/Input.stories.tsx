@@ -1,6 +1,9 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
-import { SIZES_INPUT, VARIANTS_INPUT } from '../shared/styles/inputStyles';
 import { SIZE_SM, VARIANT_PRIMARY } from '../constants';
+import {
+  SIZES_INPUT,
+  VARIANTS_INPUT,
+} from '../shared/interfaces/inputInterfaces';
 import Input, { IInput } from '.';
 
 export default {

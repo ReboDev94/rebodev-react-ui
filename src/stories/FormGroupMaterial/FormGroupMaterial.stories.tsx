@@ -2,8 +2,8 @@ import { Meta, StoryFn as Story } from '@storybook/react';
 import FormGroupMaterial, { IFormGroupMaterial } from '.';
 import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
-import { VARIANTS_INPUT } from '../shared/styles/inputStyles';
 import { VARIANT_PRIMARY } from '../constants';
+import { VARIANTS_INPUT } from '../shared/interfaces/inputInterfaces';
 
 export default {
   title: 'Form/FormGroupMaterial',

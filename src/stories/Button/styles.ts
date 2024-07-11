@@ -11,15 +11,6 @@ import {
   VARIANT_PRIMARY,
 } from '../constants';
 
-export const VARIANT_BTN = [
-  VARIANT_BASE,
-  VARIANT_OUTLINE_BASE,
-  VARIANT_PRIMARY,
-  VARIANT_OUTLINE_PRIMARY,
-  VARIANT_ERROR,
-  VARIANT_OUTLINE_ERROR,
-] as const;
-
 export const BASE_BUTTON_CLASSES = `
   px-4
   inline-block

@@ -1,6 +1,16 @@
 import { InputHTMLAttributes } from 'react';
-import { VARIANTS_CHECKBOX } from './styles';
-import { ALL_SIZES } from '../constants';
+import {
+  ALL_SIZES,
+  VARIANT_BASE,
+  VARIANT_ERROR,
+  VARIANT_PRIMARY,
+} from '../constants';
+
+export const VARIANTS_CHECKBOX = [
+  VARIANT_PRIMARY,
+  VARIANT_ERROR,
+  VARIANT_BASE,
+] as const;
 
 export type Variant = (typeof VARIANTS_CHECKBOX)[number];
 export type Size = (typeof ALL_SIZES)[number];

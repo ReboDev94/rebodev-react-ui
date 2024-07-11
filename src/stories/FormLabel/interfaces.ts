@@ -1,5 +1,12 @@
 import { ReactNode } from 'react';
-import { SIZES_LABEL } from './styles';
+import { POSITION_LB, POSITION_LT, POSITION_RB, POSITION_RT } from '../constants';
+
+export const SIZES_LABEL = [
+  POSITION_RT,
+  POSITION_LB,
+  POSITION_LT,
+  POSITION_RB,
+] as const;
 
 type labelPosition = (typeof SIZES_LABEL)[number];
 

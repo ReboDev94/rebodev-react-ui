@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Checkbox, { ICheckBox } from '.';
 import { ALL_SIZES, SIZE_XS, VARIANT_ERROR } from '../constants';
-import { VARIANTS_CHECKBOX } from './styles';
+import { VARIANTS_CHECKBOX } from './interfaces';
 
 const meta = {
   title: 'GENERAL/CheckBox',

@@ -7,7 +7,7 @@ import {
   SIZE_MD,
   VARIANT_BASE,
 } from '../constants';
-import { VARIANTS_AVATAR } from './styles';
+import { VARIANTS_AVATAR } from './interfaces';
 
 const meta = {
   title: 'GENERAL/Avatar',

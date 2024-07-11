@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ALL_SIZES, SIZE_MD, VARIANT_PRIMARY } from '../constants';
-import { VARIANT_BTN } from './styles';
 import Button, { IButton } from '.';
+import { VARIANT_BTN } from './interfaces';
 
 const meta = {
   title: 'GENERAL/Button',

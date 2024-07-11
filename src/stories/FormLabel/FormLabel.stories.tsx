@@ -1,8 +1,8 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
 import FormLabel, { IFormLabel } from '.';
-import { SIZES_LABEL } from './styles';
 import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
+import { SIZES_LABEL } from './interfaces';
 
 export default {
   title: 'Form/FormLabel',

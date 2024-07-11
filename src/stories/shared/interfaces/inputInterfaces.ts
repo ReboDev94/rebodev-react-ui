@@ -1,8 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
 import { IButton } from '../..';
-import { VARIANT_BASE, VARIANT_PRIMARY } from '../../constants';
-import { VARIANTS_INPUT, SIZES_INPUT } from '../styles/inputStyles';
+import {
+  SIZE_LG,
+  SIZE_MD,
+  SIZE_SM,
+  SIZE_XS,
+  VARIANT_BASE,
+  VARIANT_ERROR,
+  VARIANT_PRIMARY,
+} from '../../constants';
+
+export const VARIANTS_INPUT = [
+  VARIANT_PRIMARY,
+  VARIANT_ERROR,
+  VARIANT_BASE,
+] as const;
+export const SIZES_INPUT = [SIZE_XS, SIZE_SM, SIZE_MD, SIZE_LG] as const;
 
 export type Variant = (typeof VARIANTS_INPUT)[number];
 export type Size = (typeof SIZES_INPUT)[number];

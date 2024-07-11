@@ -8,13 +8,6 @@ import {
   VARIANT_PRIMARY,
 } from '../../constants';
 
-export const VARIANTS_INPUT = [
-  VARIANT_PRIMARY,
-  VARIANT_ERROR,
-  VARIANT_BASE,
-] as const;
-export const SIZES_INPUT = [SIZE_XS, SIZE_SM, SIZE_MD, SIZE_LG] as const;
-
 const SIZE_XS_INPUT_CLASSES = 'h-[36px] px-2 py-2 text-xs';
 const SIZE_SM_INPUT_CLASSES = 'h-[40px] px-2 py-2.5 text-sm';
 const SIZE_MD_INPUT_CLASSES = 'h-[42px] px-2 py-2.5';
