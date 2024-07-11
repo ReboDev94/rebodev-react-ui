@@ -1,12 +1,10 @@
 import { InputHTMLAttributes } from 'react';
-import { VARIANT_BASE, VARIANT_ERROR, VARIANT_PRIMARY } from '../constants';
+import { VARIANTS_CHECKBOX } from './styles';
+import { ALL_SIZES } from '../constants';
 
-export type Variant =
-  | typeof VARIANT_PRIMARY
-  | typeof VARIANT_ERROR
-  | typeof VARIANT_BASE;
-
-export interface ICheckBox
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export type Variant = (typeof VARIANTS_CHECKBOX)[number];
+export type Size = (typeof ALL_SIZES)[number];
+export interface ICheckBox extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
+  sizeCheck?: Size;
   variant?: Variant;
 }
