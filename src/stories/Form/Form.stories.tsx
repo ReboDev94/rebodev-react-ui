@@ -11,11 +11,16 @@ export default {
   title: 'Form/Form',
   component: Form,
   tags: ['autodocs'],
+  argTypes: {
+    className: {
+      control: 'text',
+    },
+  },
 } satisfies Meta<typeof Form>;
 
 export const Default: Story<IForm> = args => {
   return (
-    <Form {...args} className="flex flex-col gap-4 w-96">
+    <Form {...args}>
       <div>
         <FormLabel {...FormLabelStorie.args} title="Correo electrónico">
           <Input {...InputStorie.args} type="email" />
@@ -37,4 +42,8 @@ export const Default: Story<IForm> = args => {
       </div>
     </Form>
   );
+};
+
+Default.args = {
+  className: 'flex flex-col gap-4 w-96',
 };

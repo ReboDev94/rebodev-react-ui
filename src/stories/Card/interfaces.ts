@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { VARIANT_DEFAULT, VARIANT_PRIMARY } from '../constants';
 
-export type VariantCard = typeof VARIANT_DEFAULT | typeof VARIANT_PRIMARY;
+export const VARIANTS_CARD = [VARIANT_DEFAULT, VARIANT_PRIMARY] as const;
+export type VariantCard = (typeof VARIANTS_CARD)[number];
 
 export interface ICard {
   variant?: VariantCard;
