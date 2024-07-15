@@ -1,7 +1,8 @@
 import { ButtonHTMLAttributes } from 'react';
 import { VARIANT_BASE, VARIANT_PRIMARY } from '../constants/variants';
 
-type Variant = typeof VARIANT_PRIMARY | typeof VARIANT_BASE;
+export const VARIANTS_PAGINATION = [VARIANT_PRIMARY, VARIANT_BASE] as const;
+type Variant = (typeof VARIANTS_PAGINATION)[number];
 
 export interface IPagination {
   pageCount: number;
