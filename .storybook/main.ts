@@ -18,6 +18,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
   viteFinal: config =>
     mergeConfig(config, {
       plugins: [svgr({ include: '**/*.svg?react' })],

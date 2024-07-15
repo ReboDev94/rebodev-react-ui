@@ -76,7 +76,7 @@ const InputSearch = <T extends ObjetoOString>({
             errorState={errorState}
             sizeType={sizeType}
             placeholder={value ? value.label : 'Selecciona una opción'}
-            className={twMerge(value && 'placeholder:font-medium')}
+            className={twMerge(value && 'placeholder:font-bold placeholder:text-base-500')}
             onFocus={() => setShowList(true)}
             disabled={disabled}
           />

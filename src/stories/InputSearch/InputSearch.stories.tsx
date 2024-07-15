@@ -3,8 +3,6 @@ import { useArgs } from '@storybook/preview-api';
 import InputSearch, { IOptionInputSearch } from '.';
 import { useEffect, useState } from 'react';
 import {
-  IInputSearch,
-  ObjetoOString,
   SIZES_INPUT,
   VARIANTS_INPUT,
 } from '../shared/interfaces/inputInterfaces';
@@ -13,6 +11,8 @@ import {
   VARIANT_OUTLINE_PRIMARY,
   VARIANT_PRIMARY,
 } from '../constants';
+import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
+import Avatar from '../Avatar';
 
 interface ApiResponse {
   info: Info;
@@ -70,18 +70,14 @@ const meta: Meta<typeof InputSearch> = {
   tags: ['autodocs'],
   parameters: {
     controls: {
-      exclude: [
-        'searchValue',
-        'onSearchValue',
-        'value',
-        'onChange',
-        'options',
-        'children',
-        'renderItem',
-      ],
+      exclude: ['children'],
     },
   },
   argTypes: {
+    value: {
+      control: false,
+      description: 'Value selected',
+    },
     loading: {
       control: 'boolean',
     },
@@ -108,6 +104,33 @@ const meta: Meta<typeof InputSearch> = {
     labelNoOption: {
       control: 'text',
     },
+    options: {
+      description: 'array options',
+      control: false,
+    },
+    renderItem: {
+      description: 'Custom item component',
+    },
+    searchValue: {
+      description: 'get usestate searchValue',
+      control: false,
+    },
+    onSearchValue: {
+      description: 'set usestate on searchValue',
+    },
+  },
+  args: {
+    loading: false,
+    variant: VARIANT_PRIMARY,
+    errorState: false,
+    sizeType: SIZE_SM,
+    disabled: false,
+    clearable: true,
+    labelNoOption: 'Sin opciones',
+    buttonClearProps: {
+      variant: VARIANT_OUTLINE_PRIMARY,
+    },
+    renderItem: undefined,
   },
 } satisfies Meta<typeof InputSearch>;
 
@@ -149,21 +172,7 @@ const useSearchApi = () => {
   return { searchValue, setSearchValue, selected, setSelected, options };
 };
 
-const DEFAULT_DATA: Partial<IInputSearch<ObjetoOString>> = {
-  loading: false,
-  variant: VARIANT_PRIMARY,
-  errorState: false,
-  sizeType: SIZE_SM,
-  disabled: false,
-  clearable: true,
-  labelNoOption: 'Sin opciones',
-  buttonClearProps: {
-    variant: VARIANT_OUTLINE_PRIMARY,
-  },
-};
-
 export const Default: Story = {
-  args: { ...DEFAULT_DATA },
   render: function Render(args) {
     const { selected, searchValue, options, setSelected, setSearchValue } =
       useSearchApi();
@@ -174,8 +183,44 @@ export const Default: Story = {
           {...args}
           value={selected}
           options={options}
-          searchValue={searchValue}
           onChange={val => setSelected(val)}
+          searchValue={searchValue}
+          onSearchValue={val => setSearchValue(val)}
+        />
+      </div>
+    );
+  },
+};
+
+const customItem = (val: IOptionInputSearch<Character>) => {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar {...AvatarStorie.args} size="sm" src={val.value.image} />
+      <div>
+        <p>{val.label}</p>
+        <span className="text-xs text-base-300">{val.value.origin.name}</span>
+      </div>
+    </div>
+  );
+};
+
+export const CustomItem: Story = {
+  args: {
+    ...Default.args,
+    renderItem: val => customItem(val as IOptionInputSearch<Character>),
+  },
+  render: function Render(args) {
+    const { selected, searchValue, options, setSelected, setSearchValue } =
+      useSearchApi();
+
+    return (
+      <div className="flex h-96">
+        <InputSearch
+          {...args}
+          value={selected}
+          options={options}
+          onChange={val => setSelected(val)}
+          searchValue={searchValue}
           onSearchValue={val => setSearchValue(val)}
         />
       </div>

@@ -72,7 +72,14 @@ export interface IInputSearch<T extends ObjetoOString> extends defaultInput {
   children?: ReactNode;
   buttonClearProps?: Omit<
     IButton,
-    'onClick' | 'disabled' | 'type' | 'className' | 'style' | 'children'
+    | 'block'
+    | 'onClick'
+    | 'disabled'
+    | 'type'
+    | 'className'
+    | 'style'
+    | 'size'
+    | 'children'
   >;
   renderItem?: (val: OptionInputSearch<T>) => ReactNode;
 }
