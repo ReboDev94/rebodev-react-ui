@@ -4,7 +4,7 @@ import Dropdown from '.';
 import Avatar from '../Avatar';
 
 const meta = {
-  title: 'DATA INPUT/Dropdown',
+  title: 'GENERAL/Dropdown',
   component: Dropdown,
   tags: ['autodocs'],
   argTypes: {
