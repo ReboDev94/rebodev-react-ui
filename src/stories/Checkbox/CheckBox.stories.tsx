@@ -4,7 +4,7 @@ import { ALL_SIZES, SIZE_XS, VARIANT_ERROR } from '../constants';
 import { VARIANTS_CHECKBOX } from './interfaces';
 
 const meta = {
-  title: 'GENERAL/CheckBox',
+  title: 'DATA INPUT/CheckBox',
   component: Checkbox,
   tags: ['autodocs'],
   parameters: {

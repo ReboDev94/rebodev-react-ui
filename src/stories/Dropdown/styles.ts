@@ -9,14 +9,14 @@ import {
 } from '../constants';
 
 export const DEFAULT_DROPDOWN_CLASSES = 'group relative inline-block';
-export const DEFAULT_DROPDOWN_TOOGLE_CLASSES = 'block m-1';
+export const DEFAULT_DROPDOWN_TOOGLE_CLASSES = 'block m-1 cursor-pointer';
 export const DEFAULT_DROPDOWN_LIST_CLASSES = `space-y-1
   bg-white
     z-[3]
     rounded-lg
     py-3
     px-2
-    shadow-[0px_0px_25px_-15px]
+    shadow-md
     absolute
     w-[10rem]
     min-w-[10rem]
