@@ -1,23 +1,18 @@
 import {
-  SIZE_LG,
-  SIZE_MD,
-  SIZE_SM,
-  SIZE_XS,
+  ALL_SIZES,
   VARIANT_BASE,
   VARIANT_ERROR,
   VARIANT_PRIMARY,
 } from '../constants';
 
-type VariantLoading =
-  | typeof VARIANT_BASE
-  | typeof VARIANT_ERROR
-  | typeof VARIANT_PRIMARY;
+export const VARIANTS_LOADING = [
+  VARIANT_BASE,
+  VARIANT_ERROR,
+  VARIANT_PRIMARY,
+] as const;
 
-type SizeLoading =
-  | typeof SIZE_XS
-  | typeof SIZE_SM
-  | typeof SIZE_MD
-  | typeof SIZE_LG;
+type VariantLoading = (typeof VARIANTS_LOADING)[number];
+type SizeLoading = (typeof ALL_SIZES)[number];
 
 export interface ILoading {
   className?: string;
