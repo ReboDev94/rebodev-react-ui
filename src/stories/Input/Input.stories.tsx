@@ -49,8 +49,6 @@ export const Default: Story<IInput> = args => {
 
 Default.args = { ...DEFAULT_ARGS, type: 'email' };
 
-export const File: Story<IInput> = args => {
-  return <Input type="file" {...args} />;
+export const File: Story<IInput> = () => {
+  return <Input {...Default.args} type="file" />;
 };
-
-File.args = DEFAULT_ARGS;
