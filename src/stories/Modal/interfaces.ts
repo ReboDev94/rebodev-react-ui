@@ -1,11 +1,7 @@
 import { ReactNode } from 'react';
-import { SIZE_LG, SIZE_MD, SIZE_SM, SIZE_XS } from '../constants';
+import { ALL_SIZES } from '../constants';
 
-type modalSize =
-  | typeof SIZE_XS
-  | typeof SIZE_SM
-  | typeof SIZE_MD
-  | typeof SIZE_LG;
+type modalSize = (typeof ALL_SIZES)[number];
 
 export interface IModal {
   value?: boolean;

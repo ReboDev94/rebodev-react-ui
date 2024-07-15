@@ -1,8 +1,8 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+import { twMerge } from 'tailwind-merge';
 import { IModal } from './interfaces';
 import BackDrop from './BackDrop';
-import { twMerge } from 'tailwind-merge';
 import {
   MODAL_CLASSES,
   MODAL_CONTAINER_CLASSES,

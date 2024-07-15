@@ -14,10 +14,10 @@ import { VARIANT_PRIMARY } from '../constants';
 
 const CollapseSidebar: React.FC<ICollapseSidebar> = ({
   title,
-  variant = VARIANT_PRIMARY,
   icon,
   className,
   children,
+  variant = VARIANT_PRIMARY,
 }) => {
   const Icon = icon;
   const [isCollapse, setisCollapse] = useState(true);
