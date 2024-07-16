@@ -60,7 +60,7 @@ const DEFAULT_ARGS: Partial<IAvatar> = {
   borderVariant: VARIANT_BASE,
   bgVariant: VARIANT_BASE,
   title: 'R',
-  src: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light',
+  src: '',
   className: '',
 };
 
