@@ -10,11 +10,11 @@ import { ISelect } from '../shared/interfaces/inputInterfaces';
 
 const Select = forwardRef<HTMLSelectElement, ISelect>((props, ref) => {
   const {
+    className,
+    children,
     sizeType = SIZE_MD,
     variant = VARIANT_PRIMARY,
     errorState = false,
-    className,
-    children,
     ...rest
   } = props;
 
