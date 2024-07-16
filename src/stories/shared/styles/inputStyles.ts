@@ -86,7 +86,7 @@ export const BASE_INPUT_TAG_DISABLED_CLASSES = [
 ];
 
 export const DEFAULT_INPUT_INTERNAL_TAG_CLASSES =
-  'p-0 h-[32px] flex-1 max-w-full border-transparent text-sm border focus:border-transparent focus:ring-0';
+  'p-0 h-[32px] flex-1 max-w-full text-sm focus:right-0 focus:outline-none';
 
 export const WRAPPER_ALL_TAGS_CLASSES = 'min-h-[32px] flex flex-wrap gap-2';
 
