@@ -28,9 +28,5 @@ const config: StorybookConfig = {
     mergeConfig(config, {
       plugins: [svgr({ include: '**/*.svg?react' })],
     }),
-  previewHead: head => `
-    ${head}
-    ${''}
-  `,
 };
 export default config;

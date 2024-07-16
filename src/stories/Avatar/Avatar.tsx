@@ -54,5 +54,4 @@ const Avatar: React.FC<IAvatar> = ({
     </div>
   );
 };
-Avatar.displayName = 'Avatar';
 export default Avatar;

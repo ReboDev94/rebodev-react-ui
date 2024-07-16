@@ -7,16 +7,16 @@ import {
   SIZE_CHECKBOX,
   VARIANT_CHECKBOX,
   WRAPPER_CHECKBOX_CLASSES,
-  WRAPPER_ICON,
+  WRAPPER_CHECKBOX_ICON,
 } from './styles';
 import { IconCheckList } from '../assets/svg';
 
 const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
   const {
-    variant = VARIANT_PRIMARY,
-    sizeCheck = SIZE_SM,
     id,
     className,
+    variant = VARIANT_PRIMARY,
+    sizeCheck = SIZE_SM,
     ...rest
   } = props;
 
@@ -37,7 +37,7 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
         )}
         {...rest}
       />
-      <span className={WRAPPER_ICON}>
+      <span className={WRAPPER_CHECKBOX_ICON}>
         <IconCheckList className={twMerge(SIZE_CHECKBOX[sizeCheck])} />
       </span>
     </label>

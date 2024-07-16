@@ -17,11 +17,11 @@ export const VARIANTS_INPUT = [
   VARIANT_BASE,
 ] as const;
 export const SIZES_INPUT = [SIZE_XS, SIZE_SM, SIZE_MD, SIZE_LG] as const;
+export const VARIANTS_TAG = [VARIANT_PRIMARY, VARIANT_BASE] as const;
 
 export type Variant = (typeof VARIANTS_INPUT)[number];
 export type Size = (typeof SIZES_INPUT)[number];
-
-export type VariantTag = typeof VARIANT_PRIMARY | typeof VARIANT_BASE;
+export type VariantTag = (typeof VARIANTS_TAG)[number];
 
 interface defaultInput {
   variant?: Variant;
@@ -37,10 +37,12 @@ export interface ITextArea
   extends TextareaHTMLAttributes<HTMLTextAreaElement>,
     Omit<defaultInput, 'sizeType'> {}
 
+type TChangeTag = (tags: string[], newTag: string) => void;
+type TRemovedTag = (tag: string) => void;
 export interface ITag extends defaultInput {
   value: string[];
-  onChange: (tags: string[], newTag: string) => void;
-  onRemoved: (tag: string) => void;
+  onChange: TChangeTag;
+  onRemoved: TRemovedTag;
   variantTag?: VariantTag;
   className?: string;
   placeholder?: string;
