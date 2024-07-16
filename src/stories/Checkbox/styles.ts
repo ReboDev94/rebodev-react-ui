@@ -8,7 +8,7 @@ import {
   SIZE_MD,
 } from '../constants';
 
-export const WRAPPER_ICON =
+export const WRAPPER_CHECKBOX_ICON =
   'absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100';
 export const WRAPPER_CHECKBOX_CLASSES =
   'relative flex items-center cursor-pointer';

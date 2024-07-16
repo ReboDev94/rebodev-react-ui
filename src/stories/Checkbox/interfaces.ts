@@ -13,7 +13,7 @@ export const VARIANTS_CHECKBOX = [
 ] as const;
 
 export type Variant = (typeof VARIANTS_CHECKBOX)[number];
-export type Size = (typeof ALL_SIZES)[number];
+type Size = (typeof ALL_SIZES)[number];
 export interface ICheckBox
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   sizeCheck?: Size;
