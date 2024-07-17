@@ -6,6 +6,7 @@ import {
   POSITION_DIVIDER,
   ALL_POSITIONS,
   ALL_ALINGS,
+  ALL_POSITIONS_LABEL,
 } from './constants';
 
 export type OmitValue<T, U> = T extends U ? never : T;
@@ -18,3 +19,4 @@ export type TallVariants = TallDefaultVariants | TallOutlineVariants;
 export type TallPositions = (typeof ALL_POSITIONS)[number];
 export type TpositionDivider = (typeof POSITION_DIVIDER)[number];
 export type TallAlings = (typeof ALL_ALINGS)[number];
+export type TallPositionLabel = (typeof ALL_POSITIONS_LABEL)[number];

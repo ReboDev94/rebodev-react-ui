@@ -69,12 +69,10 @@
   @apply top-1/2 -translate-y-1/2;
 }
 
-/* hover:bg-base-50 text-base-800 */
 .dropdown__item__li {
   @apply text-sm p-2  cursor-pointer rounded-md;
 }
 
-/* bg-base-50  text-base-400 */
 .dropdown__item__li__disabled {
   @apply cursor-not-allowed select-none;
 }

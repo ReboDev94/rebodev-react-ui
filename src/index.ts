@@ -1,6 +1,5 @@
 import {
   IDropdown,
-  IDropdownDivider,
   IDropdownItem,
   IDropdownMenu,
   IDropdownToogle,
@@ -85,7 +84,6 @@ export type {
   IDropdownToogle,
   IDropdownMenu,
   IDropdownItem,
-  IDropdownDivider,
 };
 export { default as Dropdown } from './Dropdown';
 

@@ -1,0 +1,11 @@
+.form__label__wrapper {
+  @apply flex flex-col w-full;
+}
+
+.form__label {
+  @apply text-xs;
+}
+
+.form__label__right {
+  @apply text-end;
+}

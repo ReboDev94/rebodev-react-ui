@@ -2,7 +2,7 @@ import { Meta, StoryFn as Story } from '@storybook/react';
 import FormLabel, { IFormLabel } from '.';
 import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
-import { SIZES_LABEL } from './interfaces';
+import { ALL_POSITIONS_LABEL } from '../constants';
 
 export default {
   title: 'Form/FormLabel',
@@ -22,7 +22,7 @@ export default {
     },
     position: {
       control: 'radio',
-      options: SIZES_LABEL,
+      options: ALL_POSITIONS_LABEL,
     },
   },
 } satisfies Meta<typeof FormLabel>;
