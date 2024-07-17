@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Checkbox, { ICheckBox } from '.';
-import { ALL_SIZES, SIZE_XS, VARIANT_ERROR } from '../constants';
-import { VARIANTS_CHECKBOX } from './interfaces';
+import {
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  SIZE_XS,
+  VARIANT_PRIMARY,
+} from '../constants';
+import Checkbox from '.';
 
 const meta = {
   title: 'DATA INPUT/CheckBox',
@@ -18,9 +22,9 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_CHECKBOX,
+      options: ALL_DEFAULT_VARIANTS,
     },
-    sizeCheck: {
+    size: {
       control: 'radio',
       options: ALL_SIZES,
     },
@@ -33,12 +37,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const DEFAULT_ARGS: Partial<ICheckBox> = {
+export const Default: Story = {};
+Default.args = {
   id: 'check',
-  sizeCheck: SIZE_XS,
-  variant: VARIANT_ERROR,
+  size: SIZE_XS,
+  variant: VARIANT_PRIMARY,
   className: '',
 };
-
-export const Default: Story = {};
-Default.args = DEFAULT_ARGS;

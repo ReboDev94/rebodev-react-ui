@@ -1,28 +1,22 @@
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ICheckBox } from './interfaces';
-import { VARIANT_PRIMARY, SIZE_SM } from '../constants';
-import {
-  CHECKBOX_CLASSES,
-  SIZE_CHECKBOX,
-  VARIANT_CHECKBOX,
-  WRAPPER_CHECKBOX_CLASSES,
-  WRAPPER_CHECKBOX_ICON,
-} from './styles';
+import { VARIANT_PRIMARY, SIZE_XS } from '../constants';
 import { IconCheckList } from '../assets/svg';
+import './Checkbox.styles.css';
 
 const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
   const {
     id,
     className,
     variant = VARIANT_PRIMARY,
-    sizeCheck = SIZE_SM,
+    size = SIZE_XS,
     ...rest
   } = props;
 
   return (
     <label
-      className={twMerge(WRAPPER_CHECKBOX_CLASSES, SIZE_CHECKBOX[sizeCheck])}
+      className={twMerge('checkbox__label', `checkbox__${size}`)}
       htmlFor={id}
     >
       <input
@@ -30,15 +24,16 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
         ref={ref}
         type="checkbox"
         className={twMerge(
-          CHECKBOX_CLASSES,
-          SIZE_CHECKBOX[sizeCheck],
-          VARIANT_CHECKBOX[variant],
+          'peer',
+          'checkbox',
+          `checkbox__${size}`,
+          `checkbox__${variant}`,
           className,
         )}
         {...rest}
       />
-      <span className={WRAPPER_CHECKBOX_ICON}>
-        <IconCheckList className={twMerge(SIZE_CHECKBOX[sizeCheck])} />
+      <span className={'checkbox__wrapper__icon'}>
+        <IconCheckList className={twMerge(`checkbox__${size}`)} />
       </span>
     </label>
   );
