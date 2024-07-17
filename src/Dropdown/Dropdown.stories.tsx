@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SIZE_SM } from '../constants';
 import { buttonToogle } from './interfaces';
-import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
 import Dropdown from '.';
 import Avatar from '../Avatar';
+import Divider from '../Divider';
+import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
+import { Default as DividerStorie } from '../Divider/Divider.stories';
 
 const meta = {
   title: 'GENERAL/Dropdown',
@@ -44,7 +46,7 @@ export const Default: Story = {
             >
               Item 1
             </Dropdown.Item>
-            <Dropdown.Divider />
+            <Divider {...DividerStorie.args} />
             <Dropdown.Item
               onClick={() => {
                 alert('click item 2');
@@ -52,7 +54,7 @@ export const Default: Story = {
             >
               Item 2
             </Dropdown.Item>
-            <Dropdown.Divider />
+            <Divider {...DividerStorie.args} />
             <Dropdown.Item
               onClick={() => {
                 alert('click item 3');

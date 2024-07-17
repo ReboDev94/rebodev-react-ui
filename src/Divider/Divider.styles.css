@@ -3,7 +3,7 @@
 }
 
 .divider__horizontal__xs {
-  @apply w-full h-[1.5px];
+  @apply w-full h-[1px];
 }
 
 .divider__horizontal__sm {

@@ -68,14 +68,6 @@
 .dropdown__menu__lateral__center {
   @apply top-1/2 -translate-y-1/2;
 }
-/* bg-base-100 */
-.dropdown__divider {
-  @apply h-[0.5px];
-}
-
-.dropdown__wrapper__divider {
-  @apply py-2;
-}
 
 /* hover:bg-base-50 text-base-800 */
 .dropdown__item__li {

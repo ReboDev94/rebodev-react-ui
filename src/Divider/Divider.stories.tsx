@@ -3,11 +3,11 @@ import { twMerge } from 'tailwind-merge';
 import {
   ALL_DEFAULT_VARIANTS,
   ALL_SIZES,
+  POSITION_DIVIDER,
   POSITION_HORIZONTAL,
   SIZE_XS,
   VARIANT_PRIMARY,
 } from '../constants';
-import { POSITION_DIVIDER } from './interfaces';
 import Divider from '.';
 
 const meta = {
