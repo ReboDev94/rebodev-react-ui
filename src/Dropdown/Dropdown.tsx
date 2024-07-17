@@ -1,7 +1,7 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { IDropdown } from './interfaces';
-import { DEFAULT_DROPDOWN_CLASSES } from './styles';
+import './Dropdown.styles.css';
 
 const Dropdown = React.forwardRef<HTMLDivElement, IDropdown>(
   ({ className, ...props }, ref) => {
@@ -9,7 +9,7 @@ const Dropdown = React.forwardRef<HTMLDivElement, IDropdown>(
       <div
         role="listbox"
         ref={ref}
-        className={twMerge(DEFAULT_DROPDOWN_CLASSES, className)}
+        className={twMerge('group', 'dropdown', className)}
         {...props}
       />
     );

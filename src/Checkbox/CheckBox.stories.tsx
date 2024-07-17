@@ -31,6 +31,9 @@ const meta = {
     className: {
       control: 'text',
     },
+    disabled: {
+      control: 'boolean',
+    },
   },
 } satisfies Meta<typeof Checkbox>;
 
@@ -42,5 +45,6 @@ Default.args = {
   id: 'check',
   size: SIZE_XS,
   variant: VARIANT_PRIMARY,
+  disabled: false,
   className: '',
 };

@@ -1,12 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { IDropdownMenu } from './interfaces';
-import {
-  ALIGN_LATERAL_TYPE,
-  ALIGN_VERTICAL_TYPE,
-  DEFAULT_DROPDOWN_LIST_CLASSES,
-  POSITION_TYPE,
-} from './styles';
 import { ALING_START, POSITION_BOTTOM, POSITION_TOP } from '../constants';
 
 const DropdownMenu: React.FC<IDropdownMenu> = ({
@@ -21,11 +15,11 @@ const DropdownMenu: React.FC<IDropdownMenu> = ({
       role="menu"
       tabIndex={0}
       className={twMerge(
-        DEFAULT_DROPDOWN_LIST_CLASSES,
-        POSITION_TYPE[position],
+        'dropdown__menu',
+        `dropdown__menu__${position}`,
         [POSITION_TOP, POSITION_BOTTOM].includes(position)
-          ? ALIGN_VERTICAL_TYPE[align]
-          : ALIGN_LATERAL_TYPE[align],
+          ? `dropdown__menu__vertical__${align}`
+          : `dropdown__menu__lateral__${align}`,
         className,
       )}
     />

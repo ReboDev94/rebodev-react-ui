@@ -1,9 +1,5 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import {
-  DEFAULT_DROPDOWN_LI_CLASSES,
-  DISABLED_DROPDOWN_LI_CLASSES,
-} from './styles';
 import { IDropdownItem } from './interfaces';
 
 const DropdownItem: React.FC<IDropdownItem> = ({
@@ -18,8 +14,8 @@ const DropdownItem: React.FC<IDropdownItem> = ({
       tabIndex={0}
       onClick={() => !disabled && onClick && onClick()}
       className={twMerge(
-        DEFAULT_DROPDOWN_LI_CLASSES,
-        disabled && DISABLED_DROPDOWN_LI_CLASSES,
+        'dropdown__item__li',
+        disabled && 'dropdown__item__li__disabled',
         className,
       )}
     >
