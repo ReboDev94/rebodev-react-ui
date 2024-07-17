@@ -5,7 +5,7 @@ import {
   ALL_SIZES,
   ALL_VARIANTS,
   SHAPE_CIRCLE,
-  SIZE_MD,
+  SIZE_SM,
   VARIANT_PRIMARY,
 } from '../constants';
 
@@ -51,7 +51,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 Default.args = {
-  size: SIZE_MD,
+  size: SIZE_SM,
   shape: SHAPE_CIRCLE,
   border: false,
   variant: VARIANT_PRIMARY,

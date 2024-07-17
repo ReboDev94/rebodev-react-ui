@@ -1,10 +1,9 @@
 import { twMerge } from 'tailwind-merge';
 import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
-import imageLogo from '../assets/img/logo.png';
-import { MENU_DATA_DUMMY } from '../utils';
 import Sidebar from '.';
 import Menu from '../Menu';
+import { IconSearch, IconX } from '../assets/svg';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'GENERAL/Sidebar',
@@ -27,11 +26,6 @@ export default meta;
 
 type Story = StoryObj<typeof Sidebar>;
 
-const logo = {
-  src: imageLogo,
-  alt: 'Logo',
-};
-
 export const Default: Story = {
   args: {
     width: 250,
@@ -47,23 +41,26 @@ export const Default: Story = {
     return (
       <div className="flex">
         <Sidebar {...args}>
-          <Sidebar.Header>
-            <img src={logo.src} alt={logo.alt} className="h-20" />
-          </Sidebar.Header>
+          <Sidebar.Header>LOGO</Sidebar.Header>
           <Sidebar.Content className="px-5 py-6">
             <Sidebar.Category title="Menu" />
             <Menu {...args}>
-              {MENU_DATA_DUMMY.map(({ title, icon, url, active }) => (
-                <Menu.ItemSidebar
-                  key={title}
-                  active={active}
-                  onClick={() => {
-                    console.log(`click ${title} - ${url}`);
-                  }}
-                  title={title}
-                  icon={icon}
-                />
-              ))}
+              <Menu.ItemSidebar
+                active={true}
+                onClick={() => {
+                  console.log(`click Dashboard`);
+                }}
+                title="Dashboard"
+                icon={IconX}
+              />
+              <Menu.ItemSidebar
+                active={false}
+                onClick={() => {
+                  console.log(`click Users`);
+                }}
+                title="Users"
+                icon={IconSearch}
+              />
             </Menu>
           </Sidebar.Content>
           <Sidebar.Footer>
