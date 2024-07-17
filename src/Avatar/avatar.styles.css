@@ -1,0 +1,61 @@
+.avatar {
+  @apply shadow-md grid place-content-center;
+}
+.avatar__circle {
+  @apply rounded-full;
+}
+.avatar__squared {
+  @apply rounded-md;
+}
+
+.avatar__xs {
+  @apply h-10 w-10 min-h-[2.5rem] min-w-[2.5rem] text-sm;
+}
+
+.avatar__sm {
+  @apply h-14 w-14 min-h-[3.5rem] min-w-[3.5rem] text-lg;
+}
+
+.avatar__md {
+  @apply h-24 w-24 min-h-[6rem] min-w-[6rem] text-3xl;
+}
+
+.avatar__lg {
+  @apply h-32 w-32 min-h-[8rem] min-w-[8rem] text-5xl;
+}
+
+.avatar__bordered {
+  @apply outline outline-offset-[3px] m-1;
+}
+
+.avatar__primary {
+  @apply outline-primary bg-primary text-light;
+}
+
+.avatar__secondary {
+  @apply outline-secondary bg-secondary text-light;
+}
+
+.avatar__success {
+  @apply outline-success bg-success text-light;
+}
+
+.avatar__error {
+  @apply outline-error bg-error text-light;
+}
+
+.avatar__warning {
+  @apply outline-warning bg-warning text-dark;
+}
+
+.avatar__info {
+  @apply outline-info bg-info text-dark;
+}
+
+.avatar__light {
+  @apply outline-light bg-light text-dark;
+}
+
+.avatar__dark {
+  @apply outline-dark bg-dark text-light;
+}

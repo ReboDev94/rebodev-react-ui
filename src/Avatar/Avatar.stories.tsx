@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Avatar, { IAvatar } from '.';
+import Avatar from '.';
 import {
   ALL_SHAPES,
   ALL_SIZES,
+  ALL_VARIANTS,
   SHAPE_CIRCLE,
   SIZE_MD,
-  VARIANT_BASE,
+  VARIANT_PRIMARY,
 } from '../constants';
-import { VARIANTS_AVATAR } from './interfaces';
 
 const meta = {
   title: 'GENERAL/Avatar',
@@ -30,13 +30,9 @@ const meta = {
     border: {
       control: 'boolean',
     },
-    borderVariant: {
+    variant: {
       control: 'radio',
-      options: VARIANTS_AVATAR,
-    },
-    bgVariant: {
-      control: 'radio',
-      options: VARIANTS_AVATAR,
+      options: ALL_VARIANTS,
     },
     title: {
       control: 'text',
@@ -53,16 +49,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const DEFAULT_ARGS: Partial<IAvatar> = {
+export const Default: Story = {};
+Default.args = {
   size: SIZE_MD,
   shape: SHAPE_CIRCLE,
   border: false,
-  borderVariant: VARIANT_BASE,
-  bgVariant: VARIANT_BASE,
+  variant: VARIANT_PRIMARY,
   title: 'R',
   src: '',
   className: '',
 };
-
-export const Default: Story = {};
-Default.args = DEFAULT_ARGS;
