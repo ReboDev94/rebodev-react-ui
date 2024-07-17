@@ -4,6 +4,7 @@ import {
   ALL_SIZES,
   ALL_DEFAULT_VARIANTS,
 } from './constants';
+export type OmitValue<T, U> = T extends U ? never : T;
 
 export type TallSizes = (typeof ALL_SIZES)[number];
 export type TallShapes = (typeof ALL_SHAPES)[number];
