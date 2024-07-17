@@ -1,30 +1,25 @@
 import React from 'react';
 import { twMerge, twJoin } from 'tailwind-merge';
-import {
-  BASE_BUTTON_CLASSES,
-  BLOCK_BUTTON_CLASSES,
-  SIZE_BTNS,
-  TYPE_BTNS,
-} from './styles';
 import { IButton } from './interfaces';
-import { SIZE_MD, VARIANT_PRIMARY } from '../constants';
+import { SIZE_SM, VARIANT_PRIMARY } from '../constants';
+import './Button.styles.css';
 
 const Button: React.FC<IButton> = ({
-  variant = VARIANT_PRIMARY,
-  size = SIZE_MD,
-  block = false,
   children,
   className,
+  variant = VARIANT_PRIMARY,
+  size = SIZE_SM,
+  block = false,
   ...props
 }) => {
   return (
     <button
       className={twMerge(
         twJoin(
-          BASE_BUTTON_CLASSES,
-          TYPE_BTNS[variant],
-          SIZE_BTNS[size],
-          block && BLOCK_BUTTON_CLASSES,
+          'button',
+          `button__${variant}`,
+          `button__${size}`,
+          block && 'button__block',
           className,
         ),
       )}

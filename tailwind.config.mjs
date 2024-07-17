@@ -12,10 +12,6 @@ export default {
         info: '#9BB8D3',
         light: '#E3E8F1',
         dark: '#27363B',
-        // primary: {
-        // base: {
-        // error: {
-        // success: {
       },
     },
   },

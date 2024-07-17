@@ -1,0 +1,99 @@
+.button {
+  @apply px-4
+  inline-block
+  text-center
+  rounded-md
+  font-medium
+  outline-none
+  focus:ring-4
+  transform
+  active:scale-95
+  transition-transform
+  disabled:cursor-not-allowed
+  disabled:active:scale-100
+  disabled:opacity-50;
+}
+
+.button__primary {
+  @apply bg-primary/95 hover:bg-primary text-light focus:ring-primary/10 fill-primary disabled:hover:bg-primary/95;
+}
+
+.button__secondary {
+  @apply bg-secondary/95 hover:bg-secondary text-light focus:ring-secondary/10 fill-secondary disabled:hover:bg-secondary/95;
+}
+
+.button__success {
+  @apply bg-success/95 hover:bg-success text-light focus:ring-success/10 fill-success disabled:hover:bg-success/95;
+}
+
+.button__error {
+  @apply bg-error/95 hover:bg-error text-light focus:ring-error/10 fill-error disabled:hover:bg-error/95;
+}
+
+.button__warning {
+  @apply bg-warning/95 hover:bg-warning text-dark focus:ring-warning/10 fill-warning disabled:hover:bg-warning/95;
+}
+
+.button__info {
+  @apply bg-info/95 hover:bg-info text-dark focus:ring-info/10 fill-info disabled:hover:bg-info/95;
+}
+
+.button__light {
+  @apply bg-light/95 hover:bg-light text-dark focus:ring-light/10 fill-light disabled:hover:bg-light/95;
+}
+
+.button__dark {
+  @apply bg-dark/95 hover:bg-dark text-light focus:ring-dark/10 fill-dark disabled:hover:bg-dark/95;
+}
+
+.button__outline-primary {
+  @apply focus:ring-primary/10 border-2 border-primary text-primary;
+}
+
+.button__outline-secondary {
+  @apply focus:ring-secondary/10 border-2 border-secondary text-secondary;
+}
+
+.button__outline-success {
+  @apply focus:ring-success/10 border-2 border-success text-success;
+}
+
+.button__outline-error {
+  @apply focus:ring-error/10 border-2 border-error text-error;
+}
+
+.button__outline-warning {
+  @apply focus:ring-warning/10 border-2 border-warning text-warning;
+}
+
+.button__outline-info {
+  @apply focus:ring-info/10 border-2 border-info text-info;
+}
+
+.button__outline-light {
+  @apply focus:ring-light/50  text-dark;
+}
+
+.button__outline-dark {
+  @apply focus:ring-dark/10 border-2 border-dark text-dark;
+}
+
+.button__block {
+  @apply w-full;
+}
+
+.button__xs {
+  @apply h-8 min-w-[2rem] text-xs;
+}
+
+.button__sm {
+  @apply h-9 min-w-[2.25rem] text-sm;
+}
+
+.button__md {
+  @apply h-10 min-w-[2.5rem] text-sm;
+}
+
+.button__lg {
+  @apply h-12 min-w-[3rem] text-base;
+}

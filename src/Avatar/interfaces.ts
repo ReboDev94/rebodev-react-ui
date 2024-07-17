@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
-import { TallShapes, TallSizes, TallVariant } from '../types';
+import { TallShapes, TallSizes, TallDefaultVariants } from '../types';
 
 export interface IAvatar {
   size?: TallSizes;
   shape?: TallShapes;
   border?: boolean;
-  variant?: TallVariant;
+  variant?: TallDefaultVariants;
   className?: string;
   title?: string;
   src?: string;

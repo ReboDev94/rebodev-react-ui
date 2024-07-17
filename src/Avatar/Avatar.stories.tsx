@@ -3,7 +3,7 @@ import Avatar from '.';
 import {
   ALL_SHAPES,
   ALL_SIZES,
-  ALL_VARIANTS,
+  ALL_DEFAULT_VARIANTS,
   SHAPE_CIRCLE,
   SIZE_SM,
   VARIANT_PRIMARY,
@@ -32,7 +32,7 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: ALL_VARIANTS,
+      options: ALL_DEFAULT_VARIANTS,
     },
     title: {
       control: 'text',

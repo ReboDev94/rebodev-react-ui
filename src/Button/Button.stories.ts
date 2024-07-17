@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ALL_SIZES, SIZE_MD, VARIANT_PRIMARY } from '../constants';
-import Button, { IButton } from '.';
-import { VARIANT_BTN } from './interfaces';
+import {
+  ALL_SIZES,
+  ALL_VARIANTS,
+  SIZE_SM,
+  VARIANT_PRIMARY,
+} from '../constants';
+import Button from '.';
 
 const meta = {
   title: 'GENERAL/Button',
@@ -14,7 +18,7 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: VARIANT_BTN,
+      options: ALL_VARIANTS,
     },
     block: {
       control: 'boolean',
@@ -28,13 +32,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const DEFAULT_ARGS: Partial<IButton> = {
+export const Default: Story = {};
+Default.args = {
   variant: VARIANT_PRIMARY,
-  size: SIZE_MD,
+  size: SIZE_SM,
   block: false,
   disabled: false,
   children: 'Button',
 };
-
-export const Default: Story = {};
-Default.args = DEFAULT_ARGS;
