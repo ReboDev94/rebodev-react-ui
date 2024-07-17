@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { IFormGroupMaterial } from './interfaces';
+import { IInputMaterial } from './interfaces';
 import { BASE_LABEL_CLASSES } from './styles';
 import { VARIANT_ERROR, VARIANT_PRIMARY } from '../constants';
 import { VARIANT_INPUT_LABEL } from '../shared/styles/inputStyles';
 
-const FormGroupMaterial: React.FC<IFormGroupMaterial> = ({
+const InputMaterial: React.FC<IInputMaterial> = ({
   id,
   children,
   title,
@@ -30,4 +30,4 @@ const FormGroupMaterial: React.FC<IFormGroupMaterial> = ({
   );
 };
 
-export default FormGroupMaterial;
+export default InputMaterial;

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Variant } from '../shared/interfaces/inputInterfaces';
 
-export interface IFormGroupMaterial {
+export interface IInputMaterial {
   id: string;
   title: string;
   children: ReactNode;
