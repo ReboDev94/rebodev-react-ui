@@ -1,10 +1,10 @@
 // TODO:REMOVER
-export const VARIANT_DEFAULT = 'default';
 export const VARIANT_BASE = 'base';
 export const VARIANT_OUTLINE_BASE = 'outline-base';
 
 //--------------------------------------------
 
+export const VARIANT_DEFAULT = 'default';
 export const VARIANT_PRIMARY = 'primary';
 export const VARIANT_SECONDARY = 'secondary';
 export const VARIANT_SUCCESS = 'success';
