@@ -1,13 +1,11 @@
 import { FC, ReactNode, SVGProps } from 'react';
-import { VARIANT_BASE, VARIANT_PRIMARY } from '../constants';
+import { TallDefaultVariants } from '../types';
 
 export interface IListGroup extends React.HTMLAttributes<HTMLUListElement> {}
 
-type VariantItemListGroup = typeof VARIANT_BASE | typeof VARIANT_PRIMARY;
-
 export interface IItemListGroup {
   icon?: FC<SVGProps<SVGSVGElement>>;
-  variant?: VariantItemListGroup;
+  variant?: TallDefaultVariants;
   className?: string;
   children: ReactNode;
 }

@@ -1,31 +1,28 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { IItemListGroup } from './interfaces';
-import {
-  DEFAULT_ITEM_LIST_GROUP_CLASSES,
-  ICON_ITEM_CLASSES,
-  TYPE_ITEM,
-  WRAPPER_ITEM_CLASSES,
-} from './styles';
-import { VARIANT_BASE } from '../constants';
+import { VARIANT_PRIMARY } from '../constants';
 
 const ListItem: React.FC<IItemListGroup> = ({
-  variant = VARIANT_BASE,
   icon,
   children,
   className,
+  variant = VARIANT_PRIMARY,
 }) => {
   const Icon = icon;
   return (
     <li
       className={twMerge(
-        DEFAULT_ITEM_LIST_GROUP_CLASSES,
-        TYPE_ITEM[variant],
+        'group',
+        'list__group__item',
+        `list__group__item__${variant}`,
         className,
       )}
     >
-      <div className={WRAPPER_ITEM_CLASSES}>
-        {Icon && <Icon className={twMerge(ICON_ITEM_CLASSES)} />}
+      <div className={'list__group__item__wrapper'}>
+        {Icon && (
+          <Icon className={twMerge('list__group__item__wrapper__icon')} />
+        )}
         {children}
       </div>
     </li>

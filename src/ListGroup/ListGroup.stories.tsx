@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconX } from '../assets/svg';
 import ListGroup from '.';
-import { ArrowDownIcon, IconSearch, IconX } from '../assets/svg';
 
 const meta = {
   title: 'GENERAL/ListGroup',
@@ -28,18 +28,33 @@ export const Default: Story = {
   },
 };
 
-export const Item: Story = {
+export const ItemVariant: Story = {
   render: function Render(args) {
     return (
       <ListGroup {...args}>
-        <ListGroup.Item icon={ArrowDownIcon} variant="primary">
+        <ListGroup.Item icon={IconX} variant="primary">
           Item 1
         </ListGroup.Item>
-        <ListGroup.Item icon={IconX} variant="primary">
+        <ListGroup.Item icon={IconX} variant="secondary">
           Item 2
         </ListGroup.Item>
-        <ListGroup.Item icon={IconSearch} variant="primary">
+        <ListGroup.Item icon={IconX} variant="success">
           Item 3
+        </ListGroup.Item>
+        <ListGroup.Item icon={IconX} variant="error">
+          Item 4
+        </ListGroup.Item>
+        <ListGroup.Item icon={IconX} variant="warning">
+          Item 5
+        </ListGroup.Item>
+        <ListGroup.Item icon={IconX} variant="info">
+          Item 6
+        </ListGroup.Item>
+        <ListGroup.Item icon={IconX} variant="light">
+          Item 7
+        </ListGroup.Item>
+        <ListGroup.Item icon={IconX} variant="dark">
+          Item 8
         </ListGroup.Item>
       </ListGroup>
     );
