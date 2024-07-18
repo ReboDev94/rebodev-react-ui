@@ -1,11 +1,9 @@
 import { ReactNode } from 'react';
-import { ALL_SIZES } from '../constants';
-
-type modalSize = (typeof ALL_SIZES)[number];
+import { TallSizes } from '../types';
 
 export interface IModal {
   value?: boolean;
-  size?: modalSize;
+  size?: TallSizes;
   backdrop?: boolean;
   className?: string;
   center?: boolean;
