@@ -47,10 +47,3 @@ export interface ITag extends defaultInput {
   placeholder?: string;
   disabled?: boolean;
 }
-
-export interface ISelect
-  extends React.SelectHTMLAttributes<HTMLSelectElement>,
-    defaultInput {}
-export interface ISelectOption
-  extends React.OptionHTMLAttributes<HTMLOptionElement> {}
-

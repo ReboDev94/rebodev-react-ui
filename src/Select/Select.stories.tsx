@@ -1,27 +1,26 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
-import {
-  SIZES_INPUT,
-  VARIANTS_INPUT,
-} from '../shared/interfaces/inputInterfaces';
 import Select, { ISelect } from '.';
-import { SIZE_SM, VARIANT_PRIMARY } from '../constants';
+import {
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  SIZE_SM,
+  VARIANT_PRIMARY,
+} from '../constants';
 
 export default {
   title: 'DATA INPUT/Select',
   component: Select,
   tags: ['autodocs'],
   argTypes: {
-    sizeType: {
+    size: {
       control: 'radio',
-      options: SIZES_INPUT,
+      options: ALL_SIZES,
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
+      options: ALL_DEFAULT_VARIANTS,
     },
-    errorState: {
-      control: 'boolean',
-    },
+
     className: {
       control: 'text',
     },
@@ -42,9 +41,8 @@ export const Default: Story<ISelect> = args => {
 };
 
 Default.args = {
-  sizeType: SIZE_SM,
+  size: SIZE_SM,
   variant: VARIANT_PRIMARY,
-  errorState: false,
   disabled: false,
   className: '',
 };
