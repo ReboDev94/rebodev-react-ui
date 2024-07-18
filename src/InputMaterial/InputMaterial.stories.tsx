@@ -33,8 +33,8 @@ export const Default: Story<IInputMaterial> = args => {
     <InputMaterial {...args}>
       <Input
         {...InputStorie.args}
-        variant={args.variant}
-        errorState={args.errorState}
+        // variant={args.variant}
+        // errorState={args.errorState}
         type="email"
         id="email"
         placeholder=" "

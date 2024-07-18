@@ -72,9 +72,9 @@ const InputSearch = <T extends ObjetoOString>({
           <Input
             value={searchValue}
             onChange={e => onSearchValue(e.target.value)}
-            variant={variant}
-            errorState={errorState}
-            sizeType={sizeType}
+            // variant={variant}
+            // errorState={errorState}
+            // sizeType={sizeType}
             placeholder={value ? value.label : 'Selecciona una opción'}
             className={twMerge(value && 'placeholder:font-bold placeholder:text-base-500')}
             onFocus={() => setShowList(true)}
