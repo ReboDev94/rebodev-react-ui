@@ -1,46 +1,36 @@
-import { forwardRef, useMemo } from 'react';
+import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { IInput } from '../shared/interfaces/inputInterfaces';
-import {
-  BASE_INPUT_CLASSES,
-  BASE_INPUT_FILE_CLASSES,
-  SIZE_INPUT,
-  TYPE_INPUT,
-} from '../shared/styles/inputStyles';
+import { VARIANT_PRIMARY, SIZE_SM } from '../constants';
+import { Iinput } from '../shared/input/input.interfaces';
+import '../shared/input/input.styles.css';
 
-import { VARIANT_ERROR, VARIANT_PRIMARY, SIZE_MD } from '../constants';
-
-const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
+const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
   const {
-    sizeType = SIZE_MD,
-    variant = VARIANT_PRIMARY,
-    errorState = false,
     type,
     className,
+    size = SIZE_SM,
+    variant = VARIANT_PRIMARY,
     ...rest
   } = props;
-
-  const variantClasses = useMemo(
-    () => TYPE_INPUT[errorState ? VARIANT_ERROR : variant],
-    [errorState, variant],
-  );
 
   return (
     <input
       ref={ref}
       type={type}
-      className={twMerge(
-        BASE_INPUT_CLASSES,
-        SIZE_INPUT[sizeType],
-        variantClasses,
-        type === 'file' && BASE_INPUT_FILE_CLASSES,
-        className,
-      )}
+      className={
+        twMerge(
+          'peer',
+          'input',
+          `input__${size}`,
+          `input__${variant}`,
+          type === 'file' && 'input__file',
+          className,
+        )
+      }
       {...rest}
     />
   );
 });
 
 Input.displayName = 'Input';
-
 export default Input;

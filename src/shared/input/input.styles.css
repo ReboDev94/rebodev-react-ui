@@ -1,0 +1,101 @@
+.input {
+  @apply bg-white
+  block
+  w-full
+  rounded-lg
+  shadow-sm
+  border
+  border-solid
+  focus:border
+  focus:ring-1
+  focus:outline-none
+  border-dark/30
+  disabled:opacity-50
+  placeholder:text-dark/40
+  disabled:cursor-not-allowed
+  focus-within:ring-1;
+}
+
+.input__file {
+  @apply !p-0 file:px-2 file:py-2.5 file:border-none;
+}
+
+.input__xs {
+  @apply h-[36px] px-2 py-2 text-xs;
+}
+
+.input__sm {
+  @apply h-[40px] px-2 py-2.5 text-sm;
+}
+
+.input__md {
+  @apply h-[42px] px-2 py-2.5;
+}
+
+.input__lg {
+  @apply h-[48px] px-2 py-2.5;
+}
+
+.input__primary {
+  @apply focus:ring-primary/80
+  caret-primary
+  focus:border-primary
+  focus-within:ring-primary
+  focus-within:border-primary;
+}
+
+.input__secondary {
+  @apply focus:ring-secondary/80
+  caret-secondary
+  focus:border-secondary
+  focus-within:ring-secondary
+  focus-within:border-secondary;
+}
+
+.input__success {
+  @apply focus:ring-success/80
+  caret-success
+  focus:border-success
+  focus-within:ring-success
+  focus-within:border-success;
+}
+
+.input__error {
+  @apply focus:ring-error/80
+  caret-error
+  focus:border-error
+  focus-within:ring-error
+  focus-within:border-error;
+}
+
+.input__warning {
+  @apply focus:ring-warning/80
+  caret-warning
+  focus:border-warning
+  focus-within:ring-warning
+  focus-within:border-warning;
+}
+
+.input__info {
+  @apply focus:ring-info/80
+  caret-info
+  focus:border-info
+  focus-within:ring-info
+  focus-within:border-info;
+}
+
+.input__light {
+  @apply focus:ring-light/80
+  caret-light
+  focus:border-light
+  focus-within:ring-light
+  focus-within:border-light;
+}
+
+.input__dark {
+  @apply focus:ring-dark/80
+  caret-dark
+  focus:border-dark
+  focus-within:ring-dark
+  focus-within:border-dark;
+}

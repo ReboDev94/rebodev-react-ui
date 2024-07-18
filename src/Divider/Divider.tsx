@@ -1,23 +1,21 @@
 import React from 'react';
-import { IDivider, TDataDivider } from './interfaces';
-import { SIZE_XS, VARIANT_BASE, POSITION_HORIZONTAL } from '../constants';
+import { IDivider } from './interfaces';
+import { SIZE_XS, POSITION_HORIZONTAL, VARIANT_PRIMARY } from '../constants';
 import { twMerge } from 'tailwind-merge';
-import { DATA_DIVIDER, DEFAULT_DIVIDER_CLASSES, TYPE_DIVIDER } from './styles';
+import './Divider.styles.css';
 
 const Divider: React.FC<IDivider> = ({
   className,
-  variant = VARIANT_BASE,
+  variant = VARIANT_PRIMARY,
   size = SIZE_XS,
   position = POSITION_HORIZONTAL,
 }) => {
   return (
     <div
       className={twMerge(
-        DEFAULT_DIVIDER_CLASSES,
-        TYPE_DIVIDER[variant],
-        DATA_DIVIDER[
-          `${position.toUpperCase()}_${size.toUpperCase()}_CLASSES` as TDataDivider
-        ],
+        'divider',
+        `divider__${variant}`,
+        `divider__${position}__${size}`,
         className,
       )}
     />

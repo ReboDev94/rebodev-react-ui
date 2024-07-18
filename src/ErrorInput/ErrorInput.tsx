@@ -1,29 +1,11 @@
 import React from 'react';
-import { IErrorInput } from './interfaces';
-import { VARIANT_ERROR } from '../constants';
 import { twMerge } from 'tailwind-merge';
-import {
-  ERROR_INPUT_DEFAULT_CLASSES,
-  TYPE_ERROR_INPUT,
-} from '../shared/styles/inputStyles';
+import { IErrorInput } from './interfaces';
+import './ErrorInput.styles.css';
 
-const ErrorInput: React.FC<IErrorInput> = ({
-  message,
-  variant = VARIANT_ERROR,
-}) => {
+const ErrorInput: React.FC<IErrorInput> = ({ message }) => {
   return (
-    <>
-      {message ? (
-        <p
-          className={twMerge(
-            ERROR_INPUT_DEFAULT_CLASSES,
-            TYPE_ERROR_INPUT[variant],
-          )}
-        >
-          {message}
-        </p>
-      ) : null}
-    </>
+    <>{message ? <p className={twMerge('error__input')}>{message}</p> : null}</>
   );
 };
 

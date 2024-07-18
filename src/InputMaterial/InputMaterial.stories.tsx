@@ -1,5 +1,5 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
-import FormGroupMaterial, { IFormGroupMaterial } from '.';
+import InputMaterial, { IInputMaterial } from '.';
 import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
 import { VARIANT_PRIMARY } from '../constants';
@@ -7,7 +7,7 @@ import { VARIANTS_INPUT } from '../shared/interfaces/inputInterfaces';
 
 export default {
   title: 'DATA INPUT/Input Material',
-  component: FormGroupMaterial,
+  component: InputMaterial,
   tags: ['autodocs'],
   parameters: {
     controls: {
@@ -26,20 +26,20 @@ export default {
       options: VARIANTS_INPUT,
     },
   },
-} satisfies Meta<typeof FormGroupMaterial>;
+} satisfies Meta<typeof InputMaterial>;
 
-export const Default: Story<IFormGroupMaterial> = args => {
+export const Default: Story<IInputMaterial> = args => {
   return (
-    <FormGroupMaterial {...args}>
+    <InputMaterial {...args}>
       <Input
         {...InputStorie.args}
-        variant={args.variant}
-        errorState={args.errorState}
+        // variant={args.variant}
+        // errorState={args.errorState}
         type="email"
         id="email"
         placeholder=" "
       />
-    </FormGroupMaterial>
+    </InputMaterial>
   );
 };
 

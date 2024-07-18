@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
+import { SIZE_SM } from '../constants';
+import { buttonToogle } from './interfaces';
 import Dropdown from '.';
 import Avatar from '../Avatar';
+import Divider from '../Divider';
+import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
+import { Default as DividerStorie } from '../Divider/Divider.stories';
 
 const meta = {
   title: 'GENERAL/Dropdown',
@@ -17,16 +21,47 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const buttonProps: buttonToogle = {
+  variant: 'primary',
+  size: SIZE_SM,
+  block: false,
+  className: '',
+};
+
 export const Default: Story = {
   render: function Render(args) {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
-          <Dropdown.Menu>
-            <Dropdown.Item>Item 1</Dropdown.Item>
-            <Dropdown.Item>Item 2</Dropdown.Item>
-            <Dropdown.Item>Item 3</Dropdown.Item>
+          <Dropdown.Toogle button buttonProps={{ ...buttonProps }}>
+            DropDown
+          </Dropdown.Toogle>
+          <Dropdown.Menu position="bottom" align="center">
+            <Dropdown.Item
+              className=""
+              onClick={() => {
+                alert('click item');
+              }}
+              disabled
+            >
+              Item 1
+            </Dropdown.Item>
+            <Divider {...DividerStorie.args} />
+            <Dropdown.Item
+              onClick={() => {
+                alert('click item 2');
+              }}
+            >
+              Item 2
+            </Dropdown.Item>
+            <Divider {...DividerStorie.args} />
+            <Dropdown.Item
+              onClick={() => {
+                alert('click item 3');
+              }}
+            >
+              Item 3
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>
@@ -38,19 +73,13 @@ Default.args = {
   className: '',
 };
 
-export const StyleToggle: Story = {
+export const DisabledToggle: Story = {
   render: function Render() {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle
-            buttonProps={{
-              variant: 'outline-primary',
-              size: 'sm',
-              block: true,
-            }}
-          >
-            Selecciona
+          <Dropdown.Toogle button disabled buttonProps={{ ...buttonProps }}>
+            DropDown
           </Dropdown.Toogle>
           <Dropdown.Menu>
             <Dropdown.Item>Item 1</Dropdown.Item>
@@ -87,7 +116,7 @@ export const PositionTop: Story = {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
           <Dropdown.Menu position="top">
             <Dropdown.Item>Item 1</Dropdown.Item>
             <Dropdown.Item>Item 2</Dropdown.Item>
@@ -99,13 +128,13 @@ export const PositionTop: Story = {
   },
 };
 
-export const AlignEnd: Story = {
+export const PositionLeft: Story = {
   render: function Render() {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
-          <Dropdown.Menu position="top" align="end">
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
+          <Dropdown.Menu position="left">
             <Dropdown.Item>Item 1</Dropdown.Item>
             <Dropdown.Item>Item 2</Dropdown.Item>
             <Dropdown.Item>Item 3</Dropdown.Item>
@@ -116,12 +145,29 @@ export const AlignEnd: Story = {
   },
 };
 
-export const AlignStart: Story = {
+export const PositionRight: Story = {
   render: function Render() {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
+          <Dropdown.Menu position="right">
+            <Dropdown.Item>Item 1</Dropdown.Item>
+            <Dropdown.Item>Item 2</Dropdown.Item>
+            <Dropdown.Item>Item 3</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+    );
+  },
+};
+
+export const AlingStart: Story = {
+  render: function Render() {
+    return (
+      <div className="grid w-full h-96 place-content-center">
+        <Dropdown {...Default.args}>
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
           <Dropdown.Menu position="top" align="start">
             <Dropdown.Item>Item 1</Dropdown.Item>
             <Dropdown.Item>Item 2</Dropdown.Item>
@@ -133,12 +179,12 @@ export const AlignStart: Story = {
   },
 };
 
-export const AlignCenter: Story = {
+export const AlingCenter: Story = {
   render: function Render() {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
           <Dropdown.Menu position="top" align="center">
             <Dropdown.Item>Item 1</Dropdown.Item>
             <Dropdown.Item>Item 2</Dropdown.Item>
@@ -150,17 +196,15 @@ export const AlignCenter: Story = {
   },
 };
 
-export const Divider: Story = {
+export const AlingEnd: Story = {
   render: function Render() {
     return (
       <div className="grid w-full h-96 place-content-center">
         <Dropdown {...Default.args}>
-          <Dropdown.Toogle>Selecciona</Dropdown.Toogle>
-          <Dropdown.Menu position="top" align="center">
+          <Dropdown.Toogle>Button</Dropdown.Toogle>
+          <Dropdown.Menu position="top" align="end">
             <Dropdown.Item>Item 1</Dropdown.Item>
-            <Dropdown.Divider />
             <Dropdown.Item>Item 2</Dropdown.Item>
-            <Dropdown.Divider />
             <Dropdown.Item>Item 3</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

@@ -1,12 +1,11 @@
 import {
   IDropdown,
-  IDropdownDivider,
   IDropdownItem,
   IDropdownMenu,
   IDropdownToogle,
 } from './Dropdown';
 import { ITag } from './Tag';
-import { IInput } from './Input';
+import { Iinput } from './Input';
 import { IModal } from './Modal';
 import { IRadio } from './Radio';
 import { IAvatar } from './Avatar';
@@ -15,7 +14,7 @@ import { ILoading } from './Loading';
 import { IDivider } from './Divider';
 import { IForm } from './Form';
 import { IFormLabel } from './FormLabel';
-import { IFormGroupMaterial } from './FormGroupMaterial';
+import { IInputMaterial } from './InputMaterial';
 import { ICheckBox } from './Checkbox';
 import { ITextArea } from './Textarea';
 import { ICard, ICardBody } from './Card';
@@ -85,7 +84,6 @@ export type {
   IDropdownToogle,
   IDropdownMenu,
   IDropdownItem,
-  IDropdownDivider,
 };
 export { default as Dropdown } from './Dropdown';
 
@@ -98,17 +96,17 @@ export type { IMenu, IItemSidebar, ICollapseSidebar };
 export { default as Menu } from './Menu';
 
 /* Form */
-export type { IForm, IFormLabel, IFormGroupMaterial };
+export type { IForm, IFormLabel, IInputMaterial };
 export { default as Form } from './Form';
 export { default as FormLabel } from './FormLabel';
-export { default as FormGroupMaterial } from './FormGroupMaterial';
+export { default as InputMaterial } from './InputMaterial';
 
 /* TextArea */
 export type { ITextArea };
 export { default as Textarea } from './Textarea';
 
 /* Input */
-export type { IInput };
+export type { Iinput };
 export { default as Input } from './Input';
 
 /* Sidebar */

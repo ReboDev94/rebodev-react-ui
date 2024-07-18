@@ -2,11 +2,9 @@ import DropdownComponente from './Dropdown';
 import DropdownItem from './DropdownItem';
 import DropdownToogle from './DropdownToogle';
 import DropdownMenu from './DropdownMenu';
-import DropdownDivider from './DropdownDivider';
 
 import {
   IDropdown,
-  IDropdownDivider,
   IDropdownItem,
   IDropdownMenu,
   IDropdownToogle,
@@ -16,7 +14,6 @@ const Dropdown = Object.assign(DropdownComponente, {
   Toogle: DropdownToogle,
   Menu: DropdownMenu,
   Item: DropdownItem,
-  Divider: DropdownDivider,
 });
 
 export default Dropdown;
@@ -25,5 +22,4 @@ export type {
   IDropdownToogle,
   IDropdownMenu,
   IDropdownItem,
-  IDropdownDivider,
 };

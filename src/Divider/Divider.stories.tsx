@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Divider, { IDivider } from '.';
+import { twMerge } from 'tailwind-merge';
 import {
+  ALL_DEFAULT_VARIANTS,
   ALL_SIZES,
+  POSITION_DIVIDER,
   POSITION_HORIZONTAL,
   SIZE_XS,
-  VARIANT_BASE,
+  VARIANT_PRIMARY,
 } from '../constants';
-import { POSITION_DIVIDER, VARIANTS_DIVIDER } from './interfaces';
-import { twMerge } from 'tailwind-merge';
+import Divider from '.';
 
 const meta = {
   title: 'GENERAL/Divider',
@@ -21,7 +22,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'radio',
-      options: VARIANTS_DIVIDER,
+      options: ALL_DEFAULT_VARIANTS.filter(item => item !== 'light'),
     },
     size: {
       control: 'radio',
@@ -39,13 +40,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const DEFAULT_ARGS: Partial<IDivider> = {
-  variant: VARIANT_BASE,
-  size: SIZE_XS,
-  position: POSITION_HORIZONTAL,
-  className: '',
-};
 
 export const Default: Story = {
   render: function Render(args) {
@@ -74,4 +68,9 @@ export const Default: Story = {
   },
 };
 
-Default.args = DEFAULT_ARGS;
+Default.args = {
+  variant: VARIANT_PRIMARY,
+  size: SIZE_XS,
+  position: POSITION_HORIZONTAL,
+  className: '',
+};
