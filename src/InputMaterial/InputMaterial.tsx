@@ -1,28 +1,21 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { IInputMaterial } from './interfaces';
-import { BASE_LABEL_CLASSES } from './styles';
-import { VARIANT_ERROR, VARIANT_PRIMARY } from '../constants';
-import { VARIANT_INPUT_LABEL } from '../shared/styles/inputStyles';
+import { VARIANT_PRIMARY } from '../constants';
+import './InputMaterial.styles.css';
 
 const InputMaterial: React.FC<IInputMaterial> = ({
   id,
   children,
   title,
-  errorState = false,
   variant = VARIANT_PRIMARY,
 }) => {
-  const variantClasses = useMemo(
-    () => VARIANT_INPUT_LABEL[errorState ? VARIANT_ERROR : variant],
-    [errorState, variant],
-  );
-
   return (
     <div className="relative">
       {children}
       <label
         htmlFor={id}
-        className={twMerge(BASE_LABEL_CLASSES, variantClasses)}
+        className={twMerge('input__material', `input__material__${variant}`)}
       >
         {title}
       </label>
