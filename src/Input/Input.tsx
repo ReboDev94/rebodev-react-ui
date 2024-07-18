@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { VARIANT_PRIMARY, SIZE_SM } from '../constants';
-import { Iinput } from '../shared/input/input.interfaces';
 import '../shared/input/input.styles.css';
+import { Iinput } from '.';
 
 const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
   const {
