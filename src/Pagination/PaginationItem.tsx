@@ -1,10 +1,5 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import {
-  ACTIVE_PAGINATION_ITEM,
-  PAGINATION_ITEM_CLASSES,
-  VARIANT_PAGINATION_ITEM,
-} from './styles';
 import { IPaginationItem } from './interfaces';
 
 const PaginationItem: React.FC<IPaginationItem> = ({
@@ -17,9 +12,10 @@ const PaginationItem: React.FC<IPaginationItem> = ({
     <button
       {...rest}
       className={twMerge(
-        PAGINATION_ITEM_CLASSES,
-        VARIANT_PAGINATION_ITEM[variant],
-        active && ACTIVE_PAGINATION_ITEM[variant],
+        'pagination__button',
+        'pagination__item',
+        `pagination__item__${variant}`,
+        active && `pagination__item__active__${variant}`,
       )}
     >
       {page}

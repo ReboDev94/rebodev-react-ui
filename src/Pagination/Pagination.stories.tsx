@@ -1,8 +1,7 @@
 import type { Meta, StoryFn as Story } from '@storybook/react';
 import Pagination, { IPagination } from '.';
 import { useArgs } from '@storybook/preview-api';
-import { VARIANTS_PAGINATION } from './interfaces';
-import { VARIANT_PRIMARY } from '../constants';
+import { ALL_DEFAULT_VARIANTS, VARIANT_PRIMARY } from '../constants';
 
 export default {
   title: 'GENERAL/Pagination',
@@ -20,7 +19,7 @@ export default {
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_PAGINATION,
+      options: ALL_DEFAULT_VARIANTS.filter(item => item !== 'light'),
     },
     visiblePages: {
       control: 'number',
