@@ -1,20 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Radio from './Radio';
-import { ALL_SIZES, SIZE_XS, VARIANT_PRIMARY } from '../constants';
-import { VARIANTS_RADIO } from './interfaces';
+import {
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  SIZE_XS,
+  VARIANT_PRIMARY,
+} from '../constants';
 
 const meta = {
   title: 'DATA INPUT/Radio',
   component: Radio,
   tags: ['autodocs'],
   argTypes: {
-    sizeRadio: {
+    size: {
       control: 'radio',
       options: ALL_SIZES,
     },
+    disabled: {
+      control: 'boolean',
+    },
     variant: {
       control: 'radio',
-      options: VARIANTS_RADIO,
+      options: ALL_DEFAULT_VARIANTS.filter(item => item !== 'light'),
     },
   },
 } satisfies Meta<typeof Radio>;
@@ -24,6 +31,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 Default.args = {
-  sizeRadio: SIZE_XS,
+  size: SIZE_XS,
+  disabled: false,
   variant: VARIANT_PRIMARY,
 };
