@@ -1,5 +1,5 @@
 import Input from './Input';
-import { IInput } from '../shared/interfaces/inputInterfaces';
+import { Iinput } from '../shared/input/input.interfaces';
 
 export default Input;
-export type { IInput };
+export type { Iinput };

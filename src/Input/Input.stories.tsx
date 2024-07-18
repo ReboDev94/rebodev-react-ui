@@ -1,26 +1,24 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
-import { SIZE_SM, VARIANT_PRIMARY } from '../constants';
 import {
-  SIZES_INPUT,
-  VARIANTS_INPUT,
-} from '../shared/interfaces/inputInterfaces';
-import Input, { IInput } from '.';
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  SIZE_SM,
+  VARIANT_PRIMARY,
+} from '../constants';
+import Input, { Iinput } from '.';
 
 export default {
   title: 'DATA INPUT/Input',
   component: Input,
   tags: ['autodocs'],
   argTypes: {
-    sizeType: {
+    size: {
       control: 'radio',
-      options: SIZES_INPUT,
+      options: ALL_SIZES,
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
-    },
-    errorState: {
-      control: 'boolean',
+      options: ALL_DEFAULT_VARIANTS,
     },
     placeholder: {
       control: 'text',
@@ -34,21 +32,19 @@ export default {
   },
 } satisfies Meta<typeof Input>;
 
-const DEFAULT_ARGS: Partial<IInput> = {
-  placeholder: 'rrrrebolledohdz@gmail.com',
-  sizeType: SIZE_SM,
-  variant: VARIANT_PRIMARY,
-  errorState: false,
-  disabled: false,
-  className: '',
-};
-
-export const Default: Story<IInput> = args => {
+export const Default: Story<Iinput> = args => {
   return <Input {...args} />;
 };
 
-Default.args = { ...DEFAULT_ARGS, type: 'email' };
+Default.args = {
+  placeholder: 'rrrrebolledohdz@gmail.com',
+  size: SIZE_SM,
+  variant: VARIANT_PRIMARY,
+  disabled: false,
+  className: '',
+  type: 'email',
+};
 
-export const File: Story<IInput> = () => {
+export const File: Story<Iinput> = () => {
   return <Input {...Default.args} type="file" />;
 };
