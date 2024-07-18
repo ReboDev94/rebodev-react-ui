@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import {
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  SIZE_XS,
+  VARIANT_PRIMARY,
+} from '../constants';
 import Loading from './Loading';
-import { ALL_SIZES, SIZE_XS, VARIANT_PRIMARY } from '../constants';
-import { VARIANTS_LOADING } from './interfaces';
 
 const meta = {
   title: 'GENERAL/Loading',
@@ -20,7 +24,7 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_LOADING,
+      options: ALL_DEFAULT_VARIANTS,
     },
   },
 } satisfies Meta<typeof Loading>;

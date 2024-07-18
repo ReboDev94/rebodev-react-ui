@@ -101,7 +101,7 @@ const InputSearch = <T extends TObjetoOString>({
         >
           {loading && (
             <div className={'input__search__wrapper__loading'}>
-              <Loading size="md" />
+              <Loading size="md" variant={variant} />
             </div>
           )}
 
