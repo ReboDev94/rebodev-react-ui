@@ -1,26 +1,16 @@
-import { forwardRef, useMemo } from 'react';
+import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ITextArea } from '../shared/interfaces/inputInterfaces';
-import { BASE_INPUT_CLASSES, TYPE_INPUT } from '../shared/styles/inputStyles';
-import { VARIANT_ERROR, VARIANT_PRIMARY } from '../constants';
+import { VARIANT_PRIMARY } from '../constants';
+import { ITextArea } from './interfaces';
+import '../shared/input/input.styles.css';
 
 const Textarea = forwardRef<HTMLTextAreaElement, ITextArea>((props, ref) => {
-  const {
-    variant = VARIANT_PRIMARY,
-    errorState = false,
-    className,
-    ...rest
-  } = props;
-
-  const variantClasses = useMemo(
-    () => TYPE_INPUT[errorState ? VARIANT_ERROR : variant],
-    [errorState, variant],
-  );
+  const { variant = VARIANT_PRIMARY, className, ...rest } = props;
 
   return (
     <textarea
       ref={ref}
-      className={twMerge(BASE_INPUT_CLASSES, variantClasses,'p-2', className)}
+      className={twMerge('input', `input__${variant}`, 'p-2 text-sm', className)}
       {...rest}
     />
   );

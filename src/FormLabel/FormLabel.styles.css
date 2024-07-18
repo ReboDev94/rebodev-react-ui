@@ -3,7 +3,7 @@
 }
 
 .form__label {
-  @apply text-xs;
+  @apply text-xs text-dark;
 }
 
 .form__label__right {

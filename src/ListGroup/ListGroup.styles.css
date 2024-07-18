@@ -1,0 +1,47 @@
+.list__group {
+  @apply w-full text-sm rounded-lg border border-dark/20 divide-y divide-dark/20;
+}
+
+.list__group__item {
+  @apply h-[42px] px-2 py-1 flex text-dark first:hover:rounded-t-lg last:hover:rounded-b-lg hover:font-semibold;
+}
+
+.list__group__item__wrapper {
+  @apply flex items-center gap-2 w-full;
+}
+
+.list__group__item__wrapper__icon {
+  @apply fill-dark h-full w-5 group-hover:fill-inherit;
+}
+
+.list__group__item__primary {
+  @apply hover:bg-primary/20 hover:text-primary fill-primary;
+}
+
+.list__group__item__secondary {
+  @apply hover:bg-secondary/20 hover:text-secondary fill-secondary;
+}
+
+.list__group__item__success {
+  @apply hover:bg-success/20 hover:text-success fill-success;
+}
+
+.list__group__item__error {
+  @apply hover:bg-error/20 hover:text-error fill-error;
+}
+
+.list__group__item__warning {
+  @apply hover:bg-warning/20 hover:text-dark fill-dark;
+}
+
+.list__group__item__info {
+  @apply hover:bg-info/20 hover:text-dark fill-dark;
+}
+
+.list__group__item__light {
+  @apply hover:bg-light/20 hover:text-dark fill-dark;
+}
+
+.list__group__item__dark {
+  @apply hover:bg-dark/20 hover:text-dark fill-dark;
+}

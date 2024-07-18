@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { PAGINATION_CLASSES } from './styles';
 import { IPagination } from './interfaces';
-import { VARIANT_PRIMARY } from '../constants/variants';
 import PaginationItem from './PaginationItem';
 import PaginationButton from './PaginationButton';
+import { VARIANT_PRIMARY } from '../constants/variants';
+import './Pagination.styles.css';
 
 const Pagination: React.FC<IPagination> = ({
   currentPage = 1,
@@ -59,7 +59,7 @@ const Pagination: React.FC<IPagination> = ({
   }, [startPage, endPage]);
 
   return (
-    <div className={twMerge(PAGINATION_CLASSES)}>
+    <div className={twMerge('pagination')}>
       <PaginationButton
         disabled={!hasPreviousPage}
         variant={variant}

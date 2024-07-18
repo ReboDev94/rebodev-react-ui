@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { ISidebar } from './interfaces';
 import { twMerge } from 'tailwind-merge';
-import { SIDEBAR_CLASSES, SIDEBAR_CONTAINER_CLASSES } from './styles';
+import './Sidebar.styles.css';
 
 const Sidebar: React.FC<ISidebar> = ({
   open,
@@ -13,17 +13,13 @@ const Sidebar: React.FC<ISidebar> = ({
   const widthSelected = useMemo(() => (open ? width : 0), [open, width]);
   return (
     <aside
-      className={twMerge(
-        SIDEBAR_CLASSES,
-        right && 'order-2 right-0',
-        className,
-      )}
+      className={twMerge('sidebar', right && 'order-2 right-0', className)}
       aria-label="Sidebar"
       style={{
         width: widthSelected,
       }}
     >
-      <div className={SIDEBAR_CONTAINER_CLASSES} style={{ width }}>
+      <div className={'sidebar__container'} style={{ width }}>
         {children}
       </div>
     </aside>

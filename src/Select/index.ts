@@ -1,6 +1,6 @@
 import SelectComponente from './Select';
 import Option from './Option';
-import { ISelect, ISelectOption } from '../shared/interfaces/inputInterfaces';
+import { ISelect, ISelectOption } from './interfaces';
 
 const Select = Object.assign(SelectComponente, {
   Option,

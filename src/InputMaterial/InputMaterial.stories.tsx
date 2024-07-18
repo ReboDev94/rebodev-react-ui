@@ -1,9 +1,8 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
 import InputMaterial, { IInputMaterial } from '.';
-import Input from '../Input';
 import { Default as InputStorie } from '../Input/Input.stories';
-import { VARIANT_PRIMARY } from '../constants';
-import { VARIANTS_INPUT } from '../shared/interfaces/inputInterfaces';
+import { ALL_DEFAULT_VARIANTS, VARIANT_PRIMARY } from '../constants';
+import Input from '../Input';
 
 export default {
   title: 'DATA INPUT/Input Material',
@@ -15,15 +14,15 @@ export default {
     },
   },
   argTypes: {
+    id: {
+      control: 'text',
+    },
     title: {
       control: 'text',
     },
-    errorState: {
-      control: 'boolean',
-    },
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
+      options: ALL_DEFAULT_VARIANTS,
     },
   },
 } satisfies Meta<typeof InputMaterial>;
@@ -33,10 +32,8 @@ export const Default: Story<IInputMaterial> = args => {
     <InputMaterial {...args}>
       <Input
         {...InputStorie.args}
-        // variant={args.variant}
-        // errorState={args.errorState}
-        type="email"
-        id="email"
+        variant={args.variant}
+        id={args.id}
         placeholder=" "
       />
     </InputMaterial>
@@ -47,5 +44,4 @@ Default.args = {
   id: 'email',
   title: 'Correo electrónico',
   variant: VARIANT_PRIMARY,
-  errorState: false,
 };

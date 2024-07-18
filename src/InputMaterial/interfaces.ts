@@ -1,10 +1,9 @@
 import { ReactNode } from 'react';
-import { Variant } from '../shared/interfaces/inputInterfaces';
+import { TallDefaultVariants } from '../types';
 
 export interface IInputMaterial {
   id: string;
   title: string;
   children: ReactNode;
-  errorState: boolean;
-  variant: Variant;
+  variant: TallDefaultVariants;
 }

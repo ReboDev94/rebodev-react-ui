@@ -25,13 +25,13 @@ import { IItemListGroup, IListGroup } from './ListGroup';
 import { ICollapseSidebar, IItemSidebar, IMenu } from './Menu';
 import { ITable, ITableBody, ITableHead, ITableRow } from './Table';
 import {
-  InputSearchProps,
+  IInputSearch,
   IOptionInputSearch,
-  TypeObjectoOrString,
+  TObjetoOString,
 } from './InputSearch';
 import { IBackDrop, ICategory, IContent, IHeader, ISidebar } from './Sidebar';
 
-export type { InputSearchProps, IOptionInputSearch, TypeObjectoOrString };
+export type { IInputSearch, IOptionInputSearch, TObjetoOString };
 export { default as InputSearch } from './InputSearch';
 
 /* Select */
@@ -79,12 +79,7 @@ export type { ITable, ITableHead, ITableRow, ITableBody };
 export { default as Table } from './Table';
 
 /* DropDown */
-export type {
-  IDropdown,
-  IDropdownToogle,
-  IDropdownMenu,
-  IDropdownItem,
-};
+export type { IDropdown, IDropdownToogle, IDropdownMenu, IDropdownItem };
 export { default as Dropdown } from './Dropdown';
 
 /* Avatar */

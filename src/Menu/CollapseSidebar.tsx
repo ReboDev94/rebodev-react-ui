@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import {
-  TYPE_ITEM_SIDEBAR,
-  ITEM_TITLE_CLASSES,
-  ITEM_WRAPPER_CLASSES,
-  ITEM_SIDEBAR_CLASSES,
-  ITEM_SIDEBAR_ICON_CLASSES,
-  ITEM_COLLAPSE_MENU_CLASSES,
-} from './styles';
 import { ICollapseSidebar } from './interfaces';
 import { ArrowDownIcon } from '../assets/svg';
 import { VARIANT_PRIMARY } from '../constants';
@@ -29,19 +21,20 @@ const CollapseSidebar: React.FC<ICollapseSidebar> = ({
           setisCollapse(!isCollapse);
         }}
         className={twMerge(
-          ITEM_SIDEBAR_CLASSES,
-          TYPE_ITEM_SIDEBAR[variant],
+          'group',
+          'menu__item__sidebar',
+          `menu__item__${variant}`,
           className,
         )}
       >
-        <div className={ITEM_WRAPPER_CLASSES}>
-          {Icon && <Icon className={twMerge(ITEM_SIDEBAR_ICON_CLASSES)} />}
+        <div className={'menu__wrapper'}>
+          {Icon && <Icon className={twMerge('menu__wrapper__icon')} />}
         </div>
-        <span className={ITEM_TITLE_CLASSES}>{title}</span>
-        <ArrowDownIcon className={twMerge(ITEM_SIDEBAR_ICON_CLASSES)} />
+        <span className={'menu__wrapper__title'}>{title}</span>
+        <ArrowDownIcon className={twMerge('menu__wrapper__icon')} />
       </div>
       <div
-        className={twMerge(ITEM_COLLAPSE_MENU_CLASSES, isCollapse && 'hidden')}
+        className={twMerge('menu__wrapper__collapse', isCollapse && 'hidden')}
       >
         {children}
       </div>

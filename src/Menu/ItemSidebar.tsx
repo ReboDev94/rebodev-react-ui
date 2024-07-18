@@ -1,14 +1,6 @@
 import React from 'react';
 import { IItemSidebar } from './interfaces';
 import { twMerge } from 'tailwind-merge';
-import {
-  ITEM_SIDEBAR_CLASSES,
-  ITEM_SIDEBAR_ICON_CLASSES,
-  ITEM_TITLE_CLASSES,
-  ITEM_WRAPPER_CLASSES,
-  TYPE_ACTIVE_ITEM_SIDEBAR,
-  TYPE_ITEM_SIDEBAR,
-} from './styles';
 import { VARIANT_PRIMARY } from '../constants';
 
 const ItemSidebar: React.FC<IItemSidebar> = ({
@@ -29,16 +21,17 @@ const ItemSidebar: React.FC<IItemSidebar> = ({
         tabIndex={0}
         onClick={onClick}
         className={twMerge(
-          ITEM_SIDEBAR_CLASSES,
-          TYPE_ITEM_SIDEBAR[variant],
-          active && TYPE_ACTIVE_ITEM_SIDEBAR[variant],
+          'group',
+          'menu__item__sidebar',
+          `menu__item__${variant}`,
+          active && `font-semibold menu__item__active__${variant}`,
           className,
         )}
       >
-        <div className={ITEM_WRAPPER_CLASSES}>
-          {Icon && <Icon className={twMerge(ITEM_SIDEBAR_ICON_CLASSES)} />}
+        <div className={'menu__wrapper'}>
+          {Icon && <Icon className={twMerge('menu__wrapper__icon')} />}
         </div>
-        <span className={ITEM_TITLE_CLASSES}>{title}</span>
+        <span className={'menu__wrapper__title'}>{title}</span>
       </div>
     </li>
   );

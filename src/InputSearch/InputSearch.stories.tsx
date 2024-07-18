@@ -1,17 +1,15 @@
+import { useEffect, useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useArgs } from '@storybook/preview-api';
-import InputSearch, { IOptionInputSearch } from '.';
-import { useEffect, useState } from 'react';
 import {
-  SIZES_INPUT,
-  VARIANTS_INPUT,
-} from '../shared/interfaces/inputInterfaces';
-import {
+  ALL_DEFAULT_VARIANTS,
+  ALL_SIZES,
+  ALL_VARIANTS,
   SIZE_SM,
-  VARIANT_OUTLINE_PRIMARY,
   VARIANT_PRIMARY,
 } from '../constants';
 import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
+import InputSearch, { IOptionInputSearch } from '.';
 import Avatar from '../Avatar';
 
 interface ApiResponse {
@@ -83,20 +81,18 @@ const meta: Meta<typeof InputSearch> = {
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
+      options: ALL_DEFAULT_VARIANTS,
     },
-    errorState: {
-      control: 'boolean',
-    },
-    sizeType: {
+    size: {
       control: 'radio',
-      options: SIZES_INPUT,
+      options: ALL_SIZES,
     },
     disabled: {
       control: 'boolean',
     },
-    buttonClearProps: {
-      control: 'object',
+    closeButtonVariant: {
+      control: 'radio',
+      options: ALL_VARIANTS,
     },
     clearable: {
       control: 'boolean',
@@ -122,14 +118,12 @@ const meta: Meta<typeof InputSearch> = {
   args: {
     loading: false,
     variant: VARIANT_PRIMARY,
-    errorState: false,
-    sizeType: SIZE_SM,
+    size: SIZE_SM,
     disabled: false,
     clearable: true,
+    placeholder: 'Selecciona una opción',
     labelNoOption: 'Sin opciones',
-    buttonClearProps: {
-      variant: VARIANT_OUTLINE_PRIMARY,
-    },
+    closeButtonVariant: VARIANT_PRIMARY,
     renderItem: undefined,
   },
 } satisfies Meta<typeof InputSearch>;
