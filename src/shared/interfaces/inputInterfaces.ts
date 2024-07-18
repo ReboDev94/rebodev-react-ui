@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react';
-import { IButton } from '../..';
+import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 import {
   SIZE_LG,
   SIZE_MD,
@@ -55,33 +54,3 @@ export interface ISelect
 export interface ISelectOption
   extends React.OptionHTMLAttributes<HTMLOptionElement> {}
 
-export type ObjetoOString = { [key: string]: any } | string;
-
-export interface OptionInputSearch<T extends ObjetoOString> {
-  value: T;
-  label: string;
-}
-export interface IInputSearch<T extends ObjetoOString> extends defaultInput {
-  searchValue: string;
-  onSearchValue: (val: string) => void;
-  clearable?: boolean;
-  disabled?: boolean;
-  loading?: boolean;
-  labelNoOption?: string;
-  value?: OptionInputSearch<T> | null;
-  onChange?: (val: OptionInputSearch<T> | null) => void;
-  options?: OptionInputSearch<T>[];
-  children?: ReactNode;
-  buttonClearProps?: Omit<
-    IButton,
-    | 'block'
-    | 'onClick'
-    | 'disabled'
-    | 'type'
-    | 'className'
-    | 'style'
-    | 'size'
-    | 'children'
-  >;
-  renderItem?: (val: OptionInputSearch<T>) => ReactNode;
-}
