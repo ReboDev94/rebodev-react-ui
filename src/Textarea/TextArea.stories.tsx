@@ -1,7 +1,6 @@
 import { Meta, StoryFn as Story } from '@storybook/react';
-import { VARIANTS_INPUT } from '../shared/interfaces/inputInterfaces';
+import { ALL_DEFAULT_VARIANTS, VARIANT_PRIMARY } from '../constants';
 import Textarea, { ITextArea } from '.';
-import { VARIANT_PRIMARY } from '../constants';
 
 export default {
   title: 'DATA INPUT/TextArea',
@@ -10,10 +9,7 @@ export default {
   argTypes: {
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
-    },
-    errorState: {
-      control: 'boolean',
+      options: ALL_DEFAULT_VARIANTS,
     },
     placeholder: {
       control: 'text',
@@ -34,7 +30,6 @@ export const Default: Story<ITextArea> = args => {
 Default.args = {
   placeholder: 'Escribe tu texto',
   variant: VARIANT_PRIMARY,
-  errorState: false,
   disabled: false,
   className: '',
 };

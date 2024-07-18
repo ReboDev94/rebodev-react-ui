@@ -18,38 +18,6 @@
   @apply select-none inline-flex items-center gap-2 border rounded-lg px-2 font-medium h-[32px];
 }
 
-.tag__wrapper__primary {
-  @apply focus-within:ring-primary focus-within:border-primary;
-}
-
-.tag__wrapper__secondary {
-  @apply focus-within:ring-secondary focus-within:border-secondary;
-}
-
-.tag__wrapper__success {
-  @apply focus-within:ring-success focus-within:border-success;
-}
-
-.tag__wrapper__error {
-  @apply focus-within:ring-error focus-within:border-error;
-}
-
-.tag__wrapper__warning {
-  @apply focus-within:ring-warning focus-within:border-warning;
-}
-
-.tag__wrapper__info {
-  @apply focus-within:ring-info focus-within:border-info;
-}
-
-.tag__wrapper__light {
-  @apply focus-within:ring-light focus-within:border-light;
-}
-
-.tag__wrapper__dark {
-  @apply focus-within:ring-dark focus-within:border-dark;
-}
-
 .tag__primary {
   @apply bg-primary text-light fill-light;
 }

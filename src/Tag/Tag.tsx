@@ -46,7 +46,7 @@ const Tag: React.FC<ITag> = ({
         'group',
         'input',
         'tag',
-        `tag__wrapper__${variant}`,
+        `input__${variant}`,
         disabled && 'opacity-50',
         className,
       )}
