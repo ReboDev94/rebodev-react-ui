@@ -65,7 +65,7 @@ export const Default: Story = {
           </Sidebar.Content>
           <Sidebar.Footer>
             <span className="text-sm font-semibold">
-              @Turink {new Date().getFullYear()}
+              @ReboDev {new Date().getFullYear()}
             </span>
           </Sidebar.Footer>
         </Sidebar>

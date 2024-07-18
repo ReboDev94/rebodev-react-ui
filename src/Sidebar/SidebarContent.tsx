@@ -1,10 +1,11 @@
-import { twMerge } from 'tailwind-merge';
-import { CONTENT_CLASSES } from './styles';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 import { IContent } from './interfaces';
 
 const SidebarContent: React.FC<IContent> = ({ children, className }) => {
-  return <div className={twMerge(CONTENT_CLASSES, className)}>{children}</div>;
+  return (
+    <div className={twMerge('sidebar__content', className)}>{children}</div>
+  );
 };
 
 export default SidebarContent;

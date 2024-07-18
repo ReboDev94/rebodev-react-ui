@@ -1,6 +1,5 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { CATEGORY_CLASSES } from './styles';
 import { ICategory } from './interfaces';
 
 const SidebarCategory: React.FC<ICategory> = ({
@@ -9,7 +8,7 @@ const SidebarCategory: React.FC<ICategory> = ({
   className,
 }) => {
   const Tag = tag;
-  return <Tag className={twMerge(CATEGORY_CLASSES, className)}>{title}</Tag>;
+  return <Tag className={twMerge('sidebar__category', className)}>{title}</Tag>;
 };
 
 export default SidebarCategory;
