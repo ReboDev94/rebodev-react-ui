@@ -36,14 +36,4 @@ export interface ITextArea
   extends TextareaHTMLAttributes<HTMLTextAreaElement>,
     Omit<defaultInput, 'sizeType'> {}
 
-type TChangeTag = (tags: string[], newTag: string) => void;
-type TRemovedTag = (tag: string) => void;
-export interface ITag extends defaultInput {
-  value: string[];
-  onChange: TChangeTag;
-  onRemoved: TRemovedTag;
-  variantTag?: VariantTag;
-  className?: string;
-  placeholder?: string;
-  disabled?: boolean;
-}
+

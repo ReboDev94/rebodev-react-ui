@@ -1,11 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Tag from '.';
-import {
-  SIZES_INPUT,
-  VARIANTS_INPUT,
-  VARIANTS_TAG,
-} from '../shared/interfaces/inputInterfaces';
-import { SIZE_XS, VARIANT_PRIMARY } from '../constants';
+import { ALL_DEFAULT_VARIANTS, VARIANT_PRIMARY } from '../constants';
 import { useState } from 'react';
 
 const meta: Meta<typeof Tag> = {
@@ -24,18 +19,7 @@ const meta: Meta<typeof Tag> = {
     },
     variant: {
       control: 'radio',
-      options: VARIANTS_INPUT,
-    },
-    errorState: {
-      control: 'boolean',
-    },
-    sizeType: {
-      control: 'radio',
-      options: SIZES_INPUT,
-    },
-    variantTag: {
-      control: 'radio',
-      options: VARIANTS_TAG,
+      options: ALL_DEFAULT_VARIANTS,
     },
     value: {
       description: 'Array values',
@@ -74,10 +58,7 @@ export const Default: Story = {
 };
 
 Default.args = {
-  variantTag: VARIANT_PRIMARY,
   variant: VARIANT_PRIMARY,
-  errorState: false,
-  sizeType: SIZE_XS,
   placeholder: 'Agrega nuevos items',
   disabled: false,
   className: '',

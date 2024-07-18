@@ -1,0 +1,83 @@
+.tag {
+  @apply min-h-[42px] focus-within:ring-1 px-2.5 py-[5px] flex items-center gap-2 flex-wrap;
+}
+
+.tag__wrapper {
+  @apply min-h-[32px] flex flex-wrap gap-2;
+}
+
+.tag__icon__close {
+  @apply h-full w-5 fill-inherit;
+}
+
+.tag__input__internal {
+  @apply p-0 h-[32px] flex-1 max-w-full text-sm focus:right-0 focus:outline-none;
+}
+
+.tag__item {
+  @apply select-none inline-flex items-center gap-2 border rounded-lg px-2 font-medium h-[32px];
+}
+
+.tag__wrapper__primary {
+  @apply focus-within:ring-primary focus-within:border-primary;
+}
+
+.tag__wrapper__secondary {
+  @apply focus-within:ring-secondary focus-within:border-secondary;
+}
+
+.tag__wrapper__success {
+  @apply focus-within:ring-success focus-within:border-success;
+}
+
+.tag__wrapper__error {
+  @apply focus-within:ring-error focus-within:border-error;
+}
+
+.tag__wrapper__warning {
+  @apply focus-within:ring-warning focus-within:border-warning;
+}
+
+.tag__wrapper__info {
+  @apply focus-within:ring-info focus-within:border-info;
+}
+
+.tag__wrapper__light {
+  @apply focus-within:ring-light focus-within:border-light;
+}
+
+.tag__wrapper__dark {
+  @apply focus-within:ring-dark focus-within:border-dark;
+}
+
+.tag__primary {
+  @apply bg-primary text-light fill-light;
+}
+
+.tag__secondary {
+  @apply bg-secondary text-light fill-light;
+}
+
+.tag__success {
+  @apply bg-success text-light fill-light;
+}
+
+.tag__error {
+  @apply bg-error text-light fill-light;
+}
+
+.tag__warning {
+  @apply bg-warning text-dark fill-dark;
+}
+
+.tag__info {
+  @apply bg-info text-dark fill-dark;
+}
+
+.tag__light {
+  @apply bg-light text-dark fill-dark;
+}
+
+.tag__dark {
+  @apply bg-dark text-light fill-light;
+}
