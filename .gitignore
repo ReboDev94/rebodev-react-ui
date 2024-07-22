@@ -25,5 +25,3 @@ dist-ssr
 *.sw?
 
 *storybook.log
-tsconfig.node.tsbuildinfo
-vite.config.js

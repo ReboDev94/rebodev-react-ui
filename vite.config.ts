@@ -29,10 +29,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({ include: '**/*.svg?react' }),
-    dts({
-      rollupTypes: true,
-      exclude: ['./lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-    }),
+    dts({ rollupTypes: true }),
   ],
   css: {
     postcss: {
