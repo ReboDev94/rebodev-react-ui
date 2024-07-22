@@ -1,0 +1,51 @@
+.loading {
+  @apply border-dark/20 animate-spin rounded-full border-2;
+}
+
+.loading__xs {
+  @apply h-4 w-4;
+}
+
+.loading__sm {
+  @apply h-5 w-5;
+}
+
+.loading__md {
+  @apply h-6 w-6;
+}
+
+.loading__lg {
+  @apply h-7 w-7;
+}
+
+.loading__primary {
+  @apply border-t-primary;
+}
+
+.loading__secondary {
+  @apply border-t-secondary;
+}
+
+.loading__success {
+  @apply border-t-success;
+}
+
+.loading__error {
+  @apply border-t-error;
+}
+
+.loading__warning {
+  @apply border-t-warning;
+}
+
+.loading__info {
+  @apply border-t-info;
+}
+
+.loading__light {
+  @apply border-t-light;
+}
+
+.loading__dark {
+  @apply border-t-dark;
+}
