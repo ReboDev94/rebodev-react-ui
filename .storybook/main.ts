@@ -1,6 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { mergeConfig } from 'vite';
-import svgr from 'vite-plugin-svgr';
+import { withoutVitePlugins } from '@storybook/builder-vite';
 
 const config: StorybookConfig = {
   stories: ['../lib/**/*.mdx', '../lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -24,9 +23,11 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-  viteFinal: config =>
-    mergeConfig(config, {
-      plugins: [svgr({ include: '**/*.svg?react' })],
-    }),
+  async viteFinal(config) {
+    return {
+      ...config,
+      plugins: await withoutVitePlugins(config.plugins, ['vite:dts']),
+    };
+  },
 };
 export default config;
