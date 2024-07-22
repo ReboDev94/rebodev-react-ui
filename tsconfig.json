@@ -23,5 +23,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["lib"],
+  "files": ["svg.custom.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import tailwindcss from 'tailwindcss';
+import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, './lib/index.ts'),
       name: 'yaret-ui',
-      fileName: (format) => `index.${format}.js`,
+      fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'tailwindcss'],
@@ -25,7 +26,14 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [react(), dts({ rollupTypes: true })],
+  plugins: [
+    react(),
+    svgr({ include: '**/*.svg?react' }),
+    dts({
+      rollupTypes: true,
+      exclude: ['./lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    }),
+  ],
   css: {
     postcss: {
       plugins: [tailwindcss],
