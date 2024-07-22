@@ -8,7 +8,7 @@ import { Default as AvatarStorie } from '../Avatar/Avatar.stories';
 import { Default as DividerStorie } from '../Divider/Divider.stories';
 
 const meta = {
-  title: 'GENERAL/Dropdown',
+  title: 'DATA INPUT/Dropdown',
   component: Dropdown,
   tags: ['autodocs'],
   argTypes: {

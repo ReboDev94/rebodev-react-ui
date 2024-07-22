@@ -5,7 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { IconSearch, IconX } from '../assets/svg';
 import { SIZE_MD, VARIANT_PRIMARY } from '../constants';
 import { IInputSearch, IOptionInputSearch, TObjetoOString } from './interfaces';
-import { Input, Button, Loading } from '../';
+import Input from '../Input';
+import Button from '../Button';
+import Loading from '../Loading';
 import './InputSearch.styles.css';
 
 const InputSearch = <T extends TObjetoOString>({
