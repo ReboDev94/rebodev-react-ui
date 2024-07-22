@@ -3,7 +3,6 @@ import { IAvatar } from './interfaces';
 import { twMerge } from 'tailwind-merge';
 import { SHAPE_CIRCLE, SIZE_SM, VARIANT_PRIMARY } from '../constants';
 import './avatar.styles.css';
-import { IconX } from '../assets/svg';
 
 const Avatar: React.FC<IAvatar> = ({
   title,
@@ -32,7 +31,6 @@ const Avatar: React.FC<IAvatar> = ({
         className,
       )}
     >
-      <IconX />
       {children && !loadImg && children}
       {!children && !loadImg && <span>{title}</span>}
       <img
