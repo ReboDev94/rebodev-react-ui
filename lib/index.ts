@@ -1,3 +1,4 @@
+import './index.css';
 import {
   IDropdown,
   IDropdownItem,
