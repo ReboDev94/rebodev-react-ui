@@ -14,7 +14,13 @@
     "noEmit": true,
     "declaration": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./dist/index.d.ts"],
+    "typeRoots": [
+      "./dist/index.d.ts",
+      "./node_modules/@types",
+      "./node_modules/@microsoft",
+      "./node_modules"
+    ],
+    "types": ["vitest/globals"],
 
     /* Linting */
     "strict": true,

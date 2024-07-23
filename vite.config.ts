@@ -1,3 +1,4 @@
+import 'vitest/config';
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
@@ -31,12 +32,22 @@ export default defineConfig({
     svgr({ include: '**/*.svg?react' }),
     dts({
       rollupTypes: true,
-      exclude: ['**/*.stories.ts', '**/*.stories.tsx'],
+      exclude: ['**/*.stories.ts', '**/*.stories.tsx', '**/*.test.tsx'],
     }),
   ],
   css: {
     postcss: {
       plugins: [tailwindcss],
+    },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['**/*.test.tsx'],
+    css: false,
+    coverage: {
+      include: ['lib'],
+      exclude: ['**/*.stories.tsx', '**/*.ts'],
     },
   },
 });
