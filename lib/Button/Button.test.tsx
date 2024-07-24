@@ -1,5 +1,6 @@
 import { cleanup, render, screen, fireEvent } from '@testing-library/react';
-import Button from './Button';
+import { TallSizes, TallVariants } from '../types';
+import Button from '.';
 
 describe('Button', () => {
   afterEach(cleanup);
@@ -20,17 +21,37 @@ describe('Button', () => {
     expect(content).toHaveClass('button');
   });
 
-  test('should renders variant', () => {
-    render(<Button variant="outline-secondary">Button</Button>);
+  test.each([
+    'error',
+    'primary',
+    'secondary',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+    'outline-primary',
+    'outline-secondary',
+    'outline-success',
+    'outline-error',
+    'outline-warning',
+    'outline-info',
+    'outline-light',
+    'outline-dark',
+  ] satisfies TallVariants[])('should render variant %s', variant => {
+    render(<Button variant={variant}>Button</Button>);
     const content = screen.queryByRole('button');
-    expect(content).toHaveClass('button__outline-secondary');
+    expect(content).toHaveClass(`button__${variant}`);
   });
 
-  test('should renders size', () => {
-    render(<Button size="lg">Button</Button>);
-    const content = screen.queryByRole('button');
-    expect(content).toHaveClass('button__lg');
-  });
+  test.each(['xs', 'sm', 'md', 'lg'] satisfies TallSizes[])(
+    'should render size %s',
+    (size) => {
+      render(<Button size={size}>Button</Button>);
+      const content = screen.queryByRole('button');
+      expect(content).toHaveClass(`button__${size}`);
+    },
+  );
 
   test('should renders block size', () => {
     render(<Button block>Button</Button>);
