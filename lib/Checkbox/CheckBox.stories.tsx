@@ -40,11 +40,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-Default.args = {
-  id: 'check',
-  size: SIZE_XS,
-  variant: VARIANT_PRIMARY,
-  disabled: false,
-  className: '',
+export const Default: Story = {
+  args: {
+    id: 'check',
+    size: SIZE_XS,
+    variant: VARIANT_PRIMARY,
+    disabled: false,
+    className: '',
+  },
 };
