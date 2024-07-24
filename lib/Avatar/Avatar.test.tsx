@@ -1,5 +1,6 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
-import Avatar from './Avatar';
+import { TallDefaultVariants, TallShapes, TallSizes } from '../types';
+import Avatar from '.';
 
 describe('Avatar', () => {
   afterEach(cleanup);
@@ -39,29 +40,44 @@ describe('Avatar', () => {
     expect(imgElement).not.toHaveClass('hidden');
   });
 
-  test('renders a size', () => {
-    render(<Avatar size="xs" />);
-    const content = screen.queryByLabelText('avatar');
-    const img = screen.queryByRole('img');
-    expect(content).toHaveClass('avatar__xs');
-    expect(img).toHaveClass('avatar__xs');
-  });
-
-  test('renders a shape', () => {
-    render(<Avatar shape="squared" />);
-    const content = screen.queryByLabelText('avatar');
-    expect(content).toHaveClass('avatar__squared');
-  });
-
-  test('renders a variant', () => {
-    render(<Avatar variant="secondary" />);
-    const content = screen.queryByLabelText('avatar');
-    expect(content).toHaveClass('avatar__secondary');
-  });
-
-  test('renders a border', () => {
+  test('should render border', () => {
     render(<Avatar border />);
     const content = screen.queryByLabelText('avatar');
     expect(content).toHaveClass('avatar__bordered');
+  });
+
+  test.each(['xs', 'sm', 'md', 'lg'] satisfies TallSizes[])(
+    'should render size %s',
+    size => {
+      render(<Avatar size={size} />);
+      const content = screen.queryByLabelText('avatar');
+      const img = screen.queryByRole('img');
+      expect(content).toHaveClass(`avatar__${size}`);
+      expect(img).toHaveClass(`avatar__${size}`);
+    },
+  );
+
+  test.each(['circle', 'squared'] satisfies TallShapes[])(
+    'should render shape %s',
+    shape => {
+      render(<Avatar shape={shape} />);
+      const content = screen.queryByLabelText('avatar');
+      expect(content).toHaveClass(`avatar__${shape}`);
+    },
+  );
+
+  test.each([
+    'error',
+    'primary',
+    'secondary',
+    'success',
+    'warning',
+    'info',
+    'light',
+    'dark',
+  ] satisfies TallDefaultVariants[])('should render variant %s', variant => {
+    render(<Avatar variant={variant} />);
+    const content = screen.queryByLabelText('avatar');
+    expect(content).toHaveClass(`avatar__${variant}`);
   });
 });

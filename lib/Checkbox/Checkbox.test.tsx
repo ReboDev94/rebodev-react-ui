@@ -81,7 +81,7 @@ describe('Checkbox', () => {
   });
 
   test.each(['xs', 'sm', 'md', 'lg'] satisfies TallSizes[])(
-    'should renders variants',
+    'should render variant %s',
     size => {
       render(<Checkbox id="check" size={size} />);
       expect(screen.getByLabelText('Checkbox-Label')).toHaveClass(
@@ -105,7 +105,7 @@ describe('Checkbox', () => {
     'info',
     'light',
     'dark',
-  ] satisfies TallDefaultVariants[])('should renders variants', variant => {
+  ] satisfies TallDefaultVariants[])('should render variant %s', variant => {
     render(<Checkbox id="check" variant={variant} />);
     expect(screen.getByLabelText('Checkbox')).toHaveClass(
       `checkbox__${variant}`,
