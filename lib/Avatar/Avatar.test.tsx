@@ -4,13 +4,22 @@ import Avatar from './Avatar';
 describe('Avatar', () => {
   afterEach(cleanup);
 
-  test('render  a default', () => {
+  test('should render avatar', () => {
     render(<Avatar />);
-    expect(screen.getByLabelText('avatar')).toBeTruthy();
-    expect(screen.getByRole('img').classList).toContain('hidden');
+    expect(screen.getByLabelText('avatar')).toBeInTheDocument();
   });
 
-  test('should show childre', () => {
+  test('should hidden img', () => {
+    render(<Avatar />);
+    expect(screen.getByRole('img')).toHaveClass('hidden');
+  });
+
+  test('should a default class', () => {
+    render(<Avatar />);
+    expect(screen.getByLabelText('avatar')).toHaveClass('avatar');
+  });
+
+  test('should show children', () => {
     render(<Avatar>Y</Avatar>);
     expect(screen.getByText(/Y/i)).toBeDefined();
   });
@@ -27,38 +36,32 @@ describe('Avatar', () => {
     render(<Avatar src={img_src} />);
     const imgElement = screen.getByRole('img');
     fireEvent.load(imgElement);
-    expect(imgElement.classList).not.toContain('hidden');
-  });
-
-  test('should a default class', () => {
-    render(<Avatar />);
-    const content = screen.queryByLabelText('avatar');
-    expect(content?.classList).toContain('avatar');
+    expect(imgElement).not.toHaveClass('hidden');
   });
 
   test('renders a size', () => {
     render(<Avatar size="xs" />);
     const content = screen.queryByLabelText('avatar');
     const img = screen.queryByRole('img');
-    expect(content?.classList).toContain('avatar__xs');
-    expect(img?.classList).toContain('avatar__xs');
+    expect(content).toHaveClass('avatar__xs');
+    expect(img).toHaveClass('avatar__xs');
   });
 
   test('renders a shape', () => {
     render(<Avatar shape="squared" />);
     const content = screen.queryByLabelText('avatar');
-    expect(content?.classList).toContain('avatar__squared');
+    expect(content).toHaveClass('avatar__squared');
   });
 
   test('renders a variant', () => {
     render(<Avatar variant="secondary" />);
     const content = screen.queryByLabelText('avatar');
-    expect(content?.classList).toContain('avatar__secondary');
+    expect(content).toHaveClass('avatar__secondary');
   });
 
   test('renders a border', () => {
     render(<Avatar border />);
     const content = screen.queryByLabelText('avatar');
-    expect(content?.classList).toContain('avatar__bordered');
+    expect(content).toHaveClass('avatar__bordered');
   });
 });

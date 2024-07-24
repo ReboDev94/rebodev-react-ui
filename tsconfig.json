@@ -28,6 +28,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["lib", "svg.custom.d.ts"],
+  "include": ["lib", "svg.custom.d.ts", "./vitest-setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

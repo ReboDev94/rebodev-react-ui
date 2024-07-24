@@ -45,6 +45,7 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['**/*.test.tsx'],
     css: false,
+    setupFiles: ['./vitest-setup.ts'],
     coverage: {
       include: ['lib'],
       exclude: ['**/*.stories.tsx', '**/*.ts'],
