@@ -1,5 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import Card from '.';
+import { TallDefaultVariants } from '../types';
 
 describe('Card', () => {
   afterEach(cleanup);
@@ -23,9 +24,18 @@ describe('Card', () => {
     expect(screen.getByLabelText('Card')).toHaveClass('card');
   });
 
-  test('should renders variant', () => {
-    render(<Card variant="secondary" />);
-    expect(screen.getByLabelText('Card')).toHaveClass('card__secondary');
+  test.each([
+    'primary',
+    'secondary',
+    'success',
+    'error',
+    'warning',
+    'info',
+    'light',
+    'dark',
+  ] satisfies TallDefaultVariants[])('should render variant %s', variant => {
+    render(<Card variant={variant} />);
+    expect(screen.getByLabelText('Card')).toHaveClass(`card__${variant}`);
   });
 
   test('should render cardBody', () => {
