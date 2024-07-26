@@ -1,10 +1,8 @@
-import { cleanup, render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { TallSizes, TallVariants } from '../types';
 import Button from '.';
 
 describe('Button', () => {
-  afterEach(cleanup);
-
   test('should render button', () => {
     render(<Button>Button</Button>);
     expect(screen.getByRole('button')).toBeTruthy();
@@ -46,7 +44,7 @@ describe('Button', () => {
 
   test.each(['xs', 'sm', 'md', 'lg'] satisfies TallSizes[])(
     'should render size %s',
-    (size) => {
+    size => {
       render(<Button size={size}>Button</Button>);
       const content = screen.queryByRole('button');
       expect(content).toHaveClass(`button__${size}`);

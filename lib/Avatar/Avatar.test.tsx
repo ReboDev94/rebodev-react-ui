@@ -1,10 +1,8 @@
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { TallDefaultVariants, TallShapes, TallSizes } from '../types';
 import Avatar from '.';
 
 describe('Avatar', () => {
-  afterEach(cleanup);
-
   test('should render avatar', () => {
     render(<Avatar />);
     expect(screen.getByLabelText('avatar')).toBeInTheDocument();

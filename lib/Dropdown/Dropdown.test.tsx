@@ -1,5 +1,4 @@
 import {
-  cleanup,
   fireEvent,
   render,
   screen,
@@ -19,7 +18,6 @@ const DropdownToogleFocus = () => {
 };
 
 describe('DropDown', () => {
-  afterEach(cleanup);
   // Dropdown
   test('should render dropdown', () => {
     render(<Dropdown />);

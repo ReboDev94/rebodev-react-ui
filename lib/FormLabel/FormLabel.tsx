@@ -16,9 +16,13 @@ const FormLabel: React.FC<IFormLabel> = ({
   position = POSITION_LT,
 }) => {
   return (
-    <div className={twMerge('form__label__wrapper', className)}>
+    <div
+      aria-label="FormLabel"
+      className={twMerge('form__label__wrapper', className)}
+    >
       {[POSITION_RT, POSITION_LT].includes(position) && (
         <label
+          aria-label="Title"
           className={twMerge(
             'form__label',
             'pb-1',
@@ -33,6 +37,7 @@ const FormLabel: React.FC<IFormLabel> = ({
 
       {[POSITION_RB, POSITION_LB].includes(position) && (
         <label
+          aria-label="Title"
           className={twMerge(
             'form__label',
             'pt-1',

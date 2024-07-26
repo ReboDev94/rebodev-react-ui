@@ -1,10 +1,8 @@
-import { cleanup, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Card from '.';
 import { TallDefaultVariants } from '../types';
 
 describe('Card', () => {
-  afterEach(cleanup);
-
   test('should render card', () => {
     render(<Card />);
     expect(screen.getByLabelText('Card')).toBeInTheDocument();

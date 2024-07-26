@@ -1,10 +1,8 @@
-import { cleanup, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Divider from '.';
 import { TallDefaultVariants, TallSizes } from '../types';
 
 describe('Divider', () => {
-  afterEach(cleanup);
-
   test('should render', () => {
     render(<Divider />);
     expect(screen.getByLabelText('Divider')).toBeInTheDocument();
