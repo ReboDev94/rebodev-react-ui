@@ -5,9 +5,9 @@ import { SIZE_XS, VARIANT_PRIMARY } from '../constants';
 import './Loading.styles.css';
 
 const Loading: React.FC<ILoading> = ({
+  className,
   variant = VARIANT_PRIMARY,
   size = SIZE_XS,
-  className,
 }) => {
   return (
     <div
