@@ -15,6 +15,7 @@ const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
 
   return (
     <input
+      aria-label='Input'
       ref={ref}
       type={type}
       className={
