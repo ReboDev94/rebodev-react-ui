@@ -16,7 +16,7 @@ const InputMaterial = forwardRef<HTMLInputElement, IInputMaterial>(
     } = props;
 
     return (
-      <div className="relative">
+      <div data-testid="wrapper-input-material" className="relative">
         <Input
           ref={ref}
           id={id}
