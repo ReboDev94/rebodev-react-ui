@@ -1,9 +1,4 @@
-import {
-  fireEvent,
-  render,
-  screen,
-  within,
-} from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { createRef, useEffect, useRef } from 'react';
 import Avatar from '../Avatar';
 import Dropdown from '.';

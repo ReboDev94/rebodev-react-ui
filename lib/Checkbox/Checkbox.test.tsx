@@ -45,7 +45,7 @@ describe('Checkbox', () => {
   test('should be disabled', () => {
     render(<Checkbox id="check" disabled />);
     const checkbox = screen.getByLabelText('Checkbox');
-    expect(checkbox).toBeDisabled()
+    expect(checkbox).toBeDisabled();
   });
 
   test('should render checkbox-label default class', () => {

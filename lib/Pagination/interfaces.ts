@@ -10,13 +10,15 @@ export interface IPagination {
   visiblePages?: number;
 }
 
-export interface IPaginationItem extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IPaginationItem
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   page: number;
   variant: Variant;
   active?: boolean;
 }
 
-export interface IPaginationButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IPaginationButton
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;
   positionArrow: 'right' | 'left';
   variant: Variant;

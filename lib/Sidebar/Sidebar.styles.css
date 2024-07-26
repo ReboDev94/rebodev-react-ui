@@ -6,18 +6,18 @@
   @apply flex flex-col h-full py-2;
 }
 
-.sidebar__footer{
+.sidebar__footer {
   @apply py-2 grid place-content-center;
 }
 
-.sidebar__content{
+.sidebar__content {
   @apply flex-1;
 }
 
-.sidebar__category{
-  @apply text-dark font-light ml-4
+.sidebar__category {
+  @apply text-dark font-light ml-4;
 }
 
-.sidebar__backdrop{
-    @apply fixed inset-0 z-10 bg-dark bg-opacity-[0.15]
+.sidebar__backdrop {
+  @apply fixed inset-0 z-10 bg-dark bg-opacity-[0.15];
 }

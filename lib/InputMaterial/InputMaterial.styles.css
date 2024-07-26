@@ -33,4 +33,3 @@
 .input__material__dark {
   @apply peer-focus:text-dark;
 }
-

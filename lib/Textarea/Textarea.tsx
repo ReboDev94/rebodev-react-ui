@@ -10,7 +10,12 @@ const Textarea = forwardRef<HTMLTextAreaElement, ITextArea>((props, ref) => {
   return (
     <textarea
       ref={ref}
-      className={twMerge('input', `input__${variant}`, 'p-2 text-sm', className)}
+      className={twMerge(
+        'input',
+        `input__${variant}`,
+        'p-2 text-sm',
+        className,
+      )}
       {...rest}
     />
   );
