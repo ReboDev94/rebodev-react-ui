@@ -4,7 +4,6 @@ import { useArgs } from '@storybook/preview-api';
 import {
   ALL_DEFAULT_VARIANTS,
   ALL_SIZES,
-  ALL_VARIANTS,
   SIZE_SM,
   VARIANT_PRIMARY,
 } from '../constants';
@@ -90,9 +89,8 @@ const meta: Meta<typeof InputSearch> = {
     disabled: {
       control: 'boolean',
     },
-    closeButtonVariant: {
-      control: 'radio',
-      options: ALL_VARIANTS,
+    fillCloseButton: {
+      control: 'boolean',
     },
     clearable: {
       control: 'boolean',
@@ -123,7 +121,7 @@ const meta: Meta<typeof InputSearch> = {
     clearable: true,
     placeholder: 'Selecciona una opción',
     labelNoOption: 'Sin opciones',
-    closeButtonVariant: VARIANT_PRIMARY,
+    fillCloseButton: true,
     renderItem: undefined,
   },
 } satisfies Meta<typeof InputSearch>;

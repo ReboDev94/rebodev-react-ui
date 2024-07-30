@@ -11,6 +11,7 @@ const Loading: React.FC<ILoading> = ({
 }) => {
   return (
     <div
+      data-testid="loading"
       className={twMerge(
         'loading',
         `loading__${size}`,

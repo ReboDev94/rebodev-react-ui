@@ -92,7 +92,7 @@ describe('DropDown', () => {
   // Menu
   test('should render menu', () => {
     render(<Dropdown.Menu />);
-    const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
     expect(menu).toBeInTheDocument();
   });
 
@@ -107,13 +107,13 @@ describe('DropDown', () => {
 
   test('menu should have attribute tabIndex', () => {
     render(<Dropdown.Menu />);
-    const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
     expect(menu).toHaveAttribute('tabIndex', '0');
   });
 
   test('menu should have default class', () => {
     render(<Dropdown.Menu />);
-    const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
     expect(menu).toHaveClass('dropdown__menu');
   });
 
@@ -121,7 +121,7 @@ describe('DropDown', () => {
     'menu should render position %s',
     position => {
       render(<Dropdown.Menu position={position} />);
-      const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__${position}`);
     },
   );
@@ -137,7 +137,7 @@ describe('DropDown', () => {
     'menu should render align vertical (%s + %s)',
     (position, align) => {
       render(<Dropdown.Menu position={position} align={align} />);
-      const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__vertical__${align}`);
     },
   );
@@ -153,7 +153,7 @@ describe('DropDown', () => {
     'menu should render align vertical (%s + %s)',
     (position, align) => {
       render(<Dropdown.Menu position={position} align={align} />);
-      const menu = screen.getByRole('menu');
+    const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__lateral__${align}`);
     },
   );

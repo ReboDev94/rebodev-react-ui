@@ -11,7 +11,6 @@ const DropdownMenu: React.FC<IDropdownMenu> = ({
 }) => {
   return (
     <ul
-      role="menu"
       tabIndex={0}
       className={twMerge(
         'dropdown__menu',
