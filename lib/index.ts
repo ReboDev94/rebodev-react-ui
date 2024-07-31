@@ -23,7 +23,7 @@ import { IErrorInput } from './ErrorInput';
 import { IPagination } from './Pagination';
 import { ISelect, ISelectOption } from './Select';
 import { IItemListGroup, IListGroup } from './ListGroup';
-import { ICollapseSidebar, IItemSidebar, IMenu } from './Menu';
+import { IMenu, IMenuCollpse, IMenuItem } from './Menu';
 import { ITable, ITableBody, ITableHead, ITableRow } from './Table';
 import {
   IInputSearch,
@@ -88,7 +88,7 @@ export type { IAvatar };
 export { default as Avatar } from './Avatar';
 
 /* Menu */
-export type { IMenu, IItemSidebar, ICollapseSidebar };
+export type { IMenu, IMenuCollpse, IMenuItem };
 export { default as Menu } from './Menu';
 
 /* Form */

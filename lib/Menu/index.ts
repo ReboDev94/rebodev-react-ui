@@ -1,12 +1,12 @@
 import MenuComponent from './Menu';
-import ItemSidebar from './ItemSidebar';
-import CollapseSidebar from './CollapseSidebar';
-import { IMenu, IItemSidebar, ICollapseSidebar } from './interfaces';
+import MenuItem from './MenuItem';
+import MenuCollapse from './MenuCollapse';
+import { IMenu, IMenuItem, IMenuCollpse } from './interfaces';
 
 const Menu = Object.assign(MenuComponent, {
-  ItemSidebar,
-  CollapseSidebar,
+  Item: MenuItem,
+  Collapse: MenuCollapse,
 });
 
 export default Menu;
-export type { IMenu, IItemSidebar, ICollapseSidebar };
+export type { IMenu, IMenuCollpse, IMenuItem };
