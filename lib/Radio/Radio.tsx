@@ -6,7 +6,6 @@ import './Radio.styles.css';
 
 const Radio = forwardRef<HTMLInputElement, IRadio>((props, ref) => {
   const {
-    id,
     className,
     variant = VARIANT_PRIMARY,
     size = SIZE_XS,
@@ -15,7 +14,6 @@ const Radio = forwardRef<HTMLInputElement, IRadio>((props, ref) => {
 
   return (
     <input
-      id={id}
       ref={ref}
       type="radio"
       className={twMerge(
