@@ -4,15 +4,16 @@ import { twMerge } from 'tailwind-merge';
 import { ArrowDownIcon } from '../assets/svg';
 
 const PaginationButton: React.FC<IPaginationButton> = ({
-  children,
+  label,
   variant,
   positionArrow,
   disabled,
-  ...rest
+  onClick,
 }) => {
   return (
     <button
-      {...rest}
+      type="button"
+      onClick={onClick}
       disabled={disabled}
       className={twMerge(
         'pagination__button',
@@ -28,7 +29,7 @@ const PaginationButton: React.FC<IPaginationButton> = ({
           )}
         />
       )}
-      {children}
+      {label}
       {positionArrow === 'right' && (
         <ArrowDownIcon
           className={twMerge(

@@ -9,46 +9,37 @@ import './Pagination.styles.css';
 const Pagination: React.FC<IPagination> = ({
   currentPage = 1,
   pageCount = 1,
-  visiblePages = 5,
+  labelNext = 'Sig.',
+  labelPrevious = 'Ant.',
   variant = VARIANT_PRIMARY,
   onChange,
 }) => {
+  if (currentPage > pageCount) return null;
+
   const previuosPage = () => {
-    if (currentPage === 1) return;
-    onChange(currentPage - 1);
-  };
-
-  const nextPage = () => {
-    if (currentPage === pageCount) return;
-    onChange(currentPage + 1);
-  };
-
-  const setPage = (page: number) => {
-    if (page === currentPage) return;
-    onChange(page);
+    if (currentPage !== 1) onChange(currentPage - 1);
   };
 
   const hasPreviousPage = useMemo(
     () => currentPage > 1 && pageCount > 1,
-    [currentPage],
+    [currentPage, pageCount],
   );
 
   const hasNextPage = useMemo(
     () => currentPage < pageCount && pageCount > 1,
-    [currentPage],
+    [currentPage, pageCount],
   );
 
-  const startPage = useMemo(() => {
-    if (currentPage === 1) return 1;
-    if (currentPage === pageCount) {
-      return currentPage - visiblePages + (pageCount < visiblePages ? 2 : 1);
-    }
-    return currentPage - 1;
-  }, [currentPage, pageCount, visiblePages]);
+  const nextPage = () => {
+    if (currentPage !== pageCount) onChange(currentPage + 1);
+  };
 
-  const endPage = useMemo(() => {
-    return Math.min(startPage + visiblePages - 1, pageCount);
-  }, [visiblePages, pageCount, startPage]);
+  const setPage = (page: number) => {
+    if (page !== currentPage) onChange(page);
+  };
+
+  const endPage = Math.min(Math.max(currentPage + 2, 5), pageCount);
+  const startPage = Math.max(1, endPage - 4);
 
   const pages = useMemo(() => {
     const elements: number[] = [];
@@ -59,15 +50,14 @@ const Pagination: React.FC<IPagination> = ({
   }, [startPage, endPage]);
 
   return (
-    <div className={twMerge('pagination')}>
+    <div aria-label="Pagination" className={twMerge('pagination')}>
       <PaginationButton
         disabled={!hasPreviousPage}
         variant={variant}
         positionArrow="left"
         onClick={previuosPage}
-      >
-        Ant.
-      </PaginationButton>
+        label={labelPrevious}
+      />
       {pages.map(el => (
         <PaginationItem
           key={el}
@@ -82,9 +72,8 @@ const Pagination: React.FC<IPagination> = ({
         variant={variant}
         positionArrow="right"
         onClick={nextPage}
-      >
-        Sig.
-      </PaginationButton>
+        label={labelNext}
+      />
     </div>
   );
 };

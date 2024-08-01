@@ -5,12 +5,14 @@ import { IPaginationItem } from './interfaces';
 const PaginationItem: React.FC<IPaginationItem> = ({
   page,
   variant,
+  onClick,
   active = false,
-  ...rest
 }) => {
   return (
     <button
-      {...rest}
+      aria-label="Item"
+      type="button"
+      onClick={onClick}
       className={twMerge(
         'pagination__button',
         'pagination__item',
