@@ -5,10 +5,10 @@ import './Sidebar.styles.css';
 
 const Sidebar: React.FC<ISidebar> = ({
   open,
-  width = 300,
-  right = false,
   children,
   className,
+  width = 300,
+  right = false,
 }) => {
   const widthSelected = useMemo(() => (open ? width : 0), [open, width]);
   return (
@@ -19,7 +19,11 @@ const Sidebar: React.FC<ISidebar> = ({
         width: widthSelected,
       }}
     >
-      <div className={'sidebar__container'} style={{ width }}>
+      <div
+        aria-label="Sidebar-Container"
+        className={'sidebar__container'}
+        style={{ width }}
+      >
         {children}
       </div>
     </aside>

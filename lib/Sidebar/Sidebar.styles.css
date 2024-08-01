@@ -6,7 +6,7 @@
   @apply flex flex-col h-full py-2;
 }
 
-.sidebar__footer {
+.sidebar__header {
   @apply py-2 grid place-content-center;
 }
 

@@ -4,7 +4,9 @@ import { twMerge } from 'tailwind-merge';
 
 const SidebarHeader: React.FC<IHeader> = ({ children, className }) => {
   return (
-    <div className={twMerge('sidebar__footer', className)}>{children}</div>
+    <div aria-label="Header" className={twMerge('sidebar__header', className)}>
+      {children}
+    </div>
   );
 };
 
