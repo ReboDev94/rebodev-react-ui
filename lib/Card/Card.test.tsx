@@ -35,7 +35,9 @@ describe('Card', () => {
     render(<Card variant={variant} />);
     expect(screen.getByLabelText('Card')).toHaveClass(`card__${variant}`);
   });
+});
 
+describe('CardBody', () => {
   test('should render cardBody', () => {
     render(<Card.Body>cardBody</Card.Body>);
     expect(screen.getByLabelText('CardBody')).toBeInTheDocument();

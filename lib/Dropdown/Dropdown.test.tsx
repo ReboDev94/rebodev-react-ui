@@ -1,8 +1,8 @@
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { createRef, useEffect, useRef } from 'react';
+import { TallAlings, TallPositions } from '../types';
 import Avatar from '../Avatar';
 import Dropdown from '.';
-import { TallAlings, TallPositions } from '../types';
 
 const DropdownToogleFocus = () => {
   const ref = useRef<HTMLLabelElement>(null);
@@ -13,7 +13,6 @@ const DropdownToogleFocus = () => {
 };
 
 describe('DropDown', () => {
-  // Dropdown
   test('should render dropdown', () => {
     render(<Dropdown />);
     expect(screen.getByRole('listbox')).toBeInTheDocument();
@@ -38,8 +37,9 @@ describe('DropDown', () => {
     );
     expect(container.firstChild).toHaveTextContent('element');
   });
+});
 
-  // Toggle
+describe('Toggle', () => {
   test('should render dropdown toggle', () => {
     render(<Dropdown.Toogle>Hola mundo</Dropdown.Toogle>);
     expect(screen.getByLabelText('DropDown-Toggle')).toBeInTheDocument();
@@ -88,8 +88,9 @@ describe('DropDown', () => {
       'dropdown__toggle',
     );
   });
+});
 
-  // Menu
+describe('Menu', () => {
   test('should render menu', () => {
     render(<Dropdown.Menu />);
     const menu = screen.queryByRole('list');
@@ -121,7 +122,7 @@ describe('DropDown', () => {
     'menu should render position %s',
     position => {
       render(<Dropdown.Menu position={position} />);
-    const menu = screen.queryByRole('list');
+      const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__${position}`);
     },
   );
@@ -137,7 +138,7 @@ describe('DropDown', () => {
     'menu should render align vertical (%s + %s)',
     (position, align) => {
       render(<Dropdown.Menu position={position} align={align} />);
-    const menu = screen.queryByRole('list');
+      const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__vertical__${align}`);
     },
   );
@@ -153,13 +154,13 @@ describe('DropDown', () => {
     'menu should render align vertical (%s + %s)',
     (position, align) => {
       render(<Dropdown.Menu position={position} align={align} />);
-    const menu = screen.queryByRole('list');
+      const menu = screen.queryByRole('list');
       expect(menu).toHaveClass(`dropdown__menu__lateral__${align}`);
     },
   );
+});
 
-  // Item
-
+describe('Item', () => {
   test('should render item', () => {
     render(<Dropdown.Item>element 1</Dropdown.Item>);
     const item = screen.getByRole('menuitem');

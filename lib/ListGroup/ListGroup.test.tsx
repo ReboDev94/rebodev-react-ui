@@ -30,7 +30,9 @@ describe('ListGroup', () => {
     );
     expect(container.firstChild).toHaveTextContent('element');
   });
+});
 
+describe('Item', () => {
   test('Item should render', () => {
     render(<ListGroup.Item>Element</ListGroup.Item>);
     const listGroup = screen.getByLabelText('listitem');

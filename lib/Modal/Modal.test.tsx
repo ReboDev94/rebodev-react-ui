@@ -1,28 +1,8 @@
 import { fireEvent, render, screen, within } from '@testing-library/react';
-import Modal from '.';
 import { TallSizes } from '../types';
+import Modal from '.';
 
 describe('Modal', () => {
-  test('should render backdrop', () => {
-    render(
-      <Modal backdrop value={true}>
-        <div>element</div>
-      </Modal>,
-    );
-    const backDrop = screen.queryByLabelText('BackDrop');
-    expect(backDrop).toBeInTheDocument();
-  });
-
-  test('should have backdrop default class', () => {
-    render(
-      <Modal backdrop value={true}>
-        <div>element</div>
-      </Modal>,
-    );
-    const backDrop = screen.queryByLabelText('BackDrop');
-    expect(backDrop).toHaveClass('modal__backdrop');
-  });
-
   test('should not render when value is false', () => {
     render(
       <Modal>
@@ -108,8 +88,54 @@ describe('Modal', () => {
       expect(modal).toHaveClass(b);
     },
   );
-  // Modal Header
+});
 
+describe('BackDrop', () => {
+  test('should render backdrop', () => {
+    render(
+      <Modal backdrop value={true}>
+        <div>element</div>
+      </Modal>,
+    );
+    const backDrop = screen.queryByLabelText('BackDrop');
+    expect(backDrop).toBeInTheDocument();
+  });
+
+  test('should have backdrop default class', () => {
+    render(
+      <Modal backdrop value={true}>
+        <div>element</div>
+      </Modal>,
+    );
+    const backDrop = screen.queryByLabelText('BackDrop');
+    expect(backDrop).toHaveClass('modal__backdrop');
+  });
+});
+
+describe('Body', () => {
+  test('Body should render', () => {
+    render(<Modal.Body />);
+    const header = screen.getByLabelText('Modal-Body');
+    expect(header).toBeInTheDocument();
+  });
+
+  test('Body should have default class', () => {
+    render(<Modal.Body className="custom-class" />);
+    const header = screen.getByLabelText('Modal-Body');
+    expect(header).toHaveClass('p-4 custom-class');
+  });
+
+  test('Body should render children', () => {
+    const { container } = render(
+      <Modal.Body>
+        <div>element</div>
+      </Modal.Body>,
+    );
+    expect(container.firstChild).toHaveTextContent('element');
+  });
+});
+
+describe('Header', () => {
   test('Header should render', () => {
     render(<Modal.Header />);
     const header = screen.getByLabelText('Modal-Header');
@@ -182,30 +208,9 @@ describe('Modal', () => {
     const button = screen.getByLabelText('Close');
     expect(button.querySelector('svg')).toBeInTheDocument();
   });
-  // Body
+});
 
-  test('Body should render', () => {
-    render(<Modal.Body />);
-    const header = screen.getByLabelText('Modal-Body');
-    expect(header).toBeInTheDocument();
-  });
-
-  test('Body should have default class', () => {
-    render(<Modal.Body className="custom-class" />);
-    const header = screen.getByLabelText('Modal-Body');
-    expect(header).toHaveClass('p-4 custom-class');
-  });
-
-  test('Body should render children', () => {
-    const { container } = render(
-      <Modal.Body>
-        <div>element</div>
-      </Modal.Body>,
-    );
-    expect(container.firstChild).toHaveTextContent('element');
-  });
-  // Footer
-
+describe('Footer', () => {
   test('Footer should render', () => {
     render(<Modal.Footer />);
     const header = screen.getByLabelText('Modal-Footer');
