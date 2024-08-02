@@ -4,15 +4,21 @@ import TableFooter from './TableFooter';
 import TableHead from './TableHead';
 import TableRow from './TableRow';
 import TableCol from './TableCol';
-import { ITable, ITableBody, ITableHead, ITableRow } from './interfaces';
+import {
+  ITable,
+  ITableBody,
+  ITableHead,
+  ITableRow,
+  ITableCol,
+} from './interfaces';
 
 const Table = Object.assign(TableComponent, {
   Head: TableHead,
   Body: TableBody,
   Row: TableRow,
-  Td: TableCol,
+  Col: TableCol,
   Footer: TableFooter,
 });
 
 export default Table;
-export type { ITable, ITableHead, ITableRow, ITableBody };
+export type { ITable, ITableHead, ITableRow, ITableCol, ITableBody };

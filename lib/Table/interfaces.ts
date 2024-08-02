@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, TdHTMLAttributes } from 'react';
 
 export interface ITable extends React.TableHTMLAttributes<HTMLTableElement> {
   wrapperClassName?: string;
@@ -20,3 +20,5 @@ export interface ITableRow
   hover?: boolean;
   children?: ReactNode[] | ReactNode;
 }
+
+export interface ITableCol extends TdHTMLAttributes<HTMLTableCellElement> {}
