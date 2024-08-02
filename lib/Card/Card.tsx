@@ -11,11 +11,8 @@ const Card: React.FC<ICard> = ({
 }) => {
   return (
     <div
-      className={twMerge(
-        'card',
-        `card__${variant}`,
-        className,
-      )}
+      aria-label="Card"
+      className={twMerge('card', `card__${variant}`, className)}
     >
       {children}
     </div>

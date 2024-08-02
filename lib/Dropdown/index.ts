@@ -17,9 +17,4 @@ const Dropdown = Object.assign(DropdownComponente, {
 });
 
 export default Dropdown;
-export type {
-  IDropdown,
-  IDropdownToogle,
-  IDropdownMenu,
-  IDropdownItem,
-};
+export type { IDropdown, IDropdownToogle, IDropdownMenu, IDropdownItem };

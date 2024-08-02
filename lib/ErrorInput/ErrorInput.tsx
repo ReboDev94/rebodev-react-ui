@@ -5,7 +5,13 @@ import './ErrorInput.styles.css';
 
 const ErrorInput: React.FC<IErrorInput> = ({ message }) => {
   return (
-    <>{message ? <p className={twMerge('error__input')}>{message}</p> : null}</>
+    <>
+      {message ? (
+        <p aria-label="ErrorInput" className={twMerge('error__input')}>
+          {message}
+        </p>
+      ) : null}
+    </>
   );
 };
 

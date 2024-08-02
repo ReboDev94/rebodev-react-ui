@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, TdHTMLAttributes } from 'react';
 
 export interface ITable extends React.TableHTMLAttributes<HTMLTableElement> {
   wrapperClassName?: string;
@@ -13,6 +13,7 @@ export interface ITableHead
 export interface ITableBody
   extends React.TableHTMLAttributes<HTMLTableSectionElement> {
   divide?: boolean;
+  labelNoInformation?: string;
 }
 
 export interface ITableRow
@@ -20,3 +21,5 @@ export interface ITableRow
   hover?: boolean;
   children?: ReactNode[] | ReactNode;
 }
+
+export interface ITableCol extends TdHTMLAttributes<HTMLTableCellElement> {}

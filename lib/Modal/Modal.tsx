@@ -8,8 +8,8 @@ import './Modal.styles.css';
 
 const Modal: React.FC<IModal> = ({
   children,
+  className,
   value = false,
-  className = '',
   size = SIZE_XS,
   backdrop = true,
   center = false,
@@ -18,14 +18,19 @@ const Modal: React.FC<IModal> = ({
   return createPortal(
     <>
       {backdrop && <BackDrop />}
-      <div className={twMerge('modal__container', className)}>
+      <div
+        aria-label="Modal"
+        className={twMerge('modal__container', className)}
+      >
         <div
+          aria-label="Modal-Wrapper"
           className={twMerge(
             'modal__wrapper',
             center && 'modal__wrapper__center',
           )}
         >
           <div
+            aria-label="Modal-Container"
             className={twMerge(
               'modal',
               size === 'xs' && 'md:!w-2/6',

@@ -12,6 +12,7 @@ const ListItem: React.FC<IItemListGroup> = ({
   const Icon = icon;
   return (
     <li
+      aria-label="listitem"
       className={twMerge(
         'group',
         'list__group__item',
@@ -19,7 +20,7 @@ const ListItem: React.FC<IItemListGroup> = ({
         className,
       )}
     >
-      <div className={'list__group__item__wrapper'}>
+      <div aria-label="Wrapper-Icon" className={'list__group__item__wrapper'}>
         {Icon && (
           <Icon className={twMerge('list__group__item__wrapper__icon')} />
         )}

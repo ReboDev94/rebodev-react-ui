@@ -1,5 +1,5 @@
 .menu {
-  @apply my-2 space-y-2;
+  @apply space-y-1;
 }
 
 .menu__item__sidebar {
@@ -14,8 +14,8 @@
   @apply w-6 fill-inherit;
 }
 
-.menu__wrapper__collapse{
-  @apply ml-6 my-2 space-y-2
+.menu__wrapper__collapse {
+  @apply ml-6 my-2 space-y-1;
 }
 
 .menu__wrapper__title {

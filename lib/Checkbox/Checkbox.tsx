@@ -16,12 +16,14 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
 
   return (
     <label
+      aria-label="Checkbox-Label"
       className={twMerge('checkbox__label', `checkbox__${size}`)}
       htmlFor={id}
     >
       <input
         id={id}
         ref={ref}
+        aria-label="Checkbox"
         type="checkbox"
         className={twMerge(
           'peer',
@@ -32,8 +34,11 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckBox>((props, ref) => {
         )}
         {...rest}
       />
-      <span className={'checkbox__wrapper__icon'}>
-        <IconCheckList className={twMerge(`checkbox__${size}`)} />
+      <span
+        aria-label="Checkbox-Icon"
+        className={twMerge('checkbox__wrapper__icon', `checkbox__${size}`)}
+      >
+        <IconCheckList />
       </span>
     </label>
   );

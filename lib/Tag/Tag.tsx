@@ -39,6 +39,7 @@ const Tag: React.FC<ITag> = ({
 
   return (
     <div
+      aria-label="Tag"
       tabIndex={0}
       onFocus={() => setfocusDiv(true)}
       onBlur={() => setfocusDiv(false)}
@@ -54,10 +55,18 @@ const Tag: React.FC<ITag> = ({
       {tags.length > 0 && (
         <div className={'tag__wrapper'}>
           {tags.map(tag => (
-            <span className={twMerge('tag__item', `tag__${variant}`)} key={tag}>
+            <span
+              aria-label="Item"
+              className={twMerge('tag__item', `tag__${variant}`)}
+              key={tag}
+            >
               {tag}
               {!disabled && (
-                <button onClick={() => onRemoved(tag)}>
+                <button
+                  aria-label="Button-Clean"
+                  onClick={() => onRemoved(tag)}
+                  type="button"
+                >
                   <IconX className={twMerge('tag__icon__close')} />
                 </button>
               )}

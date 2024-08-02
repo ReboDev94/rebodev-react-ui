@@ -3,7 +3,7 @@ import { TallDefaultVariants } from '../types';
 
 export interface IMenu extends React.HTMLAttributes<HTMLUListElement> {}
 
-export interface IItemSidebar {
+export interface IMenuItem {
   title: string;
   variant?: TallDefaultVariants;
   className?: string;
@@ -12,6 +12,6 @@ export interface IItemSidebar {
   onClick?: () => void;
 }
 
-export interface ICollapseSidebar extends Omit<IItemSidebar, 'active'> {
+export interface IMenuCollpse extends Omit<IMenuItem, 'active' | 'onClick'> {
   children: ReactNode;
 }

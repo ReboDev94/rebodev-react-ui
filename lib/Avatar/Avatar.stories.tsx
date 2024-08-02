@@ -49,13 +49,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-Default.args = {
-  size: SIZE_SM,
-  shape: SHAPE_CIRCLE,
-  border: false,
-  variant: VARIANT_PRIMARY,
-  title: 'R',
-  src: '',
-  className: '',
+export const Default: Story = {
+  args: {
+    title: 'R',
+    size: SIZE_SM,
+    shape: SHAPE_CIRCLE,
+    border: false,
+    variant: VARIANT_PRIMARY,
+    src: '',
+    className: '',
+  },
 };

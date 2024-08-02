@@ -7,6 +7,7 @@ const TableFooter = React.forwardRef<HTMLTableSectionElement, ITableBody>(
     return (
       <tfoot
         ref={ref}
+        aria-label="Footer"
         className={twMerge(divide && 'table__divider', className)}
         {...props}
       >

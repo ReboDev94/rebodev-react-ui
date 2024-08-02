@@ -11,6 +11,7 @@ const Header: React.FC<IModalHeader> = ({
 }) => {
   return (
     <div
+      aria-label="Modal-Header"
       className={twMerge(
         'modal__header',
         !children && 'modal__only__button',
@@ -20,6 +21,7 @@ const Header: React.FC<IModalHeader> = ({
       {children}
       {!hiddenClose && (
         <button
+          aria-label='Close'
           type="button"
           className="px-2 py-1"
           onClick={() => onClose && onClose()}

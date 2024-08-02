@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ICollapseSidebar } from './interfaces';
+import { IMenuCollpse } from './interfaces';
 import { ArrowDownIcon } from '../assets/svg';
 import { VARIANT_PRIMARY } from '../constants';
 
-const CollapseSidebar: React.FC<ICollapseSidebar> = ({
+const MenuCollapse: React.FC<IMenuCollpse> = ({
   title,
   icon,
   className,
@@ -17,9 +17,8 @@ const CollapseSidebar: React.FC<ICollapseSidebar> = ({
   return (
     <li>
       <div
-        onClick={() => {
-          setisCollapse(!isCollapse);
-        }}
+        aria-label="Collapse"
+        onClick={() => setisCollapse(!isCollapse)}
         className={twMerge(
           'group',
           'menu__item__sidebar',
@@ -27,13 +26,19 @@ const CollapseSidebar: React.FC<ICollapseSidebar> = ({
           className,
         )}
       >
-        <div className={'menu__wrapper'}>
+        <div aria-label="Icon" className={'menu__wrapper'}>
           {Icon && <Icon className={twMerge('menu__wrapper__icon')} />}
         </div>
-        <span className={'menu__wrapper__title'}>{title}</span>
-        <ArrowDownIcon className={twMerge('menu__wrapper__icon')} />
+        <span aria-label="Title" className={'menu__wrapper__title'}>
+          {title}
+        </span>
+        <ArrowDownIcon
+          data-testid="IconArrow"
+          className={twMerge('menu__wrapper__icon')}
+        />
       </div>
       <div
+        aria-label='Items'
         className={twMerge('menu__wrapper__collapse', isCollapse && 'hidden')}
       >
         {children}
@@ -42,4 +47,4 @@ const CollapseSidebar: React.FC<ICollapseSidebar> = ({
   );
 };
 
-export default CollapseSidebar;
+export default MenuCollapse;

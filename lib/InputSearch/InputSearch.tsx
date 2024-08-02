@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { v4 as uuidv4 } from 'uuid';
 import { IconSearch, IconX } from '../assets/svg';
 import { SIZE_MD, VARIANT_PRIMARY } from '../constants';
 import { IInputSearch, IOptionInputSearch, TObjetoOString } from './interfaces';
@@ -15,9 +14,9 @@ const InputSearch = <T extends TObjetoOString>({
   onSearchValue,
   value,
   renderItem,
-  onChange = () => {},
+  onChange,
   options = [],
-  closeButtonVariant = VARIANT_PRIMARY,
+  fillCloseButton = true,
   variant = VARIANT_PRIMARY,
   size = SIZE_MD,
   labelNoOption = 'Sin opciones',
@@ -50,13 +49,14 @@ const InputSearch = <T extends TObjetoOString>({
     return () => {
       document.removeEventListener('click', handleClick);
     };
-  }, []);
+  }, [handleClick]);
 
   return (
-    <div ref={refDiv} className="relative">
+    <div aria-label="InputSearch" ref={refDiv} className="relative">
       <div className="relative w-full">
         <div>
           <Input
+            aria-label="SearchTexbox"
             value={searchValue}
             onChange={e => onSearchValue(e.target.value)}
             variant={variant}
@@ -71,18 +71,20 @@ const InputSearch = <T extends TObjetoOString>({
         </div>
         {value && clearable && (
           <Button
+            aria-label="CleanBtn"
             size="xs"
             className={twMerge('input__close__button_close')}
             type="button"
             onClick={() => changeData(null)}
             disabled={disabled}
-            variant={closeButtonVariant}
+            variant={fillCloseButton ? variant : `outline-${variant}`}
           >
             <IconX className={'input__close__button__icon'} />
           </Button>
         )}
         {!value && (
           <div
+            aria-label='IconSearch'
             className={twMerge(
               'input__close__button_close',
               'input__search__wrapper__icon',
@@ -95,6 +97,7 @@ const InputSearch = <T extends TObjetoOString>({
       </div>
       {!disabled && (
         <div
+          aria-label="ListOptions"
           tabIndex={0}
           className={twMerge(
             'input__search__wrapper__options',
@@ -108,20 +111,23 @@ const InputSearch = <T extends TObjetoOString>({
           )}
 
           {options.length === 0 && !loading && (
-            <p className={'input__search__no__options__label'}>
+            <p
+              aria-label="LabelNoOptions"
+              className={'input__search__no__options__label'}
+            >
               {labelNoOption}
             </p>
           )}
 
           {!loading && options.length > 0 && (
-            <ul className="space-y-2">
+            <ul aria-label="Options" className="space-y-2">
               {options.map(opt => (
                 <li
                   className={'input__search__li'}
                   onClick={() =>
                     changeData({ value: opt.value, label: opt.label })
                   }
-                  key={uuidv4()}
+                  key={opt.label}
                 >
                   {renderItem ? renderItem(opt) : opt.label}
                 </li>

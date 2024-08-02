@@ -1,9 +1,5 @@
-import { ReactNode } from 'react';
-import { TallDefaultVariants } from '../types';
+import { Iinput } from '../Input/interfaces';
 
-export interface IInputMaterial {
-  id: string;
+export interface IInputMaterial extends Omit<Iinput, 'placeholder' | 'type'> {
   title: string;
-  children: ReactNode;
-  variant: TallDefaultVariants;
 }
