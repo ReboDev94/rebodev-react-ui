@@ -21,8 +21,11 @@ export default {
       control: 'radio',
       options: ALL_DEFAULT_VARIANTS.filter(item => item !== 'light'),
     },
-    visiblePages: {
-      control: 'number',
+    labelNext: {
+      control: 'text',
+    },
+    labelPrevious: {
+      control: 'text',
     },
     onChange: {
       description: 'change current page',
@@ -45,4 +48,6 @@ Default.args = {
   pageCount: 100,
   currentPage: 1,
   variant: VARIANT_PRIMARY,
+  labelNext: 'Sig.',
+  labelPrevious: 'Ant.',
 };
