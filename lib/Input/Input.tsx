@@ -6,8 +6,8 @@ import { Iinput } from '.';
 
 const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
   const {
-    type,
     className,
+    type = 'text',
     size = SIZE_SM,
     variant = VARIANT_PRIMARY,
     ...rest
