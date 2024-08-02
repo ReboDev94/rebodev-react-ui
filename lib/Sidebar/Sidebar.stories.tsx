@@ -45,7 +45,7 @@ export const Default: Story = {
           <Sidebar.Content className="px-5 py-6">
             <Sidebar.Category title="Menu" />
             <Menu {...args}>
-              <Menu.ItemSidebar
+              <Menu.Item
                 active={true}
                 onClick={() => {
                   console.log(`click Dashboard`);
@@ -53,7 +53,7 @@ export const Default: Story = {
                 title="Dashboard"
                 icon={IconX}
               />
-              <Menu.ItemSidebar
+              <Menu.Item
                 active={false}
                 onClick={() => {
                   console.log(`click Users`);

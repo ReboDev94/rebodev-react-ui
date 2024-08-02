@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Menu from '.';
-import CollapseSidebar from './CollapseSidebar';
 import { IconSearch, IconX } from '../assets/svg';
+import Menu from '.';
 
 const meta = {
   title: 'GENERAL/Menu',
@@ -16,59 +15,51 @@ export const Default: Story = {
   render: function Render(args) {
     return (
       <Menu {...args}>
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="primary"
-          onClick={() => {}}
           title="Item 1"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="secondary"
-          onClick={() => {}}
           title="Item 2"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="success"
-          onClick={() => {}}
           title="Item 3"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="error"
-          onClick={() => {}}
           title="Item 4"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="warning"
-          onClick={() => {}}
           title="Item 5"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="info"
-          onClick={() => {}}
           title="Item 6"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="light"
-          onClick={() => {}}
           title="Item 7"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           active={true}
           variant="dark"
-          onClick={() => {}}
           title="Item 8"
           icon={IconX}
         />
@@ -81,51 +72,43 @@ export const ActiveFalse: Story = {
   render: function Render(args) {
     return (
       <Menu {...args}>
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="primary"
-          onClick={() => {}}
           title="Item 1"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="secondary"
-          onClick={() => {}}
           title="Item 2"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="success"
-          onClick={() => {}}
           title="Item 3"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="error"
-          onClick={() => {}}
           title="Item 4"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="warning"
-          onClick={() => {}}
           title="Item 5"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="info"
-          onClick={() => {}}
           title="Item 6"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="light"
-          onClick={() => {}}
           title="Item 7"
           icon={IconX}
         />
-        <Menu.ItemSidebar
+        <Menu.Item
           variant="dark"
-          onClick={() => {}}
           title="Item 8"
           icon={IconX}
         />
@@ -138,33 +121,30 @@ export const Collapse: Story = {
   render: function Render(args) {
     return (
       <Menu {...args}>
-        <CollapseSidebar
+        <Menu.Collapse
           variant="primary"
           icon={IconSearch}
           title="Menu colapsado"
         >
-          <Menu.ItemSidebar
+          <Menu.Item
             active={true}
             variant="primary"
-            onClick={() => {}}
             title="Item 1"
             icon={IconX}
           />
-          <Menu.ItemSidebar
+          <Menu.Item
             active={true}
             variant="secondary"
-            onClick={() => {}}
             title="Item 2"
             icon={IconX}
           />
-          <Menu.ItemSidebar
+          <Menu.Item
             active={true}
             variant="success"
-            onClick={() => {}}
             title="Item 3"
             icon={IconX}
           />
-        </CollapseSidebar>
+        </Menu.Collapse>
       </Menu>
     );
   },

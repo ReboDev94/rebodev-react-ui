@@ -4,7 +4,12 @@ import { IContent } from './interfaces';
 
 const SidebarContent: React.FC<IContent> = ({ children, className }) => {
   return (
-    <div className={twMerge('sidebar__content', className)}>{children}</div>
+    <div
+      aria-label="Content"
+      className={twMerge('sidebar__content', className)}
+    >
+      {children}
+    </div>
   );
 };
 

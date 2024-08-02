@@ -27,7 +27,6 @@
   shadow-md
   absolute
   w-full
-  invisible
   opacity-0
   scale-95
   transform
@@ -41,7 +40,7 @@
 }
 
 .input__search__wrapper__options__visible {
-  @apply visible opacity-100 scale-100;
+  @apply opacity-100 scale-100;
 }
 
 .input__search__li {

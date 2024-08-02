@@ -33,19 +33,19 @@ export const Default: Story = {
         </Table.Head>
         <Table.Body divide>
           <Table.Row hover>
-            <Table.Td>Rafael de Jesus Rebolledo Hernandex</Table.Td>
-            <Table.Td>+52 747-133-38-71</Table.Td>
+            <Table.Col>Rafael de Jesus Rebolledo Hernandex</Table.Col>
+            <Table.Col>+52 747-133-38-71</Table.Col>
           </Table.Row>
           <Table.Row hover>
-            <Table.Td>Rafael de Jesus Rebolledo Hernandex</Table.Td>
-            <Table.Td>+52 747-133-38-71</Table.Td>
+            <Table.Col>Rafael de Jesus Rebolledo Hernandex</Table.Col>
+            <Table.Col>+52 747-133-38-71</Table.Col>
           </Table.Row>
         </Table.Body>
         <Table.Footer>
           <Table.Row>
-            <Table.Td colSpan={2} className="py-5">
+            <Table.Col colSpan={2} className="py-5">
               Footer
-            </Table.Td>
+            </Table.Col>
           </Table.Row>
         </Table.Footer>
       </Table>

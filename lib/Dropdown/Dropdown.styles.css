@@ -17,10 +17,8 @@
     absolute
     w-[10rem]
     min-w-[10rem]
-    invisible
     opacity-0
     group-focus-within:opacity-100
-    group-focus-within:visible
     group-focus-within:scale-100
     scale-95
     transform

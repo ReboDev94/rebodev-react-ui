@@ -12,6 +12,7 @@ const Divider: React.FC<IDivider> = ({
 }) => {
   return (
     <div
+      aria-label="Divider"
       className={twMerge(
         'divider',
         `divider__${variant}`,

@@ -17,5 +17,4 @@ const TableRow = React.forwardRef<HTMLTableRowElement, ITableRow>(
 );
 
 TableRow.displayName = 'Tr';
-
 export default TableRow;

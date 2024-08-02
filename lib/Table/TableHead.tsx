@@ -9,12 +9,17 @@ const TableHead = React.forwardRef<HTMLTableSectionElement, ITableHead>(
         <tr>
           {Array.isArray(children) ? (
             children.map((child, i) => (
-              <th key={i} scope="rol" className={'table__th'}>
+              <th
+                aria-label="Head-Item"
+                key={i}
+                scope="rol"
+                className={'table__th'}
+              >
                 {child}
               </th>
             ))
           ) : (
-            <th scope="rol" className={'table__th'}>
+            <th aria-label="Head-Item" scope="rol" className={'table__th'}>
               {children}
             </th>
           )}

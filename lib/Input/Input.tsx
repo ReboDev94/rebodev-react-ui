@@ -6,8 +6,8 @@ import { Iinput } from '.';
 
 const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
   const {
-    type,
     className,
+    type = 'text',
     size = SIZE_SM,
     variant = VARIANT_PRIMARY,
     ...rest
@@ -15,18 +15,17 @@ const Input = forwardRef<HTMLInputElement, Iinput>((props, ref) => {
 
   return (
     <input
+      aria-label="Input"
       ref={ref}
       type={type}
-      className={
-        twMerge(
-          'peer',
-          'input',
-          `input__${size}`,
-          `input__${variant}`,
-          type === 'file' && 'input__file',
-          className,
-        )
-      }
+      className={twMerge(
+        'peer',
+        'input',
+        `input__${size}`,
+        `input__${variant}`,
+        type === 'file' && 'input__file',
+        className,
+      )}
       {...rest}
     />
   );

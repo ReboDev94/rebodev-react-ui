@@ -3,3 +3,5 @@ dist/
 prettier.config.mjs
 .eslintrc.json
 vite-env.d.ts
+storybook-static/
+coverage/

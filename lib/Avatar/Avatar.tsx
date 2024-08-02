@@ -22,6 +22,7 @@ const Avatar: React.FC<IAvatar> = ({
 
   return (
     <div
+      aria-label="avatar"
       className={twMerge(
         'avatar',
         `avatar__${shape}`,
@@ -32,7 +33,7 @@ const Avatar: React.FC<IAvatar> = ({
       )}
     >
       {children && !loadImg && children}
-      {!children && !loadImg && <span>{title}</span>}
+      {!children && !loadImg && <span aria-label="title">{title}</span>}
       <img
         src={src}
         className={twMerge(
@@ -40,6 +41,7 @@ const Avatar: React.FC<IAvatar> = ({
           `avatar__${size}`,
           !loadImg && 'hidden',
         )}
+        alt="avatar-img"
         onLoad={onLoadImg}
       />
     </div>

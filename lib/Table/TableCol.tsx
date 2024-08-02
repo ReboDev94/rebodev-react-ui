@@ -1,14 +1,19 @@
-import { HTMLAttributes } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ITableCol } from './interfaces';
 
-const TableCol = <PROPS extends HTMLAttributes<HTMLTableCellElement>>({
-  children,
-  className,
-  ...props
-}: PROPS) => (
-  <td className={twMerge('table__col', className)} {...props}>
-    {children}
-  </td>
+const TableCol = React.forwardRef<HTMLTableCellElement, ITableCol>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <td
+        ref={ref}
+        className={twMerge('table__col', className)}
+        {...props}
+      >
+        {children}
+      </td>
+    );
+  },
 );
-
+TableCol.displayName = 'Td';
 export default TableCol;

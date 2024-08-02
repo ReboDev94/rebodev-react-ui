@@ -10,8 +10,8 @@
   @apply px-6 py-4;
 }
 
-.table__hover{
-    @apply hover:bg-dark/10
+.table__hover {
+  @apply hover:bg-dark/10;
 }
 
 .table__th {

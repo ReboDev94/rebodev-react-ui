@@ -42,8 +42,7 @@ export const Default: Story<IPagination> = args => {
   );
 };
 Default.args = {
-  pageCount: 10,
-  currentPage: 4,
+  pageCount: 100,
+  currentPage: 1,
   variant: VARIANT_PRIMARY,
-  visiblePages: 5,
 };
