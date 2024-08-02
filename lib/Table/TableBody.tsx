@@ -3,7 +3,16 @@ import { ITableBody } from './interfaces';
 import { twMerge } from 'tailwind-merge';
 
 const TableBody = React.forwardRef<HTMLTableSectionElement, ITableBody>(
-  ({ divide = false, children, className, ...props }, ref) => {
+  (
+    {
+      children,
+      className,
+      labelNoInformation = 'No hay información',
+      divide = false,
+      ...props
+    },
+    ref,
+  ) => {
     return (
       <tbody
         ref={ref}
@@ -13,7 +22,7 @@ const TableBody = React.forwardRef<HTMLTableSectionElement, ITableBody>(
         {!children && (
           <tr>
             <td colSpan={1000} className="h-20 text-center font-semibold">
-              No hay información
+              {labelNoInformation}
             </td>
           </tr>
         )}

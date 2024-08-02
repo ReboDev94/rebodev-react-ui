@@ -13,6 +13,7 @@ export interface ITableHead
 export interface ITableBody
   extends React.TableHTMLAttributes<HTMLTableSectionElement> {
   divide?: boolean;
+  labelNoInformation?: string;
 }
 
 export interface ITableRow
