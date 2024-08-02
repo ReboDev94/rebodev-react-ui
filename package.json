@@ -1,6 +1,6 @@
 {
   "name": "yaret-ui",
-  "private": true,
+  "private": false,
   "version": "1.0.0-beta-1",
   "type": "module",
   "main": "./dist/index.umd.js",
@@ -14,8 +14,7 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
-    },
-    "./dist/style.css": "./dist/style.css"
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -65,10 +64,12 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jsdom": "^24.1.1",
     "postcss": "^8.4.39",
+    "rollup-plugin-visualizer": "^5.12.0",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-libcss": "^1.1.1",
     "vite-plugin-svgr": "^4.2.0",
     "vitest": "^2.0.4"
   }

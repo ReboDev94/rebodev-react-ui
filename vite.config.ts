@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import tailwindcss from 'tailwindcss';
 import svgr from 'vite-plugin-svgr';
+import libCss from 'vite-plugin-libcss';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,6 +31,8 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    visualizer(),
+    libCss(),
     svgr({ include: '**/*.svg?react' }),
     dts({
       rollupTypes: true,
