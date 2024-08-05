@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IAvatar } from './interfaces';
 import { twMerge } from 'tailwind-merge';
 import { SHAPE_CIRCLE, SIZE_SM, VARIANT_PRIMARY } from '../constants';
-import './avatar.styles.css';
+import './Avatar.styles.css';
 
 const Avatar: React.FC<IAvatar> = ({
   title,
@@ -37,7 +37,7 @@ const Avatar: React.FC<IAvatar> = ({
       <img
         src={src}
         className={twMerge(
-          'rounded-[inherit] object-fill',
+          'avatar__img',
           `avatar__${size}`,
           !loadImg && 'hidden',
         )}

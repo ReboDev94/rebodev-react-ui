@@ -5,17 +5,42 @@
   rounded-md
   font-medium
   outline-none
-  focus:ring-4
   transform
-  active:scale-95
   transition-transform
+  focus:ring-4
+  active:scale-95
   disabled:cursor-not-allowed
   disabled:active:scale-100
   disabled:opacity-50;
 }
 
+.button__block {
+  @apply w-full;
+}
+
+.button__xs {
+  @apply h-8 min-w-8 text-xs;
+}
+
+.button__sm {
+  @apply h-9 min-w-9 text-sm;
+}
+
+.button__md {
+  @apply h-10 min-w-10 text-sm;
+}
+
+.button__lg {
+  @apply h-12 min-w-12 text-base;
+}
+
 .button__primary {
-  @apply bg-primary/95 hover:bg-primary text-light focus:ring-primary/10 fill-light disabled:hover:bg-primary/95;
+  @apply bg-primary/95
+  text-light
+  fill-light
+  hover:bg-primary
+  focus:ring-primary/10
+  disabled:hover:bg-primary/95;
 }
 
 .button__secondary {
@@ -76,24 +101,4 @@
 
 .button__outline-dark {
   @apply focus:ring-dark/10 border-2 border-dark text-dark fill-dark;
-}
-
-.button__block {
-  @apply w-full;
-}
-
-.button__xs {
-  @apply h-8 min-w-[2rem] text-xs;
-}
-
-.button__sm {
-  @apply h-9 min-w-[2.25rem] text-sm;
-}
-
-.button__md {
-  @apply h-10 min-w-[2.5rem] text-sm;
-}
-
-.button__lg {
-  @apply h-12 min-w-[3rem] text-base;
 }
