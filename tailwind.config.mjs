@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'rgb(var(--color-primary) / <alpha-value>)',
-        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
-        success: 'rgb(var(--color-success) / <alpha-value>)',
-        error: 'rgb(var(--color-error) / <alpha-value>)',
-        warning: 'rgb(var(--color-warning) / <alpha-value>)',
-        info: 'rgb(var(--color-info) / <alpha-value>)',
-        light: 'rgb(var(--color-light) / <alpha-value>)',
-        dark: 'rgb(var(--color-dark) / <alpha-value>)',
+        primary: '#004B87',
+        secondary: '#7C5295',
+        success: '#4B9560',
+        error: '#E04F39',
+        warning: '#F4C300',
+        info: '#9BB8D3',
+        light: '#E3E8F1',
+        dark: '#27363B',
       },
     },
   },
