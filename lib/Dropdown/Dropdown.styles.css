@@ -1,16 +1,18 @@
 .dropdown {
-  @apply relative inline-block;
+  @apply relative
+  inline-block;
 }
 
 .dropdown__toggle {
-  @apply block m-1;
+  @apply block
+  m-1;
 }
 
 .dropdown__menu {
   @apply space-y-1
   bg-white
-    z-[3]
     rounded-lg
+    z-[3]
     py-3
     px-2
     shadow-md
@@ -18,29 +20,33 @@
     w-[10rem]
     min-w-[10rem]
     opacity-0
-    group-focus-within:opacity-100
-    group-focus-within:scale-100
     scale-95
+    ease-out
     transform
     transition
     duration-200
-    ease-out;
+    group-focus-within:scale-100
+    group-focus-within:opacity-100;
 }
 
 .dropdown__menu__top {
-  @apply top-auto bottom-full;
+  @apply top-auto
+  bottom-full;
 }
 
 .dropdown__menu__bottom {
-  @apply top-full bottom-auto;
+  @apply top-full
+   bottom-auto;
 }
 
 .dropdown__menu__right {
-  @apply left-full top-0;
+  @apply left-full
+  top-0;
 }
 
 .dropdown__menu__left {
-  @apply right-full top-0;
+  @apply right-full
+  top-0;
 }
 
 .dropdown__menu__vertical__start {
@@ -52,25 +58,33 @@
 }
 
 .dropdown__menu__vertical__center {
-  @apply left-1/2 -translate-x-1/2;
+  @apply left-1/2
+  -translate-x-1/2;
 }
 
 .dropdown__menu__lateral__start {
-  @apply top-0 bottom-auto;
+  @apply top-0
+  bottom-auto;
 }
 
 .dropdown__menu__lateral__end {
-  @apply bottom-0 top-auto;
+  @apply bottom-0
+  top-auto;
 }
 
 .dropdown__menu__lateral__center {
-  @apply top-1/2 -translate-y-1/2;
+  @apply top-1/2
+  -translate-y-1/2;
 }
 
 .dropdown__item__li {
-  @apply text-sm p-2  cursor-pointer rounded-md;
+  @apply p-2
+  text-sm
+  rounded-md
+  cursor-pointer;
 }
 
 .dropdown__item__li__disabled {
-  @apply cursor-not-allowed select-none;
+  @apply select-none
+  cursor-not-allowed;
 }
