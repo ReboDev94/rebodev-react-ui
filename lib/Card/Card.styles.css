@@ -1,39 +1,53 @@
 .card {
-  @apply rounded-lg shadow-sm w-full bg-white border;
+  @apply w-full
+  rounded-md
+  shadow-sm
+  bg-white
+  border;
 }
 
 .card__primary {
-  @apply border border-primary shadow-primary/50;
+  @apply border-primary
+  shadow-primary/50;
 }
 
 .card__secondary {
-  @apply border border-secondary shadow-secondary/50;
+  @apply border-secondary
+  shadow-secondary/50;
 }
 
 .card__success {
-  @apply border border-success  shadow-success/50;
+  @apply border-success
+  shadow-success/50;
 }
 
 .card__error {
-  @apply border border-error  shadow-error/50;
+  @apply border-error
+  shadow-error/50;
 }
 
 .card__warning {
-  @apply border border-warning  shadow-warning/50;
+  @apply border-warning
+  shadow-warning/50;
 }
 
 .card__info {
-  @apply border border-info  shadow-info/50;
+  @apply border-info
+  shadow-info/50;
 }
 
 .card__light {
-  @apply border-none border-light  shadow-light;
+  @apply border-none
+  border-light
+  shadow-light;
 }
 
 .card__dark {
-  @apply border border-dark  shadow-dark/50;
+  @apply border-dark
+  shadow-dark/50;
 }
 
 .card__body {
-  @apply px-6 py-6;
+  @apply px-6
+  py-6;
 }
