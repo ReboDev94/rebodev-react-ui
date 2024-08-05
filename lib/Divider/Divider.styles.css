@@ -3,35 +3,43 @@
 }
 
 .divider__horizontal__xs {
-  @apply w-full h-[1px];
+  @apply w-full
+  h-[1px];
 }
 
 .divider__horizontal__sm {
-  @apply w-full h-[2.5px];
+  @apply w-full
+  h-[2.5px];
 }
 
 .divider__horizontal__md {
-  @apply w-full h-[3.5px];
+  @apply w-full
+  h-[3.5px];
 }
 
 .divider__horizontal__lg {
-  @apply w-full h-[4.5px];
+  @apply w-full
+  h-[4.5px];
 }
 
 .divider__vertical__xs {
-  @apply w-[1.5px] h-full;
+  @apply w-[1.5px]
+  h-full;
 }
 
 .divider__vertical__sm {
-  @apply w-[2.5px] h-full;
+  @apply w-[2.5px]
+  h-full;
 }
 
 .divider__vertical__md {
-  @apply w-[3.5px] h-full;
+  @apply w-[3.5px]
+  h-full;
 }
 
 .divider__vertical__lg {
-  @apply w-[4.5px] h-full;
+  @apply w-[4.5px]
+  h-full;
 }
 
 .divider__primary {
