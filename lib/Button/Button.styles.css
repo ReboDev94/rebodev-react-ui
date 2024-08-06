@@ -22,25 +22,25 @@
 
 .button__xs {
   @apply h-8
-  min-h-8
+  min-w-8
   text-xs;
 }
 
 .button__sm {
   @apply h-9
-  min-h-9
+  min-w-9
   text-sm;
 }
 
 .button__md {
   @apply h-10
-  min-h-10
+  min-w-10
   text-sm;
 }
 
 .button__lg {
   @apply h-12
-  min-h-12
+  min-w-12
   text-base;
 }
 
