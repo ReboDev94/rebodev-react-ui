@@ -1,9 +1,12 @@
 .form__label__wrapper {
-  @apply flex flex-col w-full;
+  @apply flex
+  flex-col
+  w-full;
 }
 
 .form__label {
-  @apply text-xs text-dark;
+  @apply text-xs
+  text-dark;
 }
 
 .form__label__right {

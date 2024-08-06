@@ -1,13 +1,19 @@
 .table {
-  @apply w-full text-sm text-left text-dark;
+  @apply w-full
+  text-sm
+  text-left
+  text-dark;
 }
 
 .table__head {
-  @apply text-xs uppercase border-b;
+  @apply text-xs
+  border-b
+  uppercase;
 }
 
 .table__col {
-  @apply px-6 py-4;
+  @apply px-6
+  py-4;
 }
 
 .table__hover {
@@ -15,13 +21,22 @@
 }
 
 .table__th {
-  @apply px-6 py-5;
+  @apply px-6
+  py-5;
 }
 
 .table__wrapper {
-  @apply relative overflow-x-auto overflow-y-hidden border border-dark/20 bg-white rounded-md shadow-sm;
+  @apply relative
+  border
+  shadow-sm
+  bg-white
+  rounded-md
+  border-dark/20
+  overflow-x-auto
+  overflow-y-hidden;
 }
 
 .table__divider {
-  @apply divide-y divide-dark/20;
+  @apply divide-y
+  divide-dark/20;
 }

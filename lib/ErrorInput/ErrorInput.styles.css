@@ -1,3 +1,5 @@
 .error__input {
-  @apply text-xs mt-1 text-error;
+  @apply mt-1
+  text-xs
+  text-error;
 }

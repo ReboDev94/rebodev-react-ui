@@ -5,77 +5,15 @@
   rounded-md
   font-medium
   outline-none
-  focus:ring-4
   transform
-  active:scale-95
   transition-transform
-  disabled:cursor-not-allowed
+  text-light
+  focus:ring-4
+  active:scale-95
+  disabled:opacity-50
   disabled:active:scale-100
-  disabled:opacity-50;
-}
-
-.button__primary {
-  @apply bg-primary/95 hover:bg-primary text-light focus:ring-primary/10 fill-light disabled:hover:bg-primary/95;
-}
-
-.button__secondary {
-  @apply bg-secondary/95 hover:bg-secondary text-light focus:ring-secondary/10 fill-light disabled:hover:bg-secondary/95;
-}
-
-.button__success {
-  @apply bg-success/95 hover:bg-success text-light focus:ring-success/10 fill-light disabled:hover:bg-success/95;
-}
-
-.button__error {
-  @apply bg-error/95 hover:bg-error text-light focus:ring-error/10 fill-light disabled:hover:bg-error/95;
-}
-
-.button__warning {
-  @apply bg-warning/95 hover:bg-warning text-dark focus:ring-warning/10 fill-dark disabled:hover:bg-warning/95;
-}
-
-.button__info {
-  @apply bg-info/95 hover:bg-info text-dark focus:ring-info/10 fill-dark disabled:hover:bg-info/95;
-}
-
-.button__light {
-  @apply bg-light/95 hover:bg-light text-dark focus:ring-light/10 fill-dark disabled:hover:bg-light/95;
-}
-
-.button__dark {
-  @apply bg-dark/95 hover:bg-dark text-light focus:ring-dark/10 fill-light disabled:hover:bg-dark/95;
-}
-
-.button__outline-primary {
-  @apply focus:ring-primary/10 border-2 border-primary text-primary fill-primary;
-}
-
-.button__outline-secondary {
-  @apply focus:ring-secondary/10 border-2 border-secondary text-secondary fill-secondary;
-}
-
-.button__outline-success {
-  @apply focus:ring-success/10 border-2 border-success text-success fill-success;
-}
-
-.button__outline-error {
-  @apply focus:ring-error/10 border-2 border-error text-error fill-error;
-}
-
-.button__outline-warning {
-  @apply focus:ring-warning/10 border-2 border-warning text-warning fill-warning;
-}
-
-.button__outline-info {
-  @apply focus:ring-info/10 border-2 border-info text-info fill-info;
-}
-
-.button__outline-light {
-  @apply focus:ring-light/50  text-dark;
-}
-
-.button__outline-dark {
-  @apply focus:ring-dark/10 border-2 border-dark text-dark fill-dark;
+  disabled:cursor-not-allowed
+  disabled:hover:bg-opacity-95;
 }
 
 .button__block {
@@ -83,17 +21,130 @@
 }
 
 .button__xs {
-  @apply h-8 min-w-[2rem] text-xs;
+  @apply h-8
+  min-h-8
+  text-xs;
 }
 
 .button__sm {
-  @apply h-9 min-w-[2.25rem] text-sm;
+  @apply h-9
+  min-h-9
+  text-sm;
 }
 
 .button__md {
-  @apply h-10 min-w-[2.5rem] text-sm;
+  @apply h-10
+  min-h-10
+  text-sm;
 }
 
 .button__lg {
-  @apply h-12 min-w-[3rem] text-base;
+  @apply h-12
+  min-h-12
+  text-base;
+}
+
+.button__primary {
+  @apply bg-primary/95
+  hover:bg-primary
+  focus:ring-primary/10;
+}
+
+.button__secondary {
+  @apply bg-secondary/95
+  hover:bg-secondary
+  focus:ring-secondary/10;
+}
+
+.button__success {
+  @apply bg-success/95
+  hover:bg-success
+  focus:ring-success/10;
+}
+
+.button__error {
+  @apply bg-error/95
+  hover:bg-error
+  focus:ring-error/10;
+}
+
+.button__warning {
+  @apply text-dark
+  bg-warning/95
+  hover:bg-warning
+  focus:ring-warning/10;
+}
+
+.button__info {
+  @apply text-dark
+  bg-info/95
+  hover:bg-info
+  focus:ring-info/10;
+}
+
+.button__light {
+  @apply text-dark
+  bg-light/95
+  hover:bg-light
+  focus:ring-light/10;
+}
+
+.button__dark {
+  @apply bg-dark/95
+  hover:bg-dark
+  focus:ring-dark/10;
+}
+
+.button__outline-primary {
+  @apply border-2
+  text-primary
+  border-primary
+  focus:ring-primary/10;
+}
+
+.button__outline-secondary {
+  @apply border-2
+  text-secondary
+  border-secondary
+  focus:ring-secondary/10;
+}
+
+.button__outline-success {
+  @apply border-2
+  text-success
+  border-success
+  focus:ring-success/10;
+}
+
+.button__outline-error {
+  @apply border-2
+  text-error
+  border-error
+  focus:ring-error/10;
+}
+
+.button__outline-warning {
+  @apply border-2
+  text-warning
+  border-warning
+  focus:ring-warning/10;
+}
+
+.button__outline-info {
+  @apply border-2
+  text-info
+  border-info
+  focus:ring-info/10;
+}
+
+.button__outline-light {
+  @apply text-dark
+  focus:ring-light/50;
+}
+
+.button__outline-dark {
+  @apply border-2
+  text-dark
+  border-dark
+  focus:ring-dark/10;
 }

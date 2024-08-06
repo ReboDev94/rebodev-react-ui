@@ -1,13 +1,29 @@
 .sidebar {
-  @apply md:relative fixed flex-shrink-0 h-screen isolate  overflow-y-auto overflow-x-hidden shadow-sm ease-in-out duration-300 bg-white z-20;
+  @apply z-20
+  fixed
+  isolate
+  h-screen
+  shadow-sm
+  bg-white
+  md:relative
+  ease-in-out
+  duration-300
+  flex-shrink-0
+  overflow-y-auto
+  overflow-x-hidden;
 }
 
 .sidebar__container {
-  @apply flex flex-col h-full py-2;
+  @apply flex
+  py-2
+  h-full
+  flex-col;
 }
 
 .sidebar__header {
-  @apply py-2 grid place-content-center;
+  @apply py-2
+  grid
+  place-content-center;
 }
 
 .sidebar__content {
@@ -15,9 +31,15 @@
 }
 
 .sidebar__category {
-  @apply text-dark font-light ml-4;
+  @apply ml-4
+  text-dark
+  font-light;
 }
 
 .sidebar__backdrop {
-  @apply fixed inset-0 z-10 bg-dark bg-opacity-[0.15];
+  @apply fixed
+  z-10
+  inset-0
+  bg-dark
+  bg-opacity-[0.15];
 }

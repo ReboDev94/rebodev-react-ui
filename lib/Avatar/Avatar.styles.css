@@ -1,0 +1,96 @@
+.avatar {
+  @apply grid
+  shadow-md
+  text-light
+  place-content-center;
+}
+
+.avatar__circle {
+  @apply rounded-full;
+}
+
+.avatar__squared {
+  @apply rounded-md;
+}
+
+.avatar__img {
+  @apply object-fill
+  rounded-[inherit];
+}
+
+.avatar__xs {
+  @apply text-sm
+  size-10
+  min-h-10
+  min-w-10;
+}
+
+.avatar__sm {
+  @apply text-lg
+  size-14
+  min-h-14
+  min-w-14;
+}
+
+.avatar__md {
+  @apply text-3xl
+  size-24
+  min-h-24
+  min-w-24;
+}
+
+.avatar__lg {
+  @apply text-5xl
+  size-32
+  min-h-32
+  min-w-32;
+}
+
+.avatar__bordered {
+  @apply m-1
+  outline
+  outline-offset-[3px];
+}
+
+.avatar__primary {
+  @apply bg-primary
+  outline-primary;
+}
+
+.avatar__secondary {
+  @apply bg-secondary
+  outline-secondary;
+}
+
+.avatar__success {
+  @apply bg-success
+  outline-success;
+}
+
+.avatar__error {
+  @apply bg-error
+  outline-error;
+}
+
+.avatar__warning {
+  @apply outline-warning
+  bg-warning
+  text-dark;
+}
+
+.avatar__info {
+  @apply bg-info
+  text-dark
+  outline-info;
+}
+
+.avatar__light {
+  @apply bg-light
+  text-dark
+  outline-light;
+}
+
+.avatar__dark {
+  @apply bg-dark
+  outline-dark;
+}
