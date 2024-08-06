@@ -19,8 +19,6 @@ or
 yarn add yaret-ui
 ```
 
-Building
-
 ## Quick Start
 
 import component from yaret-ui
