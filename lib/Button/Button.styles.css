@@ -8,6 +8,7 @@
   transform
   transition-transform
   text-light
+  fill-light
   focus:ring-4
   active:scale-95
   disabled:opacity-50
@@ -71,6 +72,7 @@
 .button__warning {
   @apply text-dark
   bg-warning/95
+  fill-dark
   hover:bg-warning
   focus:ring-warning/10;
 }
@@ -78,6 +80,7 @@
 .button__info {
   @apply text-dark
   bg-info/95
+  fill-dark
   hover:bg-info
   focus:ring-info/10;
 }
@@ -85,6 +88,7 @@
 .button__light {
   @apply text-dark
   bg-light/95
+  fill-dark
   hover:bg-light
   focus:ring-light/10;
 }
@@ -98,6 +102,7 @@
 .button__outline-primary {
   @apply border-2
   text-primary
+  fill-primary
   border-primary
   focus:ring-primary/10;
 }
@@ -105,6 +110,7 @@
 .button__outline-secondary {
   @apply border-2
   text-secondary
+  fill-secondary
   border-secondary
   focus:ring-secondary/10;
 }
@@ -112,6 +118,7 @@
 .button__outline-success {
   @apply border-2
   text-success
+  fill-success
   border-success
   focus:ring-success/10;
 }
@@ -119,6 +126,7 @@
 .button__outline-error {
   @apply border-2
   text-error
+  fill-error
   border-error
   focus:ring-error/10;
 }
@@ -126,6 +134,7 @@
 .button__outline-warning {
   @apply border-2
   text-warning
+  fill-warning
   border-warning
   focus:ring-warning/10;
 }
@@ -133,18 +142,21 @@
 .button__outline-info {
   @apply border-2
   text-info
+  fill-info
   border-info
   focus:ring-info/10;
 }
 
 .button__outline-light {
   @apply text-dark
+  fill-dark
   focus:ring-light/50;
 }
 
 .button__outline-dark {
   @apply border-2
   text-dark
+  fill-dark
   border-dark
   focus:ring-dark/10;
 }
