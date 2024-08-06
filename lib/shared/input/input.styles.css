@@ -17,23 +17,37 @@
 }
 
 .input__file {
-  @apply !p-0 file:px-2 file:py-2.5 file:border-none;
+  @apply !p-0
+  file:px-2
+  file:py-2.5
+  file:border-none;
 }
 
 .input__xs {
-  @apply h-[36px] px-2 py-2 text-xs;
+  @apply px-2
+  py-2
+  h-[36px]
+  text-xs;
 }
 
 .input__sm {
-  @apply h-[40px] px-2 py-2.5 text-sm;
+  @apply px-2
+  py-2.5
+  h-[40px]
+  text-sm;
 }
 
 .input__md {
-  @apply h-[42px] px-2 py-2.5;
+  @apply px-2
+  py-2.5
+  h-[42px];
 }
 
 .input__lg {
-  @apply h-[48px] px-2 py-2.5;
+  @apply
+  px-2
+  h-[48px]
+  py-2.5;
 }
 
 .input__primary {

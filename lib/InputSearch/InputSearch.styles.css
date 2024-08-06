@@ -1,9 +1,18 @@
 .input__close__button_close {
-  @apply rounded-full p-0 absolute top-1/2 right-1 transform -translate-y-1/2 grid place-content-center;
+  @apply rounded-full
+  p-0
+  absolute
+  top-1/2
+  right-1
+  transform
+  -translate-y-1/2
+  grid
+  place-content-center;
 }
 
 .input__close__button__icon {
-  @apply w-4 fill-inherit;
+  @apply w-4
+  fill-inherit;
 }
 
 .input__close__button__icon__disabled {
@@ -11,11 +20,12 @@
 }
 
 .input__search__wrapper__icon {
-  @apply w-8 h-8 bg-white;
+  @apply size-8 bg-white;
 }
 
 .input__search__icon {
-  @apply w-4 fill-dark/50;
+  @apply w-4
+  fill-dark/50;
 }
 
 .input__search__wrapper__options {
@@ -40,17 +50,23 @@
 }
 
 .input__search__wrapper__options__visible {
-  @apply opacity-100 scale-100;
+  @apply opacity-100
+  scale-100;
 }
 
 .input__search__li {
-  @apply cursor-pointer text-sm font-semibold;
+  @apply text-sm
+  cursor-pointer
+  font-semibold;
 }
 
 .input__search__wrapper__loading {
-  @apply grid place-content-center;
+  @apply grid
+  place-content-center;
 }
 
 .input__search__no__options__label {
-  @apply text-sm text-center text-dark/80;
+  @apply text-sm
+  text-center
+  text-dark/80;
 }

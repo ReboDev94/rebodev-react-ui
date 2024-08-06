@@ -1,21 +1,24 @@
 .loading {
-  @apply border-dark/20 animate-spin rounded-full border-2;
+  @apply border-2
+  animate-spin
+  rounded-full
+  border-dark/20;
 }
 
 .loading__xs {
-  @apply h-4 w-4;
+  @apply size-4;
 }
 
 .loading__sm {
-  @apply h-5 w-5;
+  @apply size-5;
 }
 
 .loading__md {
-  @apply h-6 w-6;
+  @apply size-6;
 }
 
 .loading__lg {
-  @apply h-7 w-7;
+  @apply size-7;
 }
 
 .loading__primary {
