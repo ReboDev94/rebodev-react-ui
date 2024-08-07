@@ -116,3 +116,6 @@ export { default as Button } from './Button';
 /* Card */
 export type { ICard, ICardBody };
 export { default as Card } from './Card';
+
+/* Type */
+export * from './types';
