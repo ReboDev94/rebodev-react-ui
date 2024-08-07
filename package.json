@@ -1,7 +1,7 @@
 {
   "name": "yaret-ui",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.0.6",
   "license": "MIT",
   "type": "module",
   "description": "YaretUI components - React -Tailwind",
@@ -11,19 +11,12 @@
     "type": "git",
     "url": "https://github.com/ReboDev94/yaret-ui.git"
   },
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -37,13 +30,14 @@
     "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.6"
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "tailwindcss": ">=3.4.6"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -70,15 +64,15 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
+    "glob": "^10.4.5",
     "jsdom": "^24.1.1",
     "postcss": "^8.4.39",
     "rollup-plugin-visualizer": "^5.12.0",
-    "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1",
-    "vite-plugin-libcss": "^1.1.1",
+    "vite-plugin-lib-inject-css": "^2.1.1",
     "vite-plugin-svgr": "^4.2.0",
     "vitest": "^2.0.4"
   }
